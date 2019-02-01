@@ -1,0 +1,303 @@
+
+/* Class = "UIViewController"; title = "６階"; ObjectID = "25D-BU-c9Z"; */
+"25D-BU-c9Z.title" = "６階";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "3bd-04-2BD"; */
+"3bd-04-2BD.title" = "次へ";
+
+/* Class = "UILabel"; text = "  第127回「燦 〜Be the Light〜」"; ObjectID = "3zR-tS-e1G"; */
+"3zR-tS-e1G.text" = "  第127回「燦 〜Be the Light〜」";
+
+/* Class = "UIViewController"; title = "場所から検索"; ObjectID = "42H-Oe-R3c"; */
+"42H-Oe-R3c.title" = "場所から検索";
+
+/* Class = "UINavigationItem"; title = "クレジット"; ObjectID = "4c9-vj-6OS"; */
+"4c9-vj-6OS.title" = "クレジット";
+
+/* Class = "UITextView"; text = "こちらは企画詳細を表示する画面です。「企画を探す」や「ブックマーク」からアクセス可能です。また、赤い星マークのボタンを押すことで、ブックマークに登録することができます。"; ObjectID = "4tV-Md-wun"; */
+"4tV-Md-wun.text" = "こちらは企画詳細を表示する画面です。「企画を探す」や「ブックマーク」からアクセス可能です。また、赤い星マークのボタンを押すことで、ブックマークに登録することができます。";
+
+/* Class = "UIViewController"; title = "企画検索"; ObjectID = "58U-OQ-a2K"; */
+"58U-OQ-a2K.title" = "企画検索";
+
+/* Class = "UIViewController"; title = "３階"; ObjectID = "5QX-4i-2MG"; */
+"5QX-4i-2MG.title" = "３階";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "5XP-gn-Hap"; */
+"5XP-gn-Hap.title" = "次へ";
+
+/* Class = "UIViewController"; title = "サイドバー"; ObjectID = "5z6-ZB-F2k"; */
+"5z6-ZB-F2k.title" = "サイドバー";
+
+/* Class = "UIButton"; normalTitle = "ブックマーク"; ObjectID = "60w-zp-k0A"; */
+"60w-zp-k0A.normalTitle" = "ブックマーク";
+
+/* Class = "UINavigationItem"; title = "使い方４"; ObjectID = "73i-17-qHp"; */
+"73i-17-qHp.title" = "使い方４";
+
+/* Class = "UIButton"; normalTitle = "使い方"; ObjectID = "7nK-vq-UqK"; */
+"7nK-vq-UqK.normalTitle" = "使い方";
+
+/* Class = "UILabel"; text = "ブックマーク"; ObjectID = "97B-DE-NtT"; */
+"97B-DE-NtT.text" = "ブックマーク";
+
+/* Class = "UILabel"; text = "場所：X号館X階"; ObjectID = "AWF-qg-nbK"; */
+"AWF-qg-nbK.text" = "場所：X号館X階";
+
+/* Class = "UINavigationItem"; title = "使い方５"; ObjectID = "Az9-sV-Yfe"; */
+"Az9-sV-Yfe.title" = "使い方５";
+
+/* Class = "UIViewController"; title = "４階"; ObjectID = "BGi-0A-GLx"; */
+"BGi-0A-GLx.title" = "４階";
+
+/* Class = "UIViewController"; title = "使い方１"; ObjectID = "BRA-rZ-ybz"; */
+"BRA-rZ-ybz.title" = "使い方１";
+
+/* Class = "UIViewController"; title = "１階"; ObjectID = "CFn-Hy-YsR"; */
+"CFn-Hy-YsR.title" = "１階";
+
+/* Class = "UITabBarController"; title = "１号館"; ObjectID = "FEb-n6-YFD"; */
+"FEb-n6-YFD.title" = "１号館";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "FZz-4o-XsT"; */
+"FZz-4o-XsT.title" = "次へ";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Goz-Sl-8tw"; */
+"Goz-Sl-8tw.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "キーワードから探す"; ObjectID = "HhV-xb-dgR"; */
+"HhV-xb-dgR.normalTitle" = "キーワードから探す";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "HyA-5n-Rjm"; */
+"HyA-5n-Rjm.title" = "次へ";
+
+/* Class = "UITabBarController"; title = "４号館"; ObjectID = "Ia4-ku-Gy7"; */
+"Ia4-ku-Gy7.title" = "４号館";
+
+/* Class = "UITextView"; text = "地図から建物を選択すると、このように各フロアの詳細マップを開けます。また、数字の書かれた部屋をタップすることで、その部屋での催しの詳しい情報が得られます。"; ObjectID = "J86-mg-W1J"; */
+"J86-mg-W1J.text" = "地図から建物を選択すると、このように各フロアの詳細マップを開けます。また、数字の書かれた部屋をタップすることで、その部屋での催しの詳しい情報が得られます。";
+
+/* Class = "UILabel"; text = "団体名"; ObjectID = "JRC-OV-lu5"; */
+"JRC-OV-lu5.text" = "団体名";
+
+/* Class = "UITextView"; text = "様々なページの右上にはサイドメニューボタンがございます、ショートカットに適宜ご利用ください。"; ObjectID = "JiB-cO-SmJ"; */
+"JiB-cO-SmJ.text" = "様々なページの右上にはサイドメニューボタンがございます、ショートカットに適宜ご利用ください。";
+
+/* Class = "UINavigationItem"; title = "ホーム"; ObjectID = "Ks8-sd-z0T"; */
+"Ks8-sd-z0T.title" = "ホーム";
+
+/* Class = "UITabBarController"; title = "５号館"; ObjectID = "LYS-FR-UcW"; */
+"LYS-FR-UcW.title" = "５号館";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "LwZ-iU-bO0"; */
+"LwZ-iU-bO0.title" = "次へ";
+
+/* Class = "UINavigationItem"; title = "使い方４"; ObjectID = "MWx-4f-CIN"; */
+"MWx-4f-CIN.title" = "使い方４";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "N2a-3a-t4D"; */
+"N2a-3a-t4D.title" = "次へ";
+
+/* Class = "UIViewController"; title = "その他"; ObjectID = "PJb-Hv-VI5"; */
+"PJb-Hv-VI5.title" = "その他";
+
+/* Class = "UILabel"; text = "企画検索"; ObjectID = "QLe-SW-MPy"; */
+"QLe-SW-MPy.text" = "企画検索";
+
+/* Class = "UIViewController"; title = "３階"; ObjectID = "RjQ-op-0e3"; */
+"RjQ-op-0e3.title" = "３階";
+
+/* Class = "UILabel"; text = "海城祭公式アプリ"; ObjectID = "SKJ-3L-U7p"; */
+"SKJ-3L-U7p.text" = "海城祭公式アプリ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UlD-2A-QgX"; */
+"UlD-2A-QgX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "　　企画名"; ObjectID = "Uuf-1j-RwB"; */
+"Uuf-1j-RwB.text" = "　　企画名";
+
+/* Class = "UIViewController"; title = "２階"; ObjectID = "V2K-FQ-CWL"; */
+"V2K-FQ-CWL.title" = "２階";
+
+/* Class = "UILabel"; text = "メニュー"; ObjectID = "WVf-Gg-kar"; */
+"WVf-Gg-kar.text" = "メニュー";
+
+/* Class = "UITextView"; text = "こちらはブックマーク一覧の画面です。企画名をタップすれば詳細情報を閲覧できます。また、右上のEditボタンでブックマークを編集可能です。全て削除する場合は「ブックマークをリセットする」が便利です。"; ObjectID = "WZz-nI-him"; */
+"WZz-nI-him.text" = "こちらはブックマーク一覧の画面です。企画名をタップすれば詳細情報を閲覧できます。また、右上のEditボタンでブックマークを編集可能です。全て削除する場合は「ブックマークをリセットする」が便利です。";
+
+/* Class = "UIViewController"; title = "８階"; ObjectID = "Wc0-Jd-yar"; */
+"Wc0-Jd-yar.title" = "８階";
+
+/* Class = "UITabBarController"; title = "２号館"; ObjectID = "Wgy-al-Xvb"; */
+"Wgy-al-Xvb.title" = "２号館";
+
+/* Class = "UILabel"; text = "食品"; ObjectID = "Wtd-k8-CUf"; */
+"Wtd-k8-CUf.text" = "食品";
+
+/* Class = "UIViewController"; title = "２階"; ObjectID = "Wv7-dH-S7X"; */
+"Wv7-dH-S7X.title" = "２階";
+
+/* Class = "UISearchBar"; placeholder = "検索ワード"; ObjectID = "XFo-fG-y6Q"; */
+"XFo-fG-y6Q.placeholder" = "検索ワード";
+
+/* Class = "UISearchBar"; XFo-fG-y6Q.scopeButtonTitles[0] = "全て"; ObjectID = "XFo-fG-y6Q"; */
+"XFo-fG-y6Q.scopeButtonTitles[0]" = "全て";
+
+/* Class = "UISearchBar"; XFo-fG-y6Q.scopeButtonTitles[1] = "企画名"; ObjectID = "XFo-fG-y6Q"; */
+"XFo-fG-y6Q.scopeButtonTitles[1]" = "企画名";
+
+/* Class = "UISearchBar"; XFo-fG-y6Q.scopeButtonTitles[2] = "団体名"; ObjectID = "XFo-fG-y6Q"; */
+"XFo-fG-y6Q.scopeButtonTitles[2]" = "団体名";
+
+/* Class = "UIButton"; normalTitle = "地図から探す"; ObjectID = "XI7-cJ-jpM"; */
+"XI7-cJ-jpM.normalTitle" = "地図から探す";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "XRj-kc-tf5"; */
+"XRj-kc-tf5.text" = "Detail";
+
+/* Class = "UILabel"; text = "制作：文化祭実行委員　プログラム部"; ObjectID = "Y1G-r3-6XV"; */
+"Y1G-r3-6XV.text" = "制作：文化祭実行委員　プログラム部";
+
+/* Class = "UILabel"; text = "タイムテーブル"; ObjectID = "YXH-7D-jtX"; */
+"YXH-7D-jtX.text" = "タイムテーブル";
+
+/* Class = "UILabel"; text = "高１　高橋"; ObjectID = "ZEl-Y7-yqt"; */
+"ZEl-Y7-yqt.text" = "高１　高橋";
+
+/* Class = "UIButton"; normalTitle = "タイムテーブル"; ObjectID = "ZW6-6m-XTB"; */
+"ZW6-6m-XTB.normalTitle" = "タイムテーブル";
+
+/* Class = "UINavigationItem"; title = "使い方１"; ObjectID = "ZzH-RO-jdr"; */
+"ZzH-RO-jdr.title" = "使い方１";
+
+/* Class = "UIViewController"; title = "食品"; ObjectID = "aCo-Ie-I2q"; */
+"aCo-Ie-I2q.title" = "食品";
+
+/* Class = "UILabel"; text = "第127回 海城祭 へようこそ！"; ObjectID = "aix-qe-xjh"; */
+"aix-qe-xjh.text" = "第127回 海城祭 へようこそ！";
+
+/* Class = "UINavigationItem"; title = "使い方３"; ObjectID = "au3-4l-AS8"; */
+"au3-4l-AS8.title" = "使い方３";
+
+/* Class = "UIViewController"; title = "３階"; ObjectID = "bHF-g2-ftH"; */
+"bHF-g2-ftH.title" = "３階";
+
+/* Class = "UIViewController"; title = "キーワードから検索"; ObjectID = "bWF-9v-YJg"; */
+"bWF-9v-YJg.title" = "キーワードから検索";
+
+/* Class = "UIBarButtonItem"; title = "終了"; ObjectID = "c4O-Er-2QK"; */
+"c4O-Er-2QK.title" = "終了";
+
+/* Class = "UITextView"; text = "こちらは「企画を探す」から「キーワードから探す」を選択した画面です。一番上の白いボックスに文字を入れれば、その文字を含む（企画名、団体名または説明文）企画を表示します。検索対象の切り替えも可能です。そして企画名をタップすれば、その企画の詳細を閲覧できます。"; ObjectID = "cOK-gr-3ku"; */
+"cOK-gr-3ku.text" = "こちらは「企画を探す」から「キーワードから探す」を選択した画面です。一番上の白いボックスに文字を入れれば、その文字を含む（企画名、団体名または説明文）企画を表示します。検索対象の切り替えも可能です。そして企画名をタップすれば、その企画の詳細を閲覧できます。";
+
+/* Class = "UIViewController"; title = "１階"; ObjectID = "cTi-wh-A7w"; */
+"cTi-wh-A7w.title" = "１階";
+
+/* Class = "UITextView"; text = "こちらは「企画を探す」から「地図から探す」を選択した画面です。地図に表示されている場所をタップすると、その場所の詳細地図、またはタイムテーブルが表示されます。"; ObjectID = "cm8-FV-Dfa"; */
+"cm8-FV-Dfa.text" = "こちらは「企画を探す」から「地図から探す」を選択した画面です。地図に表示されている場所をタップすると、その場所の詳細地図、またはタイムテーブルが表示されます。";
+
+/* Class = "UILabel"; text = "2018年9月15/16日　9:00〜16:00"; ObjectID = "ctO-XY-aIW"; */
+"ctO-XY-aIW.text" = "2018年9月15/16日　9:00〜16:00";
+
+/* Class = "UIViewController"; title = "４階"; ObjectID = "cz6-VB-Pv4"; */
+"cz6-VB-Pv4.title" = "４階";
+
+/* Class = "UINavigationItem"; title = "使い方６"; ObjectID = "egS-n5-RWn"; */
+"egS-n5-RWn.title" = "使い方６";
+
+/* Class = "UITabBarController"; title = "タイムテーブル"; ObjectID = "ez1-eB-Ck1"; */
+"ez1-eB-Ck1.title" = "タイムテーブル";
+
+/* Class = "UINavigationItem"; title = "場所から検索"; ObjectID = "f84-1J-1pM"; */
+"f84-1J-1pM.title" = "場所から検索";
+
+/* Class = "UILabel"; text = "場所コード：0000"; ObjectID = "ffJ-g1-k7a"; */
+"ffJ-g1-k7a.text" = "場所コード：0000";
+
+/* Class = "UIViewController"; title = "７階"; ObjectID = "fhG-dR-aNp"; */
+"fhG-dR-aNp.title" = "７階";
+
+/* Class = "UITabBarController"; title = "３号館"; ObjectID = "fql-xS-haI"; */
+"fql-xS-haI.title" = "３号館";
+
+/* Class = "UINavigationItem"; title = "使い方２"; ObjectID = "gXX-uE-AZq"; */
+"gXX-uE-AZq.title" = "使い方２";
+
+/* Class = "UIButton"; normalTitle = "ホーム"; ObjectID = "gyW-Fv-EOy"; */
+"gyW-Fv-EOy.normalTitle" = "ホーム";
+
+/* Class = "UILabel"; text = "ブックマーク登録済み"; ObjectID = "hxX-dM-SBH"; */
+"hxX-dM-SBH.text" = "ブックマーク登録済み";
+
+/* Class = "UIViewController"; title = "２階"; ObjectID = "iE3-S7-hJW"; */
+"iE3-S7-hJW.title" = "２階";
+
+/* Class = "UITextView"; text = "こちらがホーム画面です。「企画検索」「ブックマーク」「食品・グッズ」「タイムテーブル」「その他」の項目へ移動できます。"; ObjectID = "iGd-Wn-1bO"; */
+"iGd-Wn-1bO.text" = "こちらがホーム画面です。「企画検索」「ブックマーク」「食品・グッズ」「タイムテーブル」「その他」の項目へ移動できます。";
+
+/* Class = "UITextView"; text = "こちらが、タイムテーブルの画面です。画像をドラッグすれば、土・日のスケジュールが隅々まで見れます。また、企画をタップすればその詳細情報を閲覧できます。"; ObjectID = "j4x-0N-2EX"; */
+"j4x-0N-2EX.text" = "こちらが、タイムテーブルの画面です。画像をドラッグすれば、土・日のスケジュールが隅々まで見れます。また、企画をタップすればその詳細情報を閲覧できます。";
+
+/* Class = "UINavigationItem"; title = "ブックマーク一覧"; ObjectID = "j9G-Pn-Ps9"; */
+"j9G-Pn-Ps9.title" = "ブックマーク一覧";
+
+/* Class = "UILabel"; text = "高２　大沼"; ObjectID = "lUh-fP-yGB"; */
+"lUh-fP-yGB.text" = "高２　大沼";
+
+/* Class = "UIButton"; normalTitle = "その他"; ObjectID = "m0k-EV-XGL"; */
+"m0k-EV-XGL.normalTitle" = "その他";
+
+/* Class = "UINavigationItem"; title = "キーワードから検索"; ObjectID = "mi3-GY-25b"; */
+"mi3-GY-25b.title" = "キーワードから検索";
+
+/* Class = "UITextView"; text = "説明文あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"; ObjectID = "mlP-pj-qKd"; */
+"mlP-pj-qKd.text" = "説明文あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ";
+
+/* Class = "UIButton"; normalTitle = "食品"; ObjectID = "nVy-3a-I6r"; */
+"nVy-3a-I6r.normalTitle" = "食品";
+
+/* Class = "UIViewController"; title = "３階"; ObjectID = "nWj-cm-l4K"; */
+"nWj-cm-l4K.title" = "３階";
+
+/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "oNM-pd-L6W"; */
+"oNM-pd-L6W.title" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "クレジット"; ObjectID = "ohY-ob-YeG"; */
+"ohY-ob-YeG.normalTitle" = "クレジット";
+
+/* Class = "UIButton"; normalTitle = "その他"; ObjectID = "owY-fB-7cP"; */
+"owY-fB-7cP.normalTitle" = "その他";
+
+/* Class = "UINavigationItem"; title = "企画詳細"; ObjectID = "pNz-FV-2d4"; */
+"pNz-FV-2d4.title" = "企画詳細";
+
+/* Class = "UINavigationItem"; title = "企画検索"; ObjectID = "qCh-Fx-9DS"; */
+"qCh-Fx-9DS.title" = "企画検索";
+
+/* Class = "UIViewController"; title = "クレジット"; ObjectID = "rBW-Fk-jJy"; */
+"rBW-Fk-jJy.title" = "クレジット";
+
+/* Class = "UILabel"; text = "※ 歩行中の操作はご遠慮ください"; ObjectID = "tbI-du-AU8"; */
+"tbI-du-AU8.text" = "※ 歩行中の操作はご遠慮ください";
+
+/* Class = "UIViewController"; title = "２階"; ObjectID = "u9C-p8-eTU"; */
+"u9C-p8-eTU.title" = "２階";
+
+/* Class = "UIButton"; normalTitle = "企画検索"; ObjectID = "ubb-ho-B9P"; */
+"ubb-ho-B9P.normalTitle" = "企画検索";
+
+/* Class = "UIViewController"; title = "３階"; ObjectID = "xCD-HH-OzU"; */
+"xCD-HH-OzU.title" = "３階";
+
+/* Class = "UINavigationItem"; title = "その他"; ObjectID = "zV0-zf-wC4"; */
+"zV0-zf-wC4.title" = "その他";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "zgA-hc-J5F"; */
+"zgA-hc-J5F.title" = "Title";
+
+/* Class = "UIViewController"; title = "１階"; ObjectID = "zpd-mf-tzf"; */
+"zpd-mf-tzf.title" = "１階";
+
+/* Class = "UINavigationItem"; title = "使い方７"; ObjectID = "zzZ-lO-Aaq"; */
+"zzZ-lO-Aaq.title" = "使い方７";
