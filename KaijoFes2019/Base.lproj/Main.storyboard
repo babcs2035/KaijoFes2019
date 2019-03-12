@@ -1012,7 +1012,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="testTableView" destination="MPz-fW-Wxl" id="gOQ-rg-m3A"/>
-                        <segue destination="EQH-ZF-mps" kind="show" identifier="showDetail2" id="a4L-4Q-f0i"/>
+                        <segue destination="EQH-ZF-mps" kind="show" identifier="showDetail" id="a4L-4Q-f0i"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTJ-KV-fYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4780,7 +4780,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xOw-Lj-yeZ"/>
         <segue reference="6Q6-2a-TIk"/>
-        <segue reference="X0w-BR-teJ"/>
+        <segue reference="a4L-4Q-f0i"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
         <segue reference="wYl-n9-vt8"/>
