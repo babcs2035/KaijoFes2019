@@ -85,7 +85,7 @@ class tableViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    func sideMenu() {
+    @objc func sideMenu() {
         //  サイドメニューが表示されていない時
         if isDisplayedSideMenu == false {
             //  サイドメニューを出す
