@@ -8,7 +8,7 @@
 
 import UIKit
 
-class sideControllingViewController: UIViewController
+class sideBarControllingViewController: UIViewController
 {
     override func viewDidLoad()
 	{
@@ -30,14 +30,14 @@ class sideControllingViewController: UIViewController
         self.performSegue(withIdentifier: "goMap", sender: nil)
     }
 	
+	@IBAction func goBook(_ sender: Any)
+	{
+		self.performSegue(withIdentifier: "goBook", sender: nil)
+	}
+	
     @IBAction func goShop(_ sender: Any)
 	{
         self.performSegue(withIdentifier: "goShop", sender: nil)
-    }
-	
-    @IBAction func goBook(_ sender: Any)
-	{
-        self.performSegue(withIdentifier: "goBook", sender: nil)
     }
 	
     @IBAction func goTime(_ sender: Any)
