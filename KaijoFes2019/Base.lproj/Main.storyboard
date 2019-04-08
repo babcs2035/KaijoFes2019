@@ -2429,7 +2429,7 @@
         <!--サイドバー-->
         <scene sceneID="aU8-mx-Gox">
             <objects>
-                <viewController storyboardIdentifier="sideBar" title="サイドバー" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5z6-ZB-F2k" customClass="sideControllingViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideBar" title="サイドバー" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5z6-ZB-F2k" customClass="sideBarControllingViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t7a-92-06H"/>
                         <viewControllerLayoutGuide type="bottom" id="roH-Fn-ALg"/>
