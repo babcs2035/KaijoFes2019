@@ -8,8 +8,8 @@
 
 import UIKit
 
-class tableViewController: UIViewController, UIScrollViewDelegate {
-
+class timetableViewController: UIViewController, UIScrollViewDelegate
+{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollView2: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -41,7 +41,7 @@ class tableViewController: UIViewController, UIScrollViewDelegate {
         //　サイドメニューを非表示
         sideMenuVC.view.isHidden = true
         
-        let menuButton:UIBarButtonItem = UIBarButtonItem(image: UIImage(named:"naviMenu"), style: .plain, target: self, action: #selector(floorViewController.sideMenu))
+        let menuButton:UIBarButtonItem = UIBarButtonItem(image: UIImage(named:"naviMenu"), style: .plain, target: self, action: #selector(timetableViewController.sideMenu))
         self.tabBarController?.navigationItem.rightBarButtonItem = menuButton
         //　以上、サイドバーの設定
 

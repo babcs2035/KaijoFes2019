@@ -1385,10 +1385,10 @@
             </objects>
             <point key="canvasLocation" x="4158" y="-5015"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Timetable View Controller-->
         <scene sceneID="5px-w9-32z">
             <objects>
-                <viewController id="Ry8-Vd-YKE" customClass="tableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ry8-Vd-YKE" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IUe-gy-eS6"/>
                         <viewControllerLayoutGuide type="bottom" id="MzU-W7-l0Y"/>
@@ -1984,10 +1984,10 @@
             </objects>
             <point key="canvasLocation" x="2880" y="2557"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Timetable View Controller-->
         <scene sceneID="Zxp-9t-EdP">
             <objects>
-                <viewController id="HG1-dF-iNr" customClass="tableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HG1-dF-iNr" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3i-yg-7FJ"/>
                         <viewControllerLayoutGuide type="bottom" id="lCv-AY-tHs"/>
@@ -1999,7 +1999,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" maximumZoomScale="8" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-R6-Xqp">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeSat" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-ya-5mw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeSat" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-ya-5mw" userLabel="Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="336"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfm-LU-GJJ" userLabel="bKaijo">
@@ -4780,7 +4780,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xOw-Lj-yeZ"/>
         <segue reference="jsQ-UO-ejs"/>
-        <segue reference="M77-3j-Vjb"/>
+        <segue reference="gpc-HM-Ywz"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
         <segue reference="wYl-n9-vt8"/>
