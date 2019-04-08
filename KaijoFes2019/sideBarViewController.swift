@@ -11,13 +11,13 @@ import UIKit
 class sideBarViewController: UIViewController
 {
     // サイドメニューが表示中かの真偽
-    var isDisplayedSideMenu: Bool = false
+    var isDisplayedSideBar: Bool = false
     
     // スクリーンサイズ
     var screenWidth: CGFloat = 0
     
     // storyboard 上のサイドメニュー (UIViewController) を格納
-    var sideMenuVC: UIViewController!
+    var sideBarVC: UIViewController!
 	
     override func viewDidLoad()
 	{
@@ -27,10 +27,10 @@ class sideBarViewController: UIViewController
         screenWidth = getScreenSize().0
         
         // メインビューにサイドメニューを追加
-        addSideMenu()
+        addSideBar()
         
         // サイドメニューを非表示
-        sideMenuVC.view.isHidden = true
+        sideBarVC.view.isHidden = true
         
         // グラデーション処理
         let gradientLayer:CAGradientLayer = CAGradientLayer()
@@ -47,9 +47,9 @@ class sideBarViewController: UIViewController
     // 画面遷移時，サイドメニューが出ていれば閉じる
     override func viewWillDisappear(_ animated: Bool)
 	{
-        if isDisplayedSideMenu
+        if isDisplayedSideBar
 		{
-            closeSideMenu()
+            closeSideBar()
         }
     }
 	
@@ -58,41 +58,41 @@ class sideBarViewController: UIViewController
         self.navigationController?.popToRootViewController(animated: true)
     }
 	
-	func performSideMenu()
+	func performSideBar()
 	{
-		if !isDisplayedSideMenu
+		if !isDisplayedSideBar
 		{
-			displaySideMenu()
+			displaySideBar()
 		}
 		else
 		{
-			closeSideMenu()
+			closeSideBar()
 		}
 	}
 	
     @IBAction func buttonSearch(_ sender: Any)
 	{
-		performSideMenu()
+		performSideBar()
     }
     
 	@IBAction func buttonTable(_ sender: Any)
 	{
-		performSideMenu()
+		performSideBar()
     }
     
     @IBAction func buttonSearchMap(_ sender: Any)
 	{
-		performSideMenu()
+		performSideBar()
     }
     
     @IBAction func buttonOther(_ sender: Any)
 	{
-		performSideMenu()
+		performSideBar()
     }
     
     @IBAction func buttonCredit(_ sender: Any)
 	{
-		performSideMenu()
+		performSideBar()
     }
 	
     // スクリーンのサイズを取得
@@ -109,45 +109,45 @@ class sideBarViewController: UIViewController
     }
     
     // サイドメニューをメインビューに追加
-    func addSideMenu()
+    func addSideBar()
 	{
         // サイドメニューをメインビューに追加
-        sideMenuVC = (storyboard?.instantiateViewController(withIdentifier: "sideBar"))! as UIViewController
-        self.addChild(sideMenuVC)
-        self.view.addSubview(sideMenuVC.view)
-        sideMenuVC.didMove(toParent: self)
+        sideBarVC = (storyboard?.instantiateViewController(withIdentifier: "sideBar"))! as UIViewController
+        self.addChild(sideBarVC)
+        self.view.addSubview(sideBarVC.view)
+        sideBarVC.didMove(toParent: self)
         
         // 画面外に追加したサイドメニューを移動
-        sideMenuVC.view.transform = CGAffineTransform(translationX: (screenWidth * -1), y: 0)
+        sideBarVC.view.transform = CGAffineTransform(translationX: (screenWidth * -1), y: 0)
     }
     
     // サイドメニューをメインビューに出す
-    func displaySideMenu()
+    func displaySideBar()
 	{
         // サイドメニューを表示
-        sideMenuVC.view.isHidden = false
+        sideBarVC.view.isHidden = false
 		
         // サイドメニューをアニメーション付きで移動
         UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            self.sideMenuVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1/2), y: 0)
+            self.sideBarVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1/2), y: 0)
         })
         
         // サイドメニューが表示されていることにする
-        isDisplayedSideMenu = true
+        isDisplayedSideBar = true
     }
     
     // サイドメニューを格納
-    func closeSideMenu()
+    func closeSideBar()
 	{
         // サイドメニューをアニメーション付きで移動
         UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            self.sideMenuVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1), y: 0)
+            self.sideBarVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1), y: 0)
         })
         
         // サイドメニューが表示されていることにする
-        isDisplayedSideMenu = false
+        isDisplayedSideBar = false
         
         // サイドメニューを非表示
-        sideMenuVC.view.isHidden = true
+        sideBarVC.view.isHidden = true
     }
 }
