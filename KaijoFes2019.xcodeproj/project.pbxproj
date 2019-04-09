@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BF08414225C4B12005AF79E /* timetableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08413225C4B12005AF79E /* timetableDelegate.swift */; };
+		2BF08416225C4C95005AF79E /* timetableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08415225C4C95005AF79E /* timetableController.swift */; };
+		2BF08418225C4E1B005AF79E /* SatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08417225C4E1B005AF79E /* SatTableViewController.swift */; };
+		2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08419225C4E32005AF79E /* SunTableViewController.swift */; };
+		2BF0841C225C4E9D005AF79E /* KeionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */; };
 		4D5718731EE97013003B95D4 /* SeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5718721EE97013003B95D4 /* SeResultViewController.swift */; };
 		4D83B5871EEE95540063D1E3 /* eventData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4D83B5861EEE95540063D1E3 /* eventData.csv */; };
 		4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEF2A71EE6CA7B00AC9187 /* AppDelegate.swift */; };
@@ -17,13 +22,17 @@
 		9F1035CB1F30378100C16E32 /* bookmarks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9F1035CA1F30378100C16E32 /* bookmarks.csv */; };
 		9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */; };
 		9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */; };
-		9F3AAC8D213B8DCB00AE14FA /* timetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AAC8C213B8DCB00AE14FA /* timetableViewController.swift */; };
 		9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */; };
 		9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F759B1D1F5AB11200879326 /* floorViewController.swift */; };
 		9F7F12D9211DA5D900325688 /* howToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F12D8211DA5D900325688 /* howToViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BF08413225C4B12005AF79E /* timetableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableDelegate.swift; sourceTree = "<group>"; };
+		2BF08415225C4C95005AF79E /* timetableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableController.swift; sourceTree = "<group>"; };
+		2BF08417225C4E1B005AF79E /* SatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatTableViewController.swift; sourceTree = "<group>"; };
+		2BF08419225C4E32005AF79E /* SunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTableViewController.swift; sourceTree = "<group>"; };
+		2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeionTableViewController.swift; sourceTree = "<group>"; };
 		4D5718721EE97013003B95D4 /* SeResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeResultViewController.swift; sourceTree = "<group>"; };
 		4D83B5861EEE95540063D1E3 /* eventData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventData.csv; sourceTree = "<group>"; };
 		4DAEF2A41EE6CA7B00AC9187 /* KaijoFes2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaijoFes2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +46,6 @@
 		9F1035CA1F30378100C16E32 /* bookmarks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bookmarks.csv; sourceTree = "<group>"; };
 		9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideBarViewController.swift; sourceTree = "<group>"; };
 		9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewController.swift; sourceTree = "<group>"; };
-		9F3AAC8C213B8DCB00AE14FA /* timetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableViewController.swift; sourceTree = "<group>"; };
 		9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideBarControllingViewController.swift; sourceTree = "<group>"; };
 		9F759B1D1F5AB11200879326 /* floorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = floorViewController.swift; sourceTree = "<group>"; };
 		9F7F12D8211DA5D900325688 /* howToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = howToViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BF08412225C4861005AF79E /* timetable */ = {
+			isa = PBXGroup;
+			children = (
+				2BF08413225C4B12005AF79E /* timetableDelegate.swift */,
+				2BF08415225C4C95005AF79E /* timetableController.swift */,
+				2BF08417225C4E1B005AF79E /* SatTableViewController.swift */,
+				2BF08419225C4E32005AF79E /* SunTableViewController.swift */,
+				2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */,
+			);
+			path = timetable;
+			sourceTree = "<group>";
+		};
 		4DAEF29B1EE6CA7B00AC9187 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +106,7 @@
 				9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */,
 				9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */,
 				9F759B1D1F5AB11200879326 /* floorViewController.swift */,
-				9F3AAC8C213B8DCB00AE14FA /* timetableViewController.swift */,
+				2BF08412225C4861005AF79E /* timetable */,
 				4DB579D31EEFE79E0047D90E /* eventDetailViewController.swift */,
 				4D5718721EE97013003B95D4 /* SeResultViewController.swift */,
 				4DAEF2B31EE6CA7B00AC9187 /* LaunchScreen.storyboard */,
@@ -171,13 +191,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7F12D9211DA5D900325688 /* howToViewController.swift in Sources */,
+				2BF08418225C4E1B005AF79E /* SatTableViewController.swift in Sources */,
+				2BF0841C225C4E9D005AF79E /* KeionTableViewController.swift in Sources */,
 				4D5718731EE97013003B95D4 /* SeResultViewController.swift in Sources */,
+				2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */,
 				9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */,
 				4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */,
 				9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */,
 				9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */,
+				2BF08416225C4C95005AF79E /* timetableController.swift in Sources */,
+				2BF08414225C4B12005AF79E /* timetableDelegate.swift in Sources */,
 				9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */,
-				9F3AAC8D213B8DCB00AE14FA /* timetableViewController.swift in Sources */,
 				4DB579D41EEFE79E0047D90E /* eventDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1385,10 +1385,10 @@
             </objects>
             <point key="canvasLocation" x="4158" y="-5015"/>
         </scene>
-        <!--Timetable View Controller-->
+        <!--Sun Table View Controller-->
         <scene sceneID="5px-w9-32z">
             <objects>
-                <viewController id="Ry8-Vd-YKE" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ry8-Vd-YKE" customClass="SunTableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IUe-gy-eS6"/>
                         <viewControllerLayoutGuide type="bottom" id="MzU-W7-l0Y"/>
@@ -1400,7 +1400,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-5z-Btc">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeSun" translatesAutoresizingMaskIntoConstraints="NO" id="p60-2P-kdQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeSun" translatesAutoresizingMaskIntoConstraints="NO" id="p60-2P-kdQ" userLabel="Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="342"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L69-nG-wUs" userLabel="bVsboys">
@@ -1624,7 +1624,7 @@
                             <constraint firstItem="dPf-5z-Btc" firstAttribute="leading" secondItem="Vbj-Ct-1yj" secondAttribute="leading" id="xQ4-n5-uc6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="sun" id="2TK-13-dZX"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="sun" id="2TK-13-dZX"/>
                     <connections>
                         <outlet property="imageView2" destination="p60-2P-kdQ" id="G2O-iI-qC1"/>
                         <outlet property="scrollView2" destination="dPf-5z-Btc" id="bC2-z9-D8Q"/>
@@ -1635,10 +1635,10 @@
             </objects>
             <point key="canvasLocation" x="2054" y="2557"/>
         </scene>
-        <!--Floor View Controller-->
+        <!--Keion Table View Controller-->
         <scene sceneID="UpE-of-ffr">
             <objects>
-                <viewController id="mTp-LR-LnS" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mTp-LR-LnS" customClass="KeionTableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Qs-19-Xay"/>
                         <viewControllerLayoutGuide type="bottom" id="md5-Ac-2rq"/>
@@ -1975,7 +1975,7 @@
                             <constraint firstItem="KuC-hB-l1N" firstAttribute="trailing" secondItem="jlv-5R-grQ" secondAttribute="trailingMargin" id="ykG-NA-Die"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabKeion" id="Mka-rc-frC"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="" image="tabKeion" id="Mka-rc-frC"/>
                     <connections>
                         <segue destination="EQH-ZF-mps" kind="show" identifier="segueKeion" id="X0w-BR-teJ"/>
                     </connections>
@@ -1984,10 +1984,10 @@
             </objects>
             <point key="canvasLocation" x="2880" y="2557"/>
         </scene>
-        <!--Timetable View Controller-->
+        <!--Sat Table View Controller-->
         <scene sceneID="Zxp-9t-EdP">
             <objects>
-                <viewController id="HG1-dF-iNr" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HG1-dF-iNr" customClass="SatTableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3i-yg-7FJ"/>
                         <viewControllerLayoutGuide type="bottom" id="lCv-AY-tHs"/>
@@ -2187,9 +2187,7 @@
                             <constraint firstItem="MCT-R6-Xqp" firstAttribute="leading" secondItem="R98-cU-Isb" secondAttribute="leading" id="x5u-N3-Bgp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="sat" id="tfF-cG-lQE">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="sat" id="tfF-cG-lQE"/>
                     <connections>
                         <outlet property="imageView" destination="3bd-ya-5mw" id="yc4-rC-R2E"/>
                         <outlet property="scrollView" destination="MCT-R6-Xqp" id="wwk-Kx-3C5"/>
@@ -2203,8 +2201,8 @@
         <!--タイムテーブル-->
         <scene sceneID="QKC-53-nRb">
             <objects>
-                <tabBarController title="タイムテーブル" id="ez1-eB-Ck1" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="vAM-ee-pGo">
+                <tabBarController title="タイムテーブル" id="ez1-eB-Ck1" customClass="timetableController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vAM-ee-pGo" customClass="timeTable" customModule="KaijoFes2019" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -4780,7 +4778,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xOw-Lj-yeZ"/>
         <segue reference="jsQ-UO-ejs"/>
-        <segue reference="gpc-HM-Ywz"/>
+        <segue reference="M77-3j-Vjb"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
         <segue reference="wYl-n9-vt8"/>
