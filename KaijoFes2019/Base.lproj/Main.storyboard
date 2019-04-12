@@ -1154,7 +1154,7 @@
         <!--キーワードから検索-->
         <scene sceneID="2i2-Tu-XG9">
             <objects>
-                <viewController storyboardIdentifier="searchWord" title="キーワードから検索" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bWF-9v-YJg" customClass="SeResultViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchView" title="キーワードから検索" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bWF-9v-YJg" customClass="searchViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1u-tr-alX"/>
                         <viewControllerLayoutGuide type="bottom" id="nOk-8v-67D"/>
@@ -4777,8 +4777,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xOw-Lj-yeZ"/>
-        <segue reference="jsQ-UO-ejs"/>
-        <segue reference="M77-3j-Vjb"/>
+        <segue reference="RkJ-dG-uqB"/>
+        <segue reference="NFa-m8-1IP"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
         <segue reference="wYl-n9-vt8"/>
