@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SatTableViewController: UIViewController, timetableDelegate
+class SatTableViewController: UIViewController
 {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var imageView: UIImageView!
@@ -61,9 +61,15 @@ class SatTableViewController: UIViewController, timetableDelegate
 		}
 	}
 	
-	func didSelectTab(timetableDelegate: timetableController)
+	override func viewWillAppear(_ animated: Bool)
 	{
-		print("Sat!")
+		// サイドバー初期化
+		SideBar = sideBarCommon()
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: SatTableViewController())
+		self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"naviMenu"), style: .plain, target: self, action: #selector(SatTableViewController.sideBar))
 	}
 	
 	@objc func sideBar()

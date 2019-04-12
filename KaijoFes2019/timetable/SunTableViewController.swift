@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SunTableViewController: UIViewController, timetableDelegate
+class SunTableViewController: UIViewController
 {
 	@IBOutlet weak var scrollView2: UIScrollView!
 	@IBOutlet weak var imageView2: UIImageView!
@@ -61,9 +61,15 @@ class SunTableViewController: UIViewController, timetableDelegate
 		}
 	}
 	
-	func didSelectTab(timetableDelegate: timetableController)
+	override func viewWillAppear(_ animated: Bool)
 	{
-		print("Sun!")
+		// サイドバー初期化
+		SideBar = sideBarCommon()
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: SunTableViewController())
+		self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"naviMenu"), style: .plain, target: self, action: #selector(SunTableViewController.sideBar))
 	}
 	
 	@objc func sideBar()
