@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BF08414225C4B12005AF79E /* timetableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08413225C4B12005AF79E /* timetableDelegate.swift */; };
-		2BF08416225C4C95005AF79E /* timetableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08415225C4C95005AF79E /* timetableController.swift */; };
 		2BF08418225C4E1B005AF79E /* SatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08417225C4E1B005AF79E /* SatTableViewController.swift */; };
 		2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08419225C4E32005AF79E /* SunTableViewController.swift */; };
 		2BF0841C225C4E9D005AF79E /* KeionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */; };
@@ -27,8 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2BF08413225C4B12005AF79E /* timetableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableDelegate.swift; sourceTree = "<group>"; };
-		2BF08415225C4C95005AF79E /* timetableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableController.swift; sourceTree = "<group>"; };
 		2BF08417225C4E1B005AF79E /* SatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatTableViewController.swift; sourceTree = "<group>"; };
 		2BF08419225C4E32005AF79E /* SunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTableViewController.swift; sourceTree = "<group>"; };
 		2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeionTableViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +61,6 @@
 		2BF08412225C4861005AF79E /* timetable */ = {
 			isa = PBXGroup;
 			children = (
-				2BF08413225C4B12005AF79E /* timetableDelegate.swift */,
-				2BF08415225C4C95005AF79E /* timetableController.swift */,
 				2BF08417225C4E1B005AF79E /* SatTableViewController.swift */,
 				2BF08419225C4E32005AF79E /* SunTableViewController.swift */,
 				2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */,
@@ -195,8 +189,6 @@
 				4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */,
 				9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */,
 				9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */,
-				2BF08416225C4C95005AF79E /* timetableController.swift in Sources */,
-				2BF08414225C4B12005AF79E /* timetableDelegate.swift in Sources */,
 				9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */,
 				4DB579D41EEFE79E0047D90E /* eventDetailViewController.swift in Sources */,
 			);
