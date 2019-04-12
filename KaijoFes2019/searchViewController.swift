@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SeResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class searchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     //　以下、サイドバーの設定
     //  サイドメニューが表示中かの真偽
