@@ -63,7 +63,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
             let csvData = try String(contentsOfFile: csvPath!, encoding: String.Encoding.utf8)
             
             // 改行区切りでデータを分割し，配列に格納
-            dataList = csvData.components(separatedBy: "\n")
+            dataList = csvData.components(separatedBy: "*")
             dataList.removeLast()
         }
 		catch
@@ -75,10 +75,16 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         var index = 0;
         while index < dataList.count
         {
-            let dataDetail = dataList[index].components(separatedBy: ",")
-            originEvent.insert(dataDetail[2], at: index);
-            originOrgan.insert(dataDetail[1], at: index);
-            originDetail.insert(dataDetail[3], at:index);
+			// 改行コードを削除
+			dataList[index] = dataList[index].replacingOccurrences(of: "\r\n", with: "")
+			
+			// "" を削除
+			dataList[index] = dataList[index].replacingOccurrences(of: "\"", with: "")
+			
+            var dataDetail = dataList[index].components(separatedBy: ",")
+            originEvent.insert(dataDetail[1], at: index);
+            originOrgan.insert(dataDetail[0], at: index);
+            originDetail.insert(dataDetail[4], at:index);
             index += 1
         }
         

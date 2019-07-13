@@ -102,57 +102,17 @@ class eventDetailViewController: UIViewController
                 bookEnable.isEnabled = true
             }
         }
-        
-        if Int(data[6]) == 1
+		
+		let picName = "i" + String(data[5])
+		circleCut.image = UIImage(named: picName)
+		if data[3] == "classroom"
 		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "コード：" + String(data[5])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 2
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "日時：" + String(data[8])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 3
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "日時：下記参照"
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = String(data[8]) + "\n\n" + "メンバー：" + data[7] + "\n\n" + data[3]
-        }
-		else if Int(data[6]) == 4
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "コード：" + String(data[5])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 5
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "　場所：" + String(data[4])
-            placeName.text = ""
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
+			placeCode.text = "コード：" + String(data[6])
+		}
+		placeName.text = "場所：" + String(data[7])
+		eventName.text = String("    " + data[1])
+		organName.text = data[0]
+		detailText.text = data[4]
     }
 	
 	override func didReceiveMemoryWarning()
