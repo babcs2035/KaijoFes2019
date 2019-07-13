@@ -98,10 +98,10 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         tableField.reloadData()
     }
     
-    //　画面遷移時，サイドメニューが出ていれば閉じる
+    //　画面遷移時，サイドバーが出ていれば閉じる
     override func viewWillDisappear(_ animated: Bool)
 	{
-		if SideBar.sideBarVC.view.isHidden
+		if !SideBar.sideBarVC.view.isHidden
 		{
 			SideBar.closeSideBar()
 		}
