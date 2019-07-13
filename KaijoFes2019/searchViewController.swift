@@ -8,19 +8,8 @@
 
 import UIKit
 
-class SeResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    
-    //　以下、サイドバーの設定
-    //  サイドメニューが表示中かの真偽
-    var isDisplayedSideMenu: Bool = false
-    
-    //  スクリーンサイズを格納するための変数
-    var screenWidth: CGFloat = 0
-    
-    //  storyboard上のサイドメニュー(UIViewController)を格納するためのもの
-    var sideMenuVC: UIViewController!
-    //　以上、サイドバーの設定
-    
+class searchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate
+{
     // アウトレット接続
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableField: UITableView!
@@ -34,35 +23,29 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
     var displayDetail = [""]            // 表示するデータ（説明文）
     var dataList:[String] = []
     var displayList:[String] = []      // 画面遷移時のデータリスト
-    
+	
+	var SideBar = sideBarCommon()
+	
     // 初期化処理
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        //　以下、サイドバーの設定
-            //  スクリーンの幅を取得して、変数に格納
-            screenWidth = getScreenSize().0
-        
-            //  メインビューにサイドメニューを追加
-            addSideMenu()
-        
-            //　サイドメニューを非表示
-            sideMenuVC.view.isHidden = true
-        //以上、サイドバーの設定
-        
-        //以下、グラデーション
-            let gradientLayer:CAGradientLayer = CAGradientLayer()
-            let startColor = UIColor(red: 255/255.0, green: 247/255.0, blue: 99/255.0, alpha: 0.8).cgColor
-            let endColor = UIColor(red: 255/255.0, green: 186/255.0, blue: 36/255.0, alpha: 0.8).cgColor
-            // viewの右上から左下へ
-            gradientLayer.colors = [startColor, endColor]
-            gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-            gradientLayer.frame = view.bounds
-            view.layer.insertSublayer(gradientLayer, at: 0)
-        //以上、グラデーション
-        
+		
+		// サイドバーの設定
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: searchViewController())
+		
+		let gradientLayer:CAGradientLayer = CAGradientLayer()
+		let startColor = UIColor(red: 255/255.0, green: 247/255.0, blue: 99/255.0, alpha: 0.8).cgColor
+		let endColor = UIColor(red: 255/255.0, green: 186/255.0, blue: 36/255.0, alpha: 0.8).cgColor
+		gradientLayer.colors = [startColor, endColor]
+		gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
+		gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+		gradientLayer.frame = view.bounds
+		view.layer.insertSublayer(gradientLayer, at: 0)
+	
         // デリゲート先の設定
         searchBar.delegate = self
         tableField.delegate = self
@@ -79,14 +62,16 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
             // CSV ファイルのデータを取得
             let csvData = try String(contentsOfFile: csvPath!, encoding: String.Encoding.utf8)
             
-            // 改行区切りでデータを分割し、配列に格納
+            // 改行区切りでデータを分割し，配列に格納
             dataList = csvData.components(separatedBy: "\n")
             dataList.removeLast()
-        } catch {
+        }
+		catch
+		{
             print(error)
         }
         
-        // カンマ区切りでデータを分裂し、配列に格納
+        // カンマ区切りでデータを分裂し，配列に格納
         var index = 0;
         while index < dataList.count
         {
@@ -113,14 +98,15 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
         tableField.reloadData()
     }
     
-    //　画面遷移時、サイドメニューが出ていれば閉じる
-    override func viewWillDisappear(_ animated: Bool) {
-        if isDisplayedSideMenu == true {
-            closeSideMenu()
-        }
+    //　画面遷移時，サイドバーが出ていれば閉じる
+    override func viewWillDisappear(_ animated: Bool)
+	{
+		if !SideBar.sideBarVC.view.isHidden
+		{
+			SideBar.closeSideBar()
+		}
     }
-    
-    
+	
     // テーブルの行数を指定する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -129,8 +115,8 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     // Cell に値を設定する
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+	{
         // セルのスタイルを指定する
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "myCell")
         
@@ -151,15 +137,10 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
             // 団体名
             cell.detailTextLabel?.text = displayOrgan[indexPath.row]
         }
-        
+		
         // セルのアクセサリを設定
         cell.accessoryType = .none
-        
-//        // セルの背景色
-//        let transWhite = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.1)
-//        cell.backgroundColor = transWhite
-//        cell.contentView.backgroundColor = transWhite
-        
+		
         return cell
     }
     
@@ -213,7 +194,8 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
                     index += 1
                 }
                 
-            } else if searchBar.selectedScopeButtonIndex == 1
+            }
+			else if searchBar.selectedScopeButtonIndex == 1
             {
                 // 「企画名から」が選択されている場合
                 for event in originEvent
@@ -292,100 +274,14 @@ class SeResultViewController: UIViewController, UITableViewDataSource, UITableVi
             (segue.destination as! eventDetailViewController).data = sender as! [String]
         }
     }
-    
-    
-    //　以下、サイドバーの設定
-    
-    @IBAction func buttonSearchWord(_ sender: Any) {
-        //  サイドメニューが表示されていない時
-        if isDisplayedSideMenu == false {
-            //  サイドメニューを出す
-            displaySideMenu()
-        }
-            //  サイドメニューが表示されている時
-        else {
-            //  サイドメニューを閉じる
-            closeSideMenu()
-        }
+	
+    @IBAction func buttonSearchWord(_ sender: Any)
+	{
+		SideBar.performSideBar()
     }
-    
-    /*
-     *  メソッド
-     */
-    // スクリーンのサイズを取得するためのメソッド
-    func getScreenSize() -> (CGFloat, CGFloat) {
-        
-        //  スクリーンサイズを取得
-        let screenSize = UIScreen.main.bounds.size
-        
-        //  スクリーンの幅と高さを変数に格納
-        let width: CGFloat = screenSize.width
-        let height: CGFloat = screenSize.height
-        
-        return (width, height)
-    }
-    
-    //  サイドメニューをメインビューに追加するためのメソッド
-    func addSideMenu() {
-        
-        //  サイドメニューをメインビューに追加
-        sideMenuVC = (storyboard?.instantiateViewController(withIdentifier: "sideBar"))! as UIViewController
-        self.addChild(sideMenuVC)
-        self.view.addSubview(sideMenuVC.view)
-        sideMenuVC.didMove(toParent: self)
-        
-        //  画面外に追加したサイドメニューを移動
-        sideMenuVC.view.transform = CGAffineTransform(translationX: (screenWidth * -1), y: 0)
-    }
-    
-    //  サイドメニューをメインビューに出すためのメソッド
-    func displaySideMenu() {
-        
-        //　サイドメニューを表示
-        sideMenuVC.view.isHidden = false
-        //  サイドメニューをアニメーション付きで移動させる
-        UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            self.sideMenuVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1/2), y: 0)
-        })
-        
-        //  サイドメニューが表示されていることにする
-        isDisplayedSideMenu = true
-    }
-    
-    //  サイドメニューを格納するためのメソッド
-    func closeSideMenu() {
-        
-        //  サイドメニューをアニメーション付きで移動させる
-        UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            self.sideMenuVC.view.transform = CGAffineTransform(translationX: (self.screenWidth * -1), y: 0)
-        })
-        
-        //  サイドメニューが表示されていることにする
-        isDisplayedSideMenu = false
-        
-        //　サイドメニューを非表示
-        sideMenuVC.view.isHidden = true
-    }
-    //　以上、サイドバーの設定
-    
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
 }

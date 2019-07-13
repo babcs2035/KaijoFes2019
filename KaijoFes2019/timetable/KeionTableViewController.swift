@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KeionTableViewController: UIViewController, timetableDelegate
+class KeionTableViewController: UIViewController
 {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var imageView: UIImageView!
@@ -61,9 +61,15 @@ class KeionTableViewController: UIViewController, timetableDelegate
 		}
 	}
 	
-	func didSelectTab(timetableDelegate: timetableController)
+	override func viewWillAppear(_ animated: Bool)
 	{
-		print("Keion!")
+		// サイドバー初期化
+		SideBar = sideBarCommon()
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: KeionTableViewController())
+		self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"naviMenu"), style: .plain, target: self, action: #selector(KeionTableViewController.sideBar))
 	}
 	
 	@objc func sideBar()
