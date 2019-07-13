@@ -157,8 +157,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 4DAEF29B1EE6CA7B00AC9187;
 			productRefGroup = 4DAEF2A51EE6CA7B00AC9187 /* Products */;
