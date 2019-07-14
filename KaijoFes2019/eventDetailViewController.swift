@@ -62,7 +62,7 @@ class eventDetailViewController: UIViewController
                 // ユーザーが保存した CSV ファイルが無い場合は，初期 CSV ファイルから読み込む
                 path = Bundle.main.path(forResource: "bookmarks", ofType: "csv")
                 let csvData2 = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                bookmarkList = csvData2.components(separatedBy: "\n")
+                bookmarkList = csvData2.components(separatedBy: "*\n")
 				
                 // 原因不明のバグを直すための調整
                 bookmarkList.removeLast()
@@ -71,7 +71,7 @@ class eventDetailViewController: UIViewController
 			{
                 // ユーザーが保存した CSV ファイルのデータを取得する
                 let csvData = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                bookmarkList = csvData.components(separatedBy: "\n")
+                bookmarkList = csvData.components(separatedBy: "*\n")
             }
 			
             // カンマ区切りでデータを分裂し，配列に格納
@@ -103,12 +103,8 @@ class eventDetailViewController: UIViewController
             }
         }
 		
-		let picName = "i" + String(data[5])
-		circleCut.image = UIImage(named: picName)
-		if data[3] == "classroom"
-		{
-			placeCode.text = "コード：" + String(data[6])
-		}
+		circleCut.image = UIImage(named: String(data[6]))
+		placeCode.text = "コード：" + String(data[6])
 		placeName.text = "場所：" + String(data[7])
 		eventName.text = String("    " + data[1])
 		organName.text = data[0]
@@ -148,7 +144,7 @@ class eventDetailViewController: UIViewController
     func saveCSV()
 	{
         // 改行区切りで部活配列を連結
-        let outputStr = bookmarkList.joined(separator: "\n")
+        let outputStr = bookmarkList.joined(separator: "*\n")
         
         do
 		{

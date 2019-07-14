@@ -36,7 +36,7 @@ class bookmarkTableViewController: UITableViewController
                 // 初期 CSV ファイルから読込
                 path = Bundle.main.path(forResource: "bookmarks", ofType: "csv")
                 let csvData = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                let temp = csvData.components(separatedBy: "\n")
+                let temp = csvData.components(separatedBy: "*\n")
 				bookmarkList = temp
                 // 原因不明のバグを直すための調整
                 bookmarkList.removeLast()
@@ -46,7 +46,7 @@ class bookmarkTableViewController: UITableViewController
 			{
                 // ユーザーが保存した CSV ファイルのデータを取得
                 let csvData = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                bookmarkList = csvData.components(separatedBy: "\n")
+                bookmarkList = csvData.components(separatedBy: "*\n")
             }
             
             // CSV ファイルの出力先を確認
@@ -83,8 +83,8 @@ class bookmarkTableViewController: UITableViewController
 				let bookmarkDetail = bookmarkList[indexPath.row].components(separatedBy: ",")
 				
 				// セルのラベルに企画名，団体名を設定
-				cell.textLabel?.text = bookmarkDetail[2]
-				cell.detailTextLabel?.text = bookmarkDetail[1]
+				cell.textLabel?.text = bookmarkDetail[1]
+				cell.detailTextLabel?.text = bookmarkDetail[0]
 				cell.backgroundColor = UIColor.white
 			}
 			// 最終行
