@@ -14,16 +14,9 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableField: UITableView!
     
-    // 変数宣言
-    var originEvent = [""]             // 全データ（企画名）
-    var originOrgan = [""]             // 全データ（団体名）
-    var originDetail = [""]             // 全データ（説明文）
-    var displayEvent = [""]            // 表示するデータ（企画名）
-    var displayOrgan = [""]            // 表示するデータ（団体名）
-    var displayDetail = [""]            // 表示するデータ（説明文）
-    var dataList:[String] = []
-    var displayList:[String] = []      // 画面遷移時のデータリスト
-	
+    // 変数
+    var originList:[String] = []		// 全データ
+    var displayList:[String] = []       // 表示するデータ
 	var SideBar = sideBarCommon()
 	
     // 初期化処理
@@ -55,69 +48,32 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         searchBar.enablesReturnKeyAutomatically = false
         
         // CSV ファイル読み込み
-        do {
-            // CSV ファイルのパス名を取得
-            let csvPath = Bundle.main.path(forResource: "eventData", ofType: "csv")
-            
+        do
+		{
             // CSV ファイルのデータを取得
-            let csvData = try String(contentsOfFile: csvPath!, encoding: String.Encoding.utf8)
+            let csvData = try String(contentsOfFile: Bundle.main.path(forResource: "eventData", ofType: "csv")!, encoding: String.Encoding.utf8)
             
             // 改行区切りでデータを分割し，配列に格納
-            dataList = csvData.components(separatedBy: "*")
-            dataList.removeLast()
+            originList = csvData.components(separatedBy: "*\n")
+            originList.removeLast()
         }
-		catch
-		{
-            print(error)
-        }
-        
-        // カンマ区切りでデータを分裂し，配列に格納
-        var index = 0;
-        while index < dataList.count
-        {
-			// 改行コードを削除
-			dataList[index] = dataList[index].replacingOccurrences(of: "\r\n", with: "")
-			
-			// "" を削除
-			dataList[index] = dataList[index].replacingOccurrences(of: "\"", with: "")
-			
-            var dataDetail = dataList[index].components(separatedBy: ",")
-            originEvent.insert(dataDetail[1], at: index);
-            originOrgan.insert(dataDetail[0], at: index);
-            originDetail.insert(dataDetail[4], at:index);
-            index += 1
-        }
-        
-        originEvent.removeLast()
-        originOrgan.removeLast()
-        originDetail.removeLast()
-        
-        // 表示用配列の初期化（最初は origin をコピーして全て表示する）
-        displayEvent = originEvent
-        displayOrgan = originOrgan
-        displayDetail = originDetail
-        
-        // 画面遷移準備（初期設定）
-        displayList = dataList
+		catch { print(error) }
+		
+        // "" を削除
+		for i in 0 ... (originList.count - 1) { originList[i] = originList[i].replacingOccurrences(of: "\"", with: "") }
+		
+        // 表示用配列を初期化
+        displayList = originList
         
         // テーブル再表示
         tableField.reloadData()
-    }
-    
-    //　画面遷移時，サイドバーが出ていれば閉じる
-    override func viewWillDisappear(_ animated: Bool)
-	{
-		if !SideBar.sideBarVC.view.isHidden
-		{
-			SideBar.closeSideBar()
-		}
     }
 	
     // テーブルの行数を指定する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // 表示用配列の要素数 + 1（件数表示行）を返す
-        return displayEvent.count + 1
+        return displayList.count + 1
     }
     
     // Cell に値を設定する
@@ -125,23 +81,21 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 	{
         // セルのスタイルを指定する
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "myCell")
-        
-        // 最終行かそうでないかで分岐
-        if indexPath.row == displayEvent.count
+		
+		if indexPath.row == displayList.count
         {
             // 最終行の場合は検索結果件数を表示
             cell.textLabel?.textColor = UIColor.lightGray
-            cell.textLabel?.text = "\(displayEvent.count)件の検索結果"
+            cell.textLabel?.text = "\(displayList.count) 件の検索結果"
             
             // 選択不可にする
             cell.selectionStyle = .none
         }
         else
         {
-            // 企画名
-            cell.textLabel?.text = displayEvent[indexPath.row]
-            // 団体名
-            cell.detailTextLabel?.text = displayOrgan[indexPath.row]
+			let details = displayList[indexPath.row].components(separatedBy: ",")
+            cell.textLabel?.text = details[1]
+            cell.detailTextLabel?.text = details[0]
         }
 		
         // セルのアクセサリを設定
@@ -154,7 +108,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
     {
         // 最終行の件数セルは選択不可
-        if indexPath.row >= displayEvent.count { return nil }
+        if indexPath.row >= displayList.count { return nil }
         else { return indexPath }
     }
     
@@ -167,74 +121,22 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         if searchBar.text == ""
         {
             // 空文字列の場合は全表示
-            displayEvent = originEvent
-            displayOrgan = originOrgan
-            displayDetail = originDetail
+			displayList = originList
         }
         else
         {
             // 表示用・伝達用配列を初期化
-            displayEvent = []
-            displayOrgan = []
-            displayDetail = []
             displayList = []
-            
-            // 処理中のインデックス
-            var index = 0
-            
-            // 検索モードにより分岐
-            if searchBar.selectedScopeButtonIndex == 0
-            {
-                // 「全て」が選択されている場合
-                for event in originEvent
-                {
-                    // 検索対象文字を含んでいれば表示用配列（企画名＆団体名＆説明文）に追加
-                    if (event.range(of: searchBar.text!) != nil)||(originOrgan[index].range(of: searchBar.text!) != nil)||(originDetail[index].range(of: searchBar.text!) != nil)
-                    {
-                        displayEvent.append(event)
-                        displayOrgan.append(originOrgan[index])
-                        displayDetail.append(originDetail[index])
-                        displayList.append(dataList[index])
-                        
-                    }
-                    index += 1
-                }
-                
-            }
-			else if searchBar.selectedScopeButtonIndex == 1
-            {
-                // 「企画名から」が選択されている場合
-                for event in originEvent
-                {
-                    // 検索対象文字を含んでいれば表示用配列（企画名）に追加
-                    if event.range(of: searchBar.text!) != nil
-                    {
-                        displayEvent.append(event)
-                        displayOrgan.append(originOrgan[index])
-                        displayDetail.append(originDetail[index])
-                        displayList.append(dataList[index])
-                        
-                    }
-                    index += 1
-                }
-                
-            }
-            else
-            {
-                // 「団体名から」が選択されている場合
-                for organ in originOrgan
-                {
-                    // 検索対象文字を含んでいれば表示用配列（団体名）に追加
-                    if organ.range(of: searchBar.text!) != nil
-                    {
-                        displayOrgan.append(organ)
-                        displayEvent.append(originEvent[index])
-                        displayDetail.append(originDetail[index])
-                        displayList.append(dataList[index])
-                    }
-                    index += 1
-                }
-            }
+			
+			for list in originList
+			{
+				if (searchBar.selectedScopeButtonIndex == 0 && list.range(of: searchBar.text!) != nil)
+					|| (searchBar.selectedScopeButtonIndex == 1 && list.components(separatedBy: ",")[1].range(of: searchBar.text!) != nil)
+					|| (searchBar.selectedScopeButtonIndex == 2 && list.components(separatedBy: ",")[0].range(of: searchBar.text!) != nil)
+				{
+					displayList.append(list)
+				}
+			}
         }
         
         // テーブル再表示
@@ -244,17 +146,14 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
     // サーチバーのキャンセルボタンが押された時の処理
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
     {
+		// キーボードをしまう
+		searchBar.resignFirstResponder()
+		
         // サーチバーの中身を空にする
         searchBar.text = ""
-        
-        // キーボードをしまう
-        searchBar.resignFirstResponder()
-        
-        // 表示用配列を元の配列と同じにする
-        displayEvent = originEvent
-        displayOrgan = originOrgan
-        displayDetail = originDetail
-        displayList = dataList
+		
+        // 全表示
+        displayList = originList
         
         // テーブル再表示
         tableField.reloadData()
@@ -280,6 +179,15 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
             (segue.destination as! eventDetailViewController).data = sender as! [String]
         }
     }
+	
+	//　画面遷移時，サイドバーが出ていれば閉じる
+	override func viewWillDisappear(_ animated: Bool)
+	{
+		if !SideBar.sideBarVC.view.isHidden
+		{
+			SideBar.closeSideBar()
+		}
+	}
 	
     @IBAction func buttonSearchWord(_ sender: Any)
 	{
