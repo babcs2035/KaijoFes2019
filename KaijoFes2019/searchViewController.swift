@@ -75,7 +75,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         // 表示用配列の要素数 + 1（件数表示行）を返す
         return displayList.count + 1
     }
-    
+	
     // Cell に値を設定する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
@@ -96,6 +96,9 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 			let details = displayList[indexPath.row].components(separatedBy: ",")
             cell.textLabel?.text = details[1]
             cell.detailTextLabel?.text = details[0]
+			
+			// サムネイル用にサークルカットをリサイズ
+			cell.imageView?.image = UIImage(named: String(details[6]))?.resize(size: CGSize.init(width: 50, height: 50))
         }
 		
         // セルのアクセサリを設定
@@ -198,4 +201,19 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
     {
         super.didReceiveMemoryWarning()
     }
+}
+
+extension UIImage
+{
+	// 画像をリサイズするメソッド
+	func resize(size _size: CGSize) -> UIImage?
+	{
+		let ratio = min(_size.width / size.width, _size.height / size.height)
+		let resizedSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+		UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
+		draw(in: CGRect(origin: .zero, size: resizedSize))
+		let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return resizedImage
+	}
 }
