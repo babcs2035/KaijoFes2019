@@ -98,7 +98,17 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
             cell.detailTextLabel?.text = details[0]
 			
 			// サムネイル用にサークルカットをリサイズ
-			cell.imageView?.image = UIImage(named: String(details[6]))?.resize(size: CGSize.init(width: 50, height: 50))
+			let tempImage:UIImage? = UIImage(named: String(details[6]))
+			var resImage:UIImage
+			if tempImage != nil
+			{
+				resImage = UIImage(named: String(details[6]))!
+			}
+			else
+			{
+				resImage = UIImage(named: "noimage")!
+			}
+			cell.imageView?.image = resImage.resize(size: CGSize.init(width: 50, height: 50))
         }
 		
         // セルのアクセサリを設定
