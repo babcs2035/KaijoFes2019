@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B7CC0BD22F993360084D131 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */; };
+		2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */; };
 		2BF08418225C4E1B005AF79E /* SatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08417225C4E1B005AF79E /* SatTableViewController.swift */; };
 		2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08419225C4E32005AF79E /* SunTableViewController.swift */; };
 		2BF0841C225C4E9D005AF79E /* KeionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
+		2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		2BF08417225C4E1B005AF79E /* SatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatTableViewController.swift; sourceTree = "<group>"; };
 		2BF08419225C4E32005AF79E /* SunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTableViewController.swift; sourceTree = "<group>"; };
 		2BF0841B225C4E9D005AF79E /* KeionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeionTableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */,
+				2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */,
 				4DAEF2A71EE6CA7B00AC9187 /* AppDelegate.swift */,
 				4DAEF2AB1EE6CA7B00AC9187 /* Main.storyboard */,
 				9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */,
@@ -193,6 +196,7 @@
 				2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */,
 				9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */,
 				4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */,
+				2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */,
 				9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */,
 				9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */,
 				9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */,
