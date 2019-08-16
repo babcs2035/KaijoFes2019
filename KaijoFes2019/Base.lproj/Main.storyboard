@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="-215" y="878"/>
         </scene>
-        <!--企画検索-->
+        <!--selectSearch-->
         <scene sceneID="WUW-Dr-Iqm">
             <objects>
-                <viewController storyboardIdentifier="search" title="企画検索" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58U-OQ-a2K" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search" title="selectSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58U-OQ-a2K" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykV-KG-6N6"/>
                         <viewControllerLayoutGuide type="bottom" id="ntA-ce-VHv"/>
@@ -302,39 +302,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhV-xb-dgR">
-                                <rect key="frame" x="25" y="94" width="364" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-jc-euS">
+                                <rect key="frame" x="20" y="91" width="174" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwg-pa-G30">
+                                        <rect key="frame" x="23" y="8" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="RuO-0z-Wjb"/>
+                                            <constraint firstAttribute="width" secondItem="qwg-pa-G30" secondAttribute="height" multiplier="1:1" id="dnx-Hn-Jfs"/>
+                                        </constraints>
+                                        <state key="normal" image="selectSearch.keyword"/>
+                                        <connections>
+                                            <segue destination="bWF-9v-YJg" kind="show" id="vrr-dg-Maf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キーワードから検索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-7d-TU3">
+                                        <rect key="frame" x="4.3333333333333286" y="133.33333333333334" width="165.33333333333337" height="21.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="lZp-Vy-EGg"/>
+                                    <constraint firstItem="qwg-pa-G30" firstAttribute="leading" secondItem="bPa-jc-euS" secondAttribute="leading" constant="23" id="BUo-fn-jhQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="qwg-pa-G30" secondAttribute="bottom" constant="39" id="GQK-dx-GnD"/>
+                                    <constraint firstItem="qwg-pa-G30" firstAttribute="centerX" secondItem="h5L-7d-TU3" secondAttribute="centerX" id="MO0-Lt-hFl"/>
+                                    <constraint firstAttribute="bottom" secondItem="h5L-7d-TU3" secondAttribute="bottom" constant="20" id="YMZ-Pg-U1P"/>
+                                    <constraint firstItem="qwg-pa-G30" firstAttribute="centerX" secondItem="bPa-jc-euS" secondAttribute="centerX" id="hdg-fJ-gPR"/>
+                                    <constraint firstItem="qwg-pa-G30" firstAttribute="top" secondItem="bPa-jc-euS" secondAttribute="topMargin" id="moS-7N-VTF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
-                                <state key="normal" title="キーワードから探す"/>
-                                <connections>
-                                    <segue destination="bWF-9v-YJg" kind="show" id="tAg-Kc-UCK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-cJ-jpM">
-                                <rect key="frame" x="25" y="184" width="364" height="60"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3up-kF-aYc">
+                                <rect key="frame" x="218" y="91" width="174" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8y-tF-pTG">
+                                        <rect key="frame" x="23" y="8" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="eEb-hS-gb6"/>
+                                            <constraint firstAttribute="width" secondItem="s8y-tF-pTG" secondAttribute="height" multiplier="1:1" id="nlc-u2-jte"/>
+                                        </constraints>
+                                        <state key="normal" image="selectSearch.map"/>
+                                        <connections>
+                                            <segue destination="42H-Oe-R3c" kind="show" id="2Yw-Zc-keq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地図から検索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVs-rs-bGy">
+                                        <rect key="frame" x="31.999999999999993" y="133" width="110.33333333333331" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ZTy-D7-x3E"/>
+                                    <constraint firstAttribute="bottom" secondItem="s8y-tF-pTG" secondAttribute="bottom" constant="39" id="JRy-gw-XM2"/>
+                                    <constraint firstItem="s8y-tF-pTG" firstAttribute="top" secondItem="3up-kF-aYc" secondAttribute="topMargin" id="Sty-oM-8V9"/>
+                                    <constraint firstItem="s8y-tF-pTG" firstAttribute="centerX" secondItem="3up-kF-aYc" secondAttribute="centerX" id="WNd-kS-ikb"/>
+                                    <constraint firstItem="s8y-tF-pTG" firstAttribute="centerX" secondItem="AVs-rs-bGy" secondAttribute="centerX" id="YTI-vG-Dky"/>
+                                    <constraint firstItem="s8y-tF-pTG" firstAttribute="leading" secondItem="3up-kF-aYc" secondAttribute="leading" constant="23" id="rnv-2M-MfJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="AVs-rs-bGy" secondAttribute="bottom" constant="20" id="uyc-y4-hhH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
-                                <state key="normal" title="地図から探す"/>
-                                <connections>
-                                    <segue destination="42H-Oe-R3c" kind="show" id="Psf-GO-Ql2"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95256897346539948" blue="0.90157461488105084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="HhV-xb-dgR" secondAttribute="trailing" constant="5" id="38u-Gl-SPv"/>
-                            <constraint firstItem="XI7-cJ-jpM" firstAttribute="top" secondItem="HhV-xb-dgR" secondAttribute="bottom" constant="30" id="4D7-zG-kXK"/>
-                            <constraint firstItem="HhV-xb-dgR" firstAttribute="leading" secondItem="imD-pC-cRg" secondAttribute="leadingMargin" constant="5" id="OwE-rX-mbI"/>
-                            <constraint firstItem="XI7-cJ-jpM" firstAttribute="leading" secondItem="imD-pC-cRg" secondAttribute="leadingMargin" constant="5" id="ifC-wY-Jo9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XI7-cJ-jpM" secondAttribute="trailing" constant="5" id="qyz-6a-eGi"/>
-                            <constraint firstItem="HhV-xb-dgR" firstAttribute="top" secondItem="ykV-KG-6N6" secondAttribute="bottom" constant="30" id="tNU-Qt-XMp"/>
+                            <constraint firstItem="bPa-jc-euS" firstAttribute="leading" secondItem="imD-pC-cRg" secondAttribute="leadingMargin" id="J84-3S-4nc"/>
+                            <constraint firstItem="bPa-jc-euS" firstAttribute="top" secondItem="3up-kF-aYc" secondAttribute="top" id="KLa-Re-BmC"/>
+                            <constraint firstItem="bPa-jc-euS" firstAttribute="top" secondItem="ykV-KG-6N6" secondAttribute="bottom" constant="27" id="KZa-J2-Foc"/>
+                            <constraint firstItem="3up-kF-aYc" firstAttribute="leading" secondItem="bPa-jc-euS" secondAttribute="trailing" constant="24" id="nWH-rr-ncc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="企画検索" id="qCh-Fx-9DS">
@@ -347,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulp-Oj-9CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="-4224"/>
+            <point key="canvasLocation" x="905.79710144927549" y="-4224.4565217391309"/>
         </scene>
         <!--場所から検索-->
         <scene sceneID="sMx-Ea-Iw3">
@@ -616,7 +652,7 @@
                             <constraint firstItem="xX5-xb-74t" firstAttribute="top" secondItem="vj6-hx-TD6" secondAttribute="top" constant="64" id="zyR-Xk-Mf7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="場所から検索" id="f84-1J-1pM">
+                    <navigationItem key="navigationItem" title="地図から検索" id="f84-1J-1pM">
                         <barButtonItem key="rightBarButtonItem" image="naviMenu" id="XJd-lF-dcN">
                             <connections>
                                 <action selector="buttonSearchMap:" destination="42H-Oe-R3c" id="hbo-5t-t52"/>
@@ -4880,6 +4916,8 @@
         <image name="num8" width="40" height="40"/>
         <image name="sat" width="40" height="40"/>
         <image name="schoolMap" width="1799" height="2602"/>
+        <image name="selectSearch.keyword" width="144" height="144"/>
+        <image name="selectSearch.map" width="144" height="144"/>
         <image name="sun" width="40" height="40"/>
         <image name="tabEat" width="100" height="43"/>
         <image name="tabKeion" width="100" height="43"/>
@@ -4888,13 +4926,13 @@
         <image name="timeSun" width="500" height="713"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xOw-Lj-yeZ"/>
-        <segue reference="RkJ-dG-uqB"/>
+        <segue reference="OZf-5t-zWW"/>
+        <segue reference="6Q6-2a-TIk"/>
         <segue reference="NFa-m8-1IP"/>
-        <segue reference="vl4-r9-aQL"/>
-        <segue reference="eR9-0h-w72"/>
+        <segue reference="evJ-it-AeW"/>
+        <segue reference="XoU-jB-Huk"/>
         <segue reference="wYl-n9-vt8"/>
-        <segue reference="gsa-NM-7Br"/>
+        <segue reference="nto-Iu-OPn"/>
         <segue reference="RNI-Ia-Yd5"/>
     </inferredMetricsTieBreakers>
 </document>
