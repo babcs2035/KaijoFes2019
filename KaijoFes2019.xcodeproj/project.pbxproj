@@ -151,10 +151,9 @@
 			};
 			buildConfigurationList = 4DAEF29F1EE6CA7B00AC9187 /* Build configuration list for PBXProject "KaijoFes2019" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				ja,
