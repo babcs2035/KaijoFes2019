@@ -354,7 +354,7 @@
                                                                 <rect key="frame" x="4" y="0.0" width="167" height="161"/>
                                                                 <state key="normal" image="selectSearch.map"/>
                                                                 <connections>
-                                                                    <segue destination="42H-Oe-R3c" kind="show" identifier="selectMap" id="3yK-hV-5zz"/>
+                                                                    <segue destination="42H-Oe-R3c" kind="show" id="4D8-HH-ukY"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -602,6 +602,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-b4-4as">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="FEb-n6-YFD" kind="show" id="Ph2-N7-b6G"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１号館" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evT-nN-xdG" userLabel="１号館">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -634,6 +637,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-sH-dZC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="Wgy-al-Xvb" kind="show" id="fXl-hN-US3"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.2" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-5k-xHY">
                                                                 <rect key="frame" x="0.0" y="8" width="175.5" height="129"/>
@@ -678,9 +684,12 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYU-CI-PLF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="fql-xS-haI" kind="show" id="gDc-1Q-OV0"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.3" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-do-fyE">
-                                                                <rect key="frame" x="0.0" y="8" width="175.5" height="129.00000000000045"/>
+                                                                <rect key="frame" x="0.0" y="8" width="175.5" height="129"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="３号館" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-sE-gRM" userLabel="３号館">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -710,6 +719,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-mV-eDg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="Ia4-ku-Gy7" kind="show" id="oB9-eJ-iTG"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="４号館" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-j3-T9N" userLabel="４号館">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -757,6 +769,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-2j-bYZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="LYS-FR-UcW" kind="show" id="znP-n1-Trk"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.5" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-iW-Kcd">
                                                                 <rect key="frame" x="0.0" y="8" width="175.5" height="128"/>
@@ -789,6 +804,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbS-wI-jt3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="ez1-eB-Ck1" kind="show" id="eFm-oB-peE"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="グラウンド" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-KM-Sx5" userLabel="グラウンド">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -836,6 +854,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d01-i0-oeV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="ez1-eB-Ck1" kind="show" id="iVx-o8-Mf9"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アリーナ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-mE-cf8" userLabel="アリーナ">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -868,6 +889,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9in-LZ-Rwf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="ez1-eB-Ck1" kind="show" id="hF8-Zt-oDl"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="講堂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEc-Ct-XrS" userLabel="講堂">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -1296,7 +1320,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m31" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-mQ-h8f">
-                                <rect key="frame" x="5" y="245" width="365" height="177.00000000000011"/>
+                                <rect key="frame" x="5" y="245" width="365" height="177"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71m-kM-kuA" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="265.5"/>
@@ -1705,7 +1729,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-F7-8gJ">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dmm-F7-8gJ" secondAttribute="height" multiplier="14:25" id="2Ff-kl-hNR"/>
                                 </constraints>
@@ -1762,7 +1786,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo2" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-Cv-xje">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ryj-Cv-xje" secondAttribute="height" multiplier="14:25" id="dZd-O9-b1s"/>
                                 </constraints>
@@ -3439,7 +3463,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m33" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-Uu-CTu">
-                                <rect key="frame" x="5" y="245" width="365.00000000000023" height="177"/>
+                                <rect key="frame" x="5" y="245" width="365" height="177"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIt-ii-uAt" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="226.5"/>
@@ -5062,7 +5086,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m54" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-OD-sWj">
-                                <rect key="frame" x="5" y="236.5" width="365.00000000000023" height="194"/>
+                                <rect key="frame" x="5" y="236.5" width="365" height="194"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6y0-sO-nUs" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="226.5"/>
@@ -5130,7 +5154,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo3" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-LK-zsc">
-                                <rect key="frame" x="64.5" y="67" width="246" height="440.00000000000011"/>
+                                <rect key="frame" x="64.5" y="67" width="246" height="440"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Oe-LK-zsc" secondAttribute="height" multiplier="14:25" id="Cse-Qx-Aks"/>
                                 </constraints>
@@ -5527,13 +5551,17 @@
         <image name="timeSun" width="500" height="713"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="fXl-hN-US3"/>
+        <segue reference="oB9-eJ-iTG"/>
+        <segue reference="znP-n1-Trk"/>
         <segue reference="OZf-5t-zWW"/>
-        <segue reference="bhD-CN-9am"/>
+        <segue reference="hF8-Zt-oDl"/>
         <segue reference="NFa-m8-1IP"/>
         <segue reference="kg2-WV-VzN"/>
         <segue reference="evJ-it-AeW"/>
         <segue reference="XoU-jB-Huk"/>
-        <segue reference="wYl-n9-vt8"/>
+        <segue reference="gDc-1Q-OV0"/>
+        <segue reference="Ph2-N7-b6G"/>
         <segue reference="nto-Iu-OPn"/>
         <segue reference="RNI-Ia-Yd5"/>
     </inferredMetricsTieBreakers>

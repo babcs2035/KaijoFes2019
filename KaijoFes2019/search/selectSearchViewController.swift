@@ -25,7 +25,7 @@ class selectSearchViewController: UIViewController
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 	{
-		if segue.identifier == "selectMap" { return }
+		if segue.identifier == nil { return }
 		let nextScene = segue.destination as! searchViewController
 		var param:String = ""
 		if segue.identifier == "selectWatch" { param = "watch" }
