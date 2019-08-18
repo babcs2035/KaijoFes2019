@@ -293,7 +293,7 @@
         <!--selectSearch-->
         <scene sceneID="WUW-Dr-Iqm">
             <objects>
-                <viewController storyboardIdentifier="search" title="selectSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58U-OQ-a2K" customClass="sideBarControllingViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectSearch" title="selectSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58U-OQ-a2K" customClass="selectSearchViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykV-KG-6N6"/>
                         <viewControllerLayoutGuide type="bottom" id="ntA-ce-VHv"/>
@@ -306,7 +306,7 @@
                                 <rect key="frame" x="5" y="69" width="365" height="1726"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kr1-1A-bxl">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="1588"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="1608"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-QY-tCn" userLabel="キーワード＆地図">
                                                 <rect key="frame" x="0.0" y="0.0" width="365" height="175.5"/>
@@ -354,7 +354,7 @@
                                                                 <rect key="frame" x="4" y="0.0" width="167" height="161"/>
                                                                 <state key="normal" image="selectSearch.map"/>
                                                                 <connections>
-                                                                    <segue destination="42H-Oe-R3c" kind="show" id="3yK-hV-5zz"/>
+                                                                    <segue destination="42H-Oe-R3c" kind="show" identifier="selectMap" id="3yK-hV-5zz"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -405,6 +405,10 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEy-ud-ShV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <action selector="selectWatch:" destination="aG0-7g-vP4" eventType="touchUpInside" id="iUk-V2-bdy"/>
+                                                                    <segue destination="bWF-9v-YJg" kind="show" identifier="selectWatch" id="wdt-Xq-0l1"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="観る" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-g3-jcP">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -439,6 +443,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQU-41-oeR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="bWF-9v-YJg" kind="show" identifier="selectHear" id="w6B-Vp-i6K"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.hear" translatesAutoresizingMaskIntoConstraints="NO" id="fjS-cR-hJp">
                                                                 <rect key="frame" x="-201.5" y="18" width="578.5" height="102"/>
@@ -485,6 +492,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdH-zD-G6y">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="bWF-9v-YJg" kind="show" identifier="selectExpr" id="eMS-0p-1Pa"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.expr" translatesAutoresizingMaskIntoConstraints="NO" id="opd-7R-63Y">
                                                                 <rect key="frame" x="-201.5" y="18" width="578.5" height="102"/>
@@ -519,6 +529,9 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk0-Jl-k7o">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
+                                                                <connections>
+                                                                    <segue destination="bWF-9v-YJg" kind="show" identifier="selectLearn" id="kg2-WV-VzN"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学ぶ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC4-Rw-ETN">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -913,7 +926,7 @@
                                             <constraint firstItem="yVy-2q-Gb7" firstAttribute="leading" secondItem="gtn-ph-zFy" secondAttribute="leading" id="ccY-bI-s40"/>
                                             <constraint firstItem="Rli-EX-iuq" firstAttribute="top" secondItem="kcF-hS-EiA" secondAttribute="bottom" constant="42" id="dH5-vn-Mf9"/>
                                             <constraint firstItem="yRf-kj-zEc" firstAttribute="width" secondItem="Ga4-rT-Nbt" secondAttribute="width" id="eig-uv-LdI"/>
-                                            <constraint firstAttribute="height" constant="1588" id="fgn-pF-PiI"/>
+                                            <constraint firstAttribute="height" constant="1608" id="fgn-pF-PiI"/>
                                             <constraint firstAttribute="trailing" secondItem="2YU-6W-nt8" secondAttribute="trailing" id="kgY-mC-CrB"/>
                                             <constraint firstItem="yVy-2q-Gb7" firstAttribute="width" secondItem="Rli-EX-iuq" secondAttribute="width" id="lLX-6v-oNp"/>
                                             <constraint firstItem="yRf-kj-zEc" firstAttribute="leading" secondItem="Ga4-rT-Nbt" secondAttribute="leading" id="mTL-Eq-5Fq"/>
@@ -934,7 +947,7 @@
                                     <constraint firstItem="kr1-1A-bxl" firstAttribute="width" secondItem="kiu-YH-oMM" secondAttribute="width" id="1fu-jc-N2D"/>
                                     <constraint firstAttribute="trailing" secondItem="kr1-1A-bxl" secondAttribute="trailing" id="29N-AQ-UOL"/>
                                     <constraint firstItem="kr1-1A-bxl" firstAttribute="leading" secondItem="kiu-YH-oMM" secondAttribute="leading" id="N4P-CF-3ds"/>
-                                    <constraint firstAttribute="bottom" secondItem="kr1-1A-bxl" secondAttribute="bottom" constant="5" id="Tz2-7v-kUz"/>
+                                    <constraint firstAttribute="bottom" secondItem="kr1-1A-bxl" secondAttribute="bottom" constant="118" id="Tz2-7v-kUz"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -950,13 +963,14 @@
                     <navigationItem key="navigationItem" title="企画検索" id="qCh-Fx-9DS">
                         <barButtonItem key="rightBarButtonItem" image="naviMenu" id="c7b-eO-iVN">
                             <connections>
-                                <action selector="buttonSearch:" destination="58U-OQ-a2K" id="hNG-Lt-5Nb"/>
+                                <action selector="sideBarButton:" destination="58U-OQ-a2K" id="bmc-2M-umI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulp-Oj-9CT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aG0-7g-vP4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="903.20000000000005" y="-4225.1874062968518"/>
         </scene>
@@ -5514,8 +5528,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OZf-5t-zWW"/>
-        <segue reference="BYE-uD-HjU"/>
+        <segue reference="bhD-CN-9am"/>
         <segue reference="NFa-m8-1IP"/>
+        <segue reference="kg2-WV-VzN"/>
         <segue reference="evJ-it-AeW"/>
         <segue reference="XoU-jB-Huk"/>
         <segue reference="wYl-n9-vt8"/>

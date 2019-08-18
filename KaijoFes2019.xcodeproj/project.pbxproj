@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5BA28623090AA1003D10E6 /* selectSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BA28523090AA1003D10E6 /* selectSearchViewController.swift */; };
 		2B7CC0BD22F993360084D131 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */; };
 		2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */; };
 		2BF08418225C4E1B005AF79E /* SatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF08417225C4E1B005AF79E /* SatTableViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5BA28523090AA1003D10E6 /* selectSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectSearchViewController.swift; sourceTree = "<group>"; };
 		2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
 		2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		2BF08417225C4E1B005AF79E /* SatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */,
 				9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */,
 				9F759B1D1F5AB11200879326 /* floorViewController.swift */,
+				2B5BA28523090AA1003D10E6 /* selectSearchViewController.swift */,
 				4D5718721EE97013003B95D4 /* searchViewController.swift */,
 				2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */,
 				2BF08412225C4861005AF79E /* timetable */,
@@ -193,6 +196,7 @@
 				2B7CC0BD22F993360084D131 /* eventTableViewCell.swift in Sources */,
 				4D5718731EE97013003B95D4 /* searchViewController.swift in Sources */,
 				2BF0841A225C4E32005AF79E /* SunTableViewController.swift in Sources */,
+				2B5BA28623090AA1003D10E6 /* selectSearchViewController.swift in Sources */,
 				9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */,
 				4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */,
 				2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */,

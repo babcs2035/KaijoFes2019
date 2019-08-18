@@ -17,6 +17,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 	var originList:[String] = []		// 全データ
 	var displayList:[String] = []       // 表示するデータ
 	var SideBar = sideBarCommon()
+	var param:String = ""
 	
 	// 初期化処理
     override func viewDidLoad()
@@ -53,7 +54,19 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		for i in 0 ... (originList.count - 1) { originList[i] = originList[i].replacingOccurrences(of: "\"", with: "") }
 		
 		// 表示用配列を初期化
-		displayList = originList
+		if !param.isEmpty
+		{
+			for list in originList
+			{
+				let details = list.components(separatedBy: ",")
+				if (!param.isEmpty && details[2].range(of: param) != nil)
+				{
+					displayList.append(list)
+				}
+			}
+			originList = displayList
+		}
+		else { displayList = originList }
 		
 		// テーブル再表示
 		eventTable.reloadData()
