@@ -18,17 +18,13 @@ class eventDetailViewController: UIViewController
     @IBOutlet weak var placeCode: UILabel!
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var bookedLabel: UILabel!
+	
     var dataList:[String] = []
     var bookmarkList:[String] = []
     var bookmarkNums:[String] = []
-    
-    // CSV ファイルの保存先
-    var userPath:String!
+    var userPath:String!	// CSV ファイルの保存先
     let fileManager = FileManager()
-	
-    // 検索画面からのデータ受け取り
-    var data:[String] = []
-    
+    var data:[String] = []	// 検索画面からのデータ受け取り
 	var SideBar = sideBarCommon()
 	
     override func viewDidLoad()
@@ -63,8 +59,6 @@ class eventDetailViewController: UIViewController
                 path = Bundle.main.path(forResource: "bookmarks", ofType: "csv")
                 let csvData2 = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
                 bookmarkList = csvData2.components(separatedBy: "*\n")
-				
-                // 原因不明のバグを直すための調整
                 bookmarkList.removeLast()
             }
 			else
@@ -104,16 +98,26 @@ class eventDetailViewController: UIViewController
         }
 		
 		circleCut.image = UIImage(named: String(data[6]))
+		eventName.text = "   " + String(data[1])
+		organName.text = data[0]
 		placeCode.text = "コード：" + String(data[6])
 		placeName.text = "場所：" + String(data[7])
-		eventName.text = String("    " + data[1])
-		organName.text = data[0]
 		detailText.text = data[4]
+		if !data[5].isEmpty
+		{
+			detailText.text += "\n\nリンク\n" + String(data[5])
+		}
     }
 	
 	override func didReceiveMemoryWarning()
 	{
 		super.didReceiveMemoryWarning()
+	}
+	
+	override func viewDidLayoutSubviews()
+	{
+		super.viewDidLayoutSubviews()
+		detailText.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
 	}
 	
 	//　画面遷移時，サイドメニューが出ていれば閉じる
