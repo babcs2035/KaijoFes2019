@@ -62,7 +62,7 @@ class eventDetailViewController: UIViewController
                 // ユーザーが保存した CSV ファイルが無い場合は，初期 CSV ファイルから読み込む
                 path = Bundle.main.path(forResource: "bookmarks", ofType: "csv")
                 let csvData2 = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                bookmarkList = csvData2.components(separatedBy: "\n")
+                bookmarkList = csvData2.components(separatedBy: "*\n")
 				
                 // 原因不明のバグを直すための調整
                 bookmarkList.removeLast()
@@ -71,7 +71,7 @@ class eventDetailViewController: UIViewController
 			{
                 // ユーザーが保存した CSV ファイルのデータを取得する
                 let csvData = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-                bookmarkList = csvData.components(separatedBy: "\n")
+                bookmarkList = csvData.components(separatedBy: "*\n")
             }
 			
             // カンマ区切りでデータを分裂し，配列に格納
@@ -102,57 +102,13 @@ class eventDetailViewController: UIViewController
                 bookEnable.isEnabled = true
             }
         }
-        
-        if Int(data[6]) == 1
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "コード：" + String(data[5])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 2
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "日時：" + String(data[8])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 3
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "日時：下記参照"
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = String(data[8]) + "\n\n" + "メンバー：" + data[7] + "\n\n" + data[3]
-        }
-		else if Int(data[6]) == 4
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "コード：" + String(data[5])
-            placeName.text = "場所：" + String(data[4])
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
-		else if Int(data[6]) == 5
-		{
-            let picName = "i" + String(data[5])
-            circleCut.image = UIImage(named: picName)
-            placeCode.text = "　場所：" + String(data[4])
-            placeName.text = ""
-            eventName.text = String("    " + data[2])
-            organName.text = data[1]
-            detailText.text = data[3]
-        }
+		
+		circleCut.image = UIImage(named: String(data[6]))
+		placeCode.text = "コード：" + String(data[6])
+		placeName.text = "場所：" + String(data[7])
+		eventName.text = String("    " + data[1])
+		organName.text = data[0]
+		detailText.text = data[4]
     }
 	
 	override func didReceiveMemoryWarning()
@@ -188,7 +144,7 @@ class eventDetailViewController: UIViewController
     func saveCSV()
 	{
         // 改行区切りで部活配列を連結
-        let outputStr = bookmarkList.joined(separator: "\n")
+        let outputStr = bookmarkList.joined(separator: "*\n")
         
         do
 		{
