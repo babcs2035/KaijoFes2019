@@ -11,13 +11,13 @@ import UIKit
 class eventDetailViewController: UIViewController
 {
     @IBOutlet weak var circleCut: UIImageView!
-    @IBOutlet weak var bookEnable: UIButton!
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var organName: UILabel!
-    @IBOutlet weak var detailText: UITextView!
-    @IBOutlet weak var placeCode: UILabel!
-    @IBOutlet weak var placeName: UILabel!
-    @IBOutlet weak var bookedLabel: UILabel!
+	@IBOutlet weak var eventName: UILabel!
+	@IBOutlet weak var organName: UILabel!
+	@IBOutlet weak var placeName: UILabel!
+	@IBOutlet weak var eventCategory: UILabel!
+	@IBOutlet weak var detailText: UITextView!
+	@IBOutlet weak var bookEnable: UIButton!
+	@IBOutlet weak var bookLabel: UILabel!
 	
     var dataList:[String] = []
     var bookmarkList:[String] = []
@@ -86,13 +86,13 @@ class eventDetailViewController: UIViewController
 		{
             if String(nums) == String(data[0])
 			{
-                bookedLabel.text = "ブックマーク登録済み"
+                bookLabel.text = "ブックマーク登録済み"
                 bookEnable.isEnabled = false
                 break
             }
 			else
 			{
-                bookedLabel.text = "ブックマーク未登録"
+                bookLabel.text = "ブックマーク未登録"
                 bookEnable.isEnabled = true
             }
         }
@@ -100,8 +100,41 @@ class eventDetailViewController: UIViewController
 		circleCut.image = UIImage(named: String(data[6]))
 		eventName.text = "   " + String(data[1])
 		organName.text = data[0]
-		placeCode.text = "コード：" + String(data[6])
-		placeName.text = "場所：" + String(data[7])
+		if data[3] == "classroom"
+		{
+			placeName.text = "場所：" + String(data[6]) + "（" + String(data[7]) + "）"
+		}
+		else if data[7] == "keion"
+		{
+			placeName.text = "場所はタイムスケジュールをご覧ください"
+		}
+		else
+		{
+			placeName.text = "場所：" + String(data[7])
+		}
+		if data[2] == "expr"
+		{
+			eventCategory.text = "体験する"
+			eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 255 / 255, blue: 20 / 255, alpha: 1)
+		}
+		if data[2] == "learn"
+		{
+			eventCategory.text = "学ぶ"
+			eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 20 / 255, blue: 255 / 255, alpha: 1)
+		}
+		if data[2] == "watch"
+		{
+			eventCategory.text = "観る"
+			eventCategory.backgroundColor = UIColor.init(red: 255 / 255, green: 20 / 255, blue: 20 / 255, alpha: 1)
+		}
+		if data[2] == "hear"
+		{
+			eventCategory.text = "聞く"
+			eventCategory.backgroundColor = UIColor.init(red: 200 / 255, green: 200 / 255, blue: 120 / 255, alpha: 1)
+		}
+		eventCategory.textColor = UIColor.white
+		eventCategory.layer.cornerRadius = 5
+		eventCategory.clipsToBounds = true
 		detailText.text = data[4]
 		if !data[5].isEmpty
 		{
@@ -117,7 +150,7 @@ class eventDetailViewController: UIViewController
 	override func viewDidLayoutSubviews()
 	{
 		super.viewDidLayoutSubviews()
-		detailText.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+		detailText.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
 	}
 	
 	//　画面遷移時，サイドメニューが出ていれば閉じる
@@ -140,7 +173,7 @@ class eventDetailViewController: UIViewController
         bookmarkList.append(dataStr)
         saveCSV()
         bookEnable.isEnabled = false
-        bookedLabel.text = "ブックマーク登録済み"
+        bookLabel.text = "ブックマーク登録済み"
         bookedAlert()
     }
     
