@@ -684,9 +684,6 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYU-CI-PLF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
-                                                                <connections>
-                                                                    <segue destination="fql-xS-haI" kind="show" id="gDc-1Q-OV0"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.3" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-do-fyE">
                                                                 <rect key="frame" x="0.0" y="8" width="175.5" height="129.00000000000045"/>
@@ -1116,9 +1113,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh5-w0-aXu" userLabel="Bu_three">
                                 <rect key="frame" x="37.5" y="433" width="45" height="135"/>
-                                <connections>
-                                    <segue destination="fql-xS-haI" kind="show" id="sQx-KP-2gj"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCL-ua-TLY" userLabel="Bu_four">
                                 <rect key="frame" x="232.5" y="406" width="94" height="27"/>
@@ -1295,82 +1289,6 @@
             </objects>
             <point key="canvasLocation" x="4158" y="-4159"/>
         </scene>
-        <!--１階-->
-        <scene sceneID="bXH-q6-AEl">
-            <objects>
-                <viewController title="１階" id="CFn-Hy-YsR" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zFe-sU-bFo"/>
-                        <viewControllerLayoutGuide type="bottom" id="V2g-CP-HMP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q9a-xc-E6f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dL-pP-vmK" userLabel="falseViewWidth">
-                                <rect key="frame" x="16" y="64" width="343" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="GZ0-tJ-P7W"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDX-5U-dxV" userLabel="falseViewHeight">
-                                <rect key="frame" x="16" y="65" width="1" height="553"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="S78-O1-URN"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m31" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-mQ-h8f">
-                                <rect key="frame" x="5" y="245" width="365" height="177.00000000000011"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71m-kM-kuA" userLabel="Height1">
-                                <rect key="frame" x="17" y="65" width="342" height="265.5"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCu-69-TMP" userLabel="Width1">
-                                <rect key="frame" x="307.5" y="330.5" width="51.5" height="287.5"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-kr-4yd" userLabel="b3101">
-                                <rect key="frame" x="95" y="330.5" width="212.5" height="88.5"/>
-                                <connections>
-                                    <action selector="b3101:" destination="CFn-Hy-YsR" eventType="touchUpInside" id="3yW-IJ-8on"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5dL-pP-vmK" firstAttribute="top" secondItem="zFe-sU-bFo" secondAttribute="bottom" id="1MQ-nP-cmW"/>
-                            <constraint firstItem="iZq-mQ-h8f" firstAttribute="height" secondItem="NDX-5U-dxV" secondAttribute="height" multiplier="0.32" id="2q7-gn-pPk"/>
-                            <constraint firstItem="71m-kM-kuA" firstAttribute="leading" secondItem="NDX-5U-dxV" secondAttribute="trailing" id="8Dn-6q-xzu"/>
-                            <constraint firstItem="71m-kM-kuA" firstAttribute="top" secondItem="5dL-pP-vmK" secondAttribute="bottom" id="8i5-dj-ean"/>
-                            <constraint firstItem="iZq-mQ-h8f" firstAttribute="centerY" secondItem="q9a-xc-E6f" secondAttribute="centerY" id="G0M-kx-0SJ"/>
-                            <constraint firstItem="pWZ-kr-4yd" firstAttribute="width" secondItem="5dL-pP-vmK" secondAttribute="width" multiplier="0.62" id="JWy-GI-1OG"/>
-                            <constraint firstAttribute="trailing" secondItem="iZq-mQ-h8f" secondAttribute="trailing" constant="5" id="JjP-eL-K3g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="71m-kM-kuA" secondAttribute="trailing" id="MTq-Ty-TzK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5dL-pP-vmK" secondAttribute="trailing" id="Pk3-fF-NIO"/>
-                            <constraint firstItem="pWZ-kr-4yd" firstAttribute="top" secondItem="71m-kM-kuA" secondAttribute="bottom" id="Q9c-kV-C5p"/>
-                            <constraint firstItem="iZq-mQ-h8f" firstAttribute="leading" secondItem="q9a-xc-E6f" secondAttribute="leading" constant="5" id="Y3E-yK-JSR"/>
-                            <constraint firstItem="lCu-69-TMP" firstAttribute="width" secondItem="5dL-pP-vmK" secondAttribute="width" multiplier="0.15" id="byn-Si-2rd"/>
-                            <constraint firstItem="iZq-mQ-h8f" firstAttribute="centerX" secondItem="q9a-xc-E6f" secondAttribute="centerX" id="c38-AC-cic"/>
-                            <constraint firstItem="5dL-pP-vmK" firstAttribute="leading" secondItem="q9a-xc-E6f" secondAttribute="leadingMargin" id="eaU-OX-bnO"/>
-                            <constraint firstItem="NDX-5U-dxV" firstAttribute="leading" secondItem="q9a-xc-E6f" secondAttribute="leadingMargin" id="etR-ve-VB7"/>
-                            <constraint firstItem="lCu-69-TMP" firstAttribute="top" secondItem="71m-kM-kuA" secondAttribute="bottom" id="f6z-8P-tHo"/>
-                            <constraint firstItem="71m-kM-kuA" firstAttribute="height" secondItem="NDX-5U-dxV" secondAttribute="height" multiplier="0.48" id="gIL-x8-qd9"/>
-                            <constraint firstItem="lCu-69-TMP" firstAttribute="leading" secondItem="pWZ-kr-4yd" secondAttribute="trailing" id="gvZ-Xk-mgQ"/>
-                            <constraint firstItem="NDX-5U-dxV" firstAttribute="top" secondItem="5dL-pP-vmK" secondAttribute="bottom" id="h5u-lp-6qZ"/>
-                            <constraint firstItem="pWZ-kr-4yd" firstAttribute="height" secondItem="NDX-5U-dxV" secondAttribute="height" multiplier="0.16" id="nKd-O6-4N8"/>
-                            <constraint firstItem="V2g-CP-HMP" firstAttribute="top" secondItem="NDX-5U-dxV" secondAttribute="bottom" id="qzw-G9-DBA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lCu-69-TMP" secondAttribute="trailing" id="rcs-vt-Cri"/>
-                            <constraint firstItem="V2g-CP-HMP" firstAttribute="top" secondItem="lCu-69-TMP" secondAttribute="bottom" id="zjm-Bt-Jbp"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num1" id="IzZ-Xs-Em6"/>
-                    <connections>
-                        <segue destination="EQH-ZF-mps" kind="show" identifier="segue31" id="Bvd-pn-eQN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KaY-U1-0yw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4422" y="4"/>
-        </scene>
         <!--３号館-->
         <scene sceneID="LFx-dw-uCn">
             <objects>
@@ -1380,11 +1298,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="CFn-Hy-YsR" kind="relationship" relationship="viewControllers" id="pva-99-SIb"/>
-                        <segue destination="u9C-p8-eTU" kind="relationship" relationship="viewControllers" id="NaF-1B-l6C"/>
-                        <segue destination="nWj-cm-l4K" kind="relationship" relationship="viewControllers" id="2Kh-pZ-XsO"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voK-qc-K60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3506,82 +3419,6 @@
             </objects>
             <point key="canvasLocation" x="-215.19999999999999" y="14.842578710644679"/>
         </scene>
-        <!--２階-->
-        <scene sceneID="h0H-N2-Sbv">
-            <objects>
-                <viewController title="２階" id="u9C-p8-eTU" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0Sp-G3-LRJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="auU-J7-uX2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6iM-pO-3Et">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWI-5g-HwE" userLabel="falseViewWidth">
-                                <rect key="frame" x="16" y="64" width="343" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="01P-bJ-6nl"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zs-0C-20F" userLabel="falseViewHeight">
-                                <rect key="frame" x="16" y="65" width="1" height="553"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="rdd-65-l7B"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m32" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-VM-qfj">
-                                <rect key="frame" x="5" y="242.5" width="365" height="182"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpg-gM-YhK" userLabel="Height1">
-                                <rect key="frame" x="17" y="65" width="342" height="232.5"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTs-Qh-0L7" userLabel="b3201">
-                                <rect key="frame" x="95.5" y="297.5" width="209.5" height="127"/>
-                                <connections>
-                                    <action selector="b3201:" destination="u9C-p8-eTU" eventType="touchUpInside" id="rHU-pH-R4t"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEx-IP-Nv0" userLabel="Width1">
-                                <rect key="frame" x="305" y="297.5" width="65" height="110.5"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="auU-J7-uX2" firstAttribute="top" secondItem="0Zs-0C-20F" secondAttribute="bottom" id="65z-Jh-k4d"/>
-                            <constraint firstItem="Bpg-gM-YhK" firstAttribute="top" secondItem="pWI-5g-HwE" secondAttribute="bottom" id="6Qk-JX-bcZ"/>
-                            <constraint firstItem="KTs-Qh-0L7" firstAttribute="width" secondItem="pWI-5g-HwE" secondAttribute="width" multiplier="0.61" id="7wJ-if-Qir"/>
-                            <constraint firstItem="jSd-VM-qfj" firstAttribute="height" secondItem="0Zs-0C-20F" secondAttribute="height" multiplier="0.33" id="Ilj-OO-eeB"/>
-                            <constraint firstItem="gEx-IP-Nv0" firstAttribute="height" secondItem="0Zs-0C-20F" secondAttribute="height" multiplier="0.2" id="Jkm-QQ-nSE"/>
-                            <constraint firstItem="Bpg-gM-YhK" firstAttribute="leading" secondItem="0Zs-0C-20F" secondAttribute="trailing" id="LHb-rM-RYS"/>
-                            <constraint firstItem="pWI-5g-HwE" firstAttribute="top" secondItem="0Sp-G3-LRJ" secondAttribute="bottom" id="MZR-g0-Y0v"/>
-                            <constraint firstItem="0Zs-0C-20F" firstAttribute="top" secondItem="pWI-5g-HwE" secondAttribute="bottom" id="Mt9-Wl-aWH"/>
-                            <constraint firstAttribute="trailing" secondItem="gEx-IP-Nv0" secondAttribute="trailing" constant="5" id="PLs-Kv-JDT"/>
-                            <constraint firstItem="jSd-VM-qfj" firstAttribute="leading" secondItem="6iM-pO-3Et" secondAttribute="leading" constant="5" id="QAf-fT-pAH"/>
-                            <constraint firstItem="KTs-Qh-0L7" firstAttribute="height" secondItem="0Zs-0C-20F" secondAttribute="height" multiplier="0.23" id="Ra0-5J-BSd"/>
-                            <constraint firstAttribute="trailing" secondItem="jSd-VM-qfj" secondAttribute="trailing" constant="5" id="VaT-Cs-vbn"/>
-                            <constraint firstItem="0Zs-0C-20F" firstAttribute="leading" secondItem="6iM-pO-3Et" secondAttribute="leadingMargin" id="Wum-zV-g1a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bpg-gM-YhK" secondAttribute="trailing" id="XdC-3d-WFy"/>
-                            <constraint firstItem="jSd-VM-qfj" firstAttribute="centerX" secondItem="6iM-pO-3Et" secondAttribute="centerX" id="ZIA-mu-hwV"/>
-                            <constraint firstItem="pWI-5g-HwE" firstAttribute="leading" secondItem="6iM-pO-3Et" secondAttribute="leadingMargin" id="aEO-Db-gBC"/>
-                            <constraint firstItem="gEx-IP-Nv0" firstAttribute="top" secondItem="Bpg-gM-YhK" secondAttribute="bottom" id="bpL-KM-G1c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pWI-5g-HwE" secondAttribute="trailing" id="kYr-8T-PJb"/>
-                            <constraint firstItem="jSd-VM-qfj" firstAttribute="centerY" secondItem="6iM-pO-3Et" secondAttribute="centerY" id="l4t-FX-skl"/>
-                            <constraint firstItem="gEx-IP-Nv0" firstAttribute="leading" secondItem="KTs-Qh-0L7" secondAttribute="trailing" id="n7i-dc-FS1"/>
-                            <constraint firstItem="KTs-Qh-0L7" firstAttribute="top" secondItem="Bpg-gM-YhK" secondAttribute="bottom" id="nHz-10-5X8"/>
-                            <constraint firstItem="gEx-IP-Nv0" firstAttribute="width" secondItem="pWI-5g-HwE" secondAttribute="width" multiplier="0.19" id="tMV-MZ-Ryg"/>
-                            <constraint firstItem="Bpg-gM-YhK" firstAttribute="height" secondItem="0Zs-0C-20F" secondAttribute="height" multiplier="0.42" id="xNy-Mp-eTp"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num2" id="TBo-7l-c98"/>
-                    <connections>
-                        <segue destination="EQH-ZF-mps" kind="show" identifier="segue32" id="IAT-h2-Hvb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ejn-rL-sXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5284" y="4"/>
-        </scene>
         <!--５号館-->
         <scene sceneID="gAb-kJ-usW">
             <objects>
@@ -3619,105 +3456,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbM-X5-N2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4419" y="1676"/>
+            <point key="canvasLocation" x="4154" y="850"/>
         </scene>
-        <!--３階-->
-        <scene sceneID="tPO-oi-KrP">
-            <objects>
-                <viewController title="３階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nWj-cm-l4K" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dCM-nk-TKu"/>
-                        <viewControllerLayoutGuide type="bottom" id="vxg-QY-IAo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CPE-bB-dlq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-TC-JwC" userLabel="falseViewWidth">
-                                <rect key="frame" x="16" y="64" width="343" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="ntk-Lm-SkV"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFV-md-VjN" userLabel="falseViewHeight">
-                                <rect key="frame" x="16" y="65" width="1" height="553"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="3RQ-xF-uHY"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m33" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-Uu-CTu">
-                                <rect key="frame" x="5" y="245" width="365.00000000000023" height="177"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIt-ii-uAt" userLabel="Height1">
-                                <rect key="frame" x="17" y="65" width="342" height="226.5"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otl-aU-SZ6" userLabel="b3302">
-                                <rect key="frame" x="205.5" y="291.5" width="109.5" height="127.5"/>
-                                <connections>
-                                    <action selector="b3302:" destination="nWj-cm-l4K" eventType="touchUpInside" id="x4S-G6-0QH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7Z-eD-OEC" userLabel="b3301">
-                                <rect key="frame" x="-0.5" y="291.5" width="99.5" height="127.5"/>
-                                <connections>
-                                    <action selector="b3301:" destination="nWj-cm-l4K" eventType="touchUpInside" id="Mcg-aK-u3n"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyp-a2-BWt" userLabel="Width1">
-                                <rect key="frame" x="315" y="291.5" width="55" height="127.5"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4f-nJ-6Wt">
-                                <rect key="frame" x="99" y="291.5" width="106.5" height="127.5"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vxg-QY-IAo" firstAttribute="top" secondItem="aFV-md-VjN" secondAttribute="bottom" id="05n-Rm-18J"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Y6-TC-JwC" secondAttribute="trailing" id="1V6-aw-eb9"/>
-                            <constraint firstItem="6Y6-TC-JwC" firstAttribute="leading" secondItem="CPE-bB-dlq" secondAttribute="leadingMargin" id="3nr-9O-gal"/>
-                            <constraint firstItem="Wyp-a2-BWt" firstAttribute="leading" secondItem="Otl-aU-SZ6" secondAttribute="trailing" id="47N-Bz-5yK"/>
-                            <constraint firstItem="Otl-aU-SZ6" firstAttribute="top" secondItem="EIt-ii-uAt" secondAttribute="bottom" id="5a2-Wx-eHf"/>
-                            <constraint firstItem="aFV-md-VjN" firstAttribute="leading" secondItem="CPE-bB-dlq" secondAttribute="leadingMargin" id="Adw-9j-Rvv"/>
-                            <constraint firstItem="L7Z-eD-OEC" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.23" id="ELc-nO-DDm"/>
-                            <constraint firstItem="n4f-nJ-6Wt" firstAttribute="top" secondItem="EIt-ii-uAt" secondAttribute="bottom" id="F3W-ke-Au7"/>
-                            <constraint firstItem="n4f-nJ-6Wt" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.23" id="I4y-7q-KZ8"/>
-                            <constraint firstItem="cdY-Uu-CTu" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.32" id="KbO-Py-34N"/>
-                            <constraint firstItem="Otl-aU-SZ6" firstAttribute="leading" secondItem="n4f-nJ-6Wt" secondAttribute="trailing" id="OH6-Yp-7l2"/>
-                            <constraint firstAttribute="trailing" secondItem="Wyp-a2-BWt" secondAttribute="trailing" constant="5" id="Ok5-No-0JG"/>
-                            <constraint firstItem="Wyp-a2-BWt" firstAttribute="top" secondItem="EIt-ii-uAt" secondAttribute="bottom" id="W48-Yj-C0M"/>
-                            <constraint firstItem="EIt-ii-uAt" firstAttribute="top" secondItem="6Y6-TC-JwC" secondAttribute="bottom" id="WA6-2k-7Jk"/>
-                            <constraint firstItem="n4f-nJ-6Wt" firstAttribute="width" secondItem="6Y6-TC-JwC" secondAttribute="width" multiplier="0.31" id="YPV-fA-I8e"/>
-                            <constraint firstItem="EIt-ii-uAt" firstAttribute="leading" secondItem="aFV-md-VjN" secondAttribute="trailing" id="Zue-yo-WaY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EIt-ii-uAt" secondAttribute="trailing" id="a9k-pl-RoL"/>
-                            <constraint firstItem="cdY-Uu-CTu" firstAttribute="leading" secondItem="CPE-bB-dlq" secondAttribute="leading" constant="5" id="b68-I1-Kqq"/>
-                            <constraint firstItem="Wyp-a2-BWt" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.23" id="c9i-ug-LYC"/>
-                            <constraint firstAttribute="trailing" secondItem="cdY-Uu-CTu" secondAttribute="trailing" constant="5" id="dIG-U2-hK3"/>
-                            <constraint firstItem="L7Z-eD-OEC" firstAttribute="width" secondItem="6Y6-TC-JwC" secondAttribute="width" multiplier="0.29" id="gi4-SO-Ddb"/>
-                            <constraint firstItem="EIt-ii-uAt" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.41" id="iCn-Wo-ZiB"/>
-                            <constraint firstItem="L7Z-eD-OEC" firstAttribute="top" secondItem="EIt-ii-uAt" secondAttribute="bottom" id="ijV-OW-hnu"/>
-                            <constraint firstItem="Wyp-a2-BWt" firstAttribute="width" secondItem="6Y6-TC-JwC" secondAttribute="width" multiplier="0.16" id="jkB-7X-zWN"/>
-                            <constraint firstItem="Otl-aU-SZ6" firstAttribute="height" secondItem="aFV-md-VjN" secondAttribute="height" multiplier="0.23" id="mVJ-pZ-V4Q"/>
-                            <constraint firstItem="aFV-md-VjN" firstAttribute="top" secondItem="6Y6-TC-JwC" secondAttribute="bottom" id="npW-UX-VbU"/>
-                            <constraint firstItem="cdY-Uu-CTu" firstAttribute="centerY" secondItem="CPE-bB-dlq" secondAttribute="centerY" id="r1J-nP-Om4"/>
-                            <constraint firstItem="cdY-Uu-CTu" firstAttribute="centerX" secondItem="CPE-bB-dlq" secondAttribute="centerX" id="rQG-1H-wUo"/>
-                            <constraint firstItem="Otl-aU-SZ6" firstAttribute="width" secondItem="6Y6-TC-JwC" secondAttribute="width" multiplier="0.32" id="uqB-6O-FnB"/>
-                            <constraint firstItem="n4f-nJ-6Wt" firstAttribute="leading" secondItem="L7Z-eD-OEC" secondAttribute="trailing" id="yJl-cw-qmr"/>
-                            <constraint firstItem="6Y6-TC-JwC" firstAttribute="top" secondItem="dCM-nk-TKu" secondAttribute="bottom" id="zWn-IC-mj1"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num3" id="QOf-4n-eju"/>
-                    <connections>
-                        <segue destination="EQH-ZF-mps" kind="show" identifier="segue33" id="uJ7-VY-9MG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P6s-Jc-8Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6123" y="4"/>
-        </scene>
-        <!--２階-->
+        <!--floor.12-->
         <scene sceneID="WrS-ZX-wDb">
             <objects>
-                <viewController title="２階" id="iE3-S7-hJW" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.12" id="iE3-S7-hJW" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sfw-xQ-RWs"/>
                         <viewControllerLayoutGuide type="bottom" id="RR0-vW-JJo"/>
@@ -3738,7 +3482,7 @@
                                     <constraint firstAttribute="width" constant="1" id="pgj-Bi-EOI"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m12" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-QQ-Y2v">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.12" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-QQ-Y2v">
                                 <rect key="frame" x="5" y="145.5" width="365" height="376"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsQ-t0-2Sm" userLabel="Height1">
@@ -3858,10 +3602,10 @@
             </objects>
             <point key="canvasLocation" x="4158" y="-2519"/>
         </scene>
-        <!--３階-->
+        <!--floor.23-->
         <scene sceneID="NNl-Je-QOf">
             <objects>
-                <viewController title="３階" id="xCD-HH-OzU" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.23" id="xCD-HH-OzU" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vAe-st-yXJ"/>
                         <viewControllerLayoutGuide type="bottom" id="jre-FJ-nNn"/>
@@ -3882,8 +3626,8 @@
                                     <constraint firstAttribute="width" constant="1" id="kgD-jI-LMc"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m23" translatesAutoresizingMaskIntoConstraints="NO" id="geS-4G-uUL">
-                                <rect key="frame" x="5" y="225.5" width="365" height="216"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.23" translatesAutoresizingMaskIntoConstraints="NO" id="geS-4G-uUL">
+                                <rect key="frame" x="5" y="130.5" width="365" height="406"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uR1-26-OBJ" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="160.5"/>
@@ -3994,7 +3738,6 @@
                             <constraint firstItem="Rix-OV-cB5" firstAttribute="height" secondItem="G0p-oT-rc2" secondAttribute="height" multiplier="0.12" id="dKf-Bu-WSZ"/>
                             <constraint firstItem="1OS-Ev-cvG" firstAttribute="leading" secondItem="vDE-Ho-Nwb" secondAttribute="trailing" id="eAu-mP-RPB"/>
                             <constraint firstItem="HnG-kj-WuO" firstAttribute="leading" secondItem="MKs-zF-eFq" secondAttribute="trailing" id="eVa-12-g9J"/>
-                            <constraint firstItem="geS-4G-uUL" firstAttribute="height" secondItem="G0p-oT-rc2" secondAttribute="height" multiplier="0.39" id="ejy-uB-k3w"/>
                             <constraint firstItem="vDE-Ho-Nwb" firstAttribute="height" secondItem="G0p-oT-rc2" secondAttribute="height" multiplier="0.12" id="ffo-kK-vyY"/>
                             <constraint firstItem="geS-4G-uUL" firstAttribute="centerX" secondItem="Hgn-Xo-RRL" secondAttribute="centerX" id="hPU-Ly-5D1"/>
                             <constraint firstItem="1OS-Ev-cvG" firstAttribute="top" secondItem="uR1-26-OBJ" secondAttribute="bottom" id="hcB-zo-2aV"/>
@@ -4025,10 +3768,10 @@
             </objects>
             <point key="canvasLocation" x="4422" y="-1669"/>
         </scene>
-        <!--３階-->
+        <!--floor.13-->
         <scene sceneID="x1J-Hq-8pR">
             <objects>
-                <viewController title="３階" id="RjQ-op-0e3" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.13" id="RjQ-op-0e3" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xvx-j8-oRw"/>
                         <viewControllerLayoutGuide type="bottom" id="dq8-WT-hb8"/>
@@ -4049,7 +3792,7 @@
                                     <constraint firstAttribute="width" constant="1" id="IeZ-C3-eKz"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m13" translatesAutoresizingMaskIntoConstraints="NO" id="s3X-2I-ikk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.13" translatesAutoresizingMaskIntoConstraints="NO" id="s3X-2I-ikk">
                                 <rect key="frame" x="5" y="149" width="365" height="369"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0w-7q-fEz" userLabel="Height1">
@@ -4141,10 +3884,10 @@
             </objects>
             <point key="canvasLocation" x="5284" y="-3349"/>
         </scene>
-        <!--４階-->
+        <!--floor.24-->
         <scene sceneID="4cb-Hq-hpr">
             <objects>
-                <viewController title="４階" id="BGi-0A-GLx" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.24" id="BGi-0A-GLx" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cLv-Ln-h3J"/>
                         <viewControllerLayoutGuide type="bottom" id="Oga-MV-dZ6"/>
@@ -4165,7 +3908,7 @@
                                     <constraint firstAttribute="width" constant="1" id="Nkq-lr-Nu3"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m24" translatesAutoresizingMaskIntoConstraints="NO" id="MD3-gb-CMH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.24" translatesAutoresizingMaskIntoConstraints="NO" id="MD3-gb-CMH">
                                 <rect key="frame" x="5" y="217.5" width="365" height="232"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiR-dz-9Jr" userLabel="Height1">
@@ -4264,10 +4007,10 @@
             </objects>
             <point key="canvasLocation" x="5284" y="-1669"/>
         </scene>
-        <!--６階-->
+        <!--floor.26-->
         <scene sceneID="D96-Zi-GLo">
             <objects>
-                <viewController title="６階" id="25D-BU-c9Z" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.26" id="25D-BU-c9Z" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vaq-gv-R8F"/>
                         <viewControllerLayoutGuide type="bottom" id="kQ6-uV-lYu"/>
@@ -4288,8 +4031,8 @@
                                     <constraint firstAttribute="width" constant="1" id="JYN-Jc-smE"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m26" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-Sr-xQE">
-                                <rect key="frame" x="5" y="214.5" width="365" height="238"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.26" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-Sr-xQE">
+                                <rect key="frame" x="5" y="214.5" width="365.00000000000023" height="238"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-zh-nm3" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="149.5"/>
@@ -4417,10 +4160,10 @@
             </objects>
             <point key="canvasLocation" x="6123" y="-1669"/>
         </scene>
-        <!--７階-->
+        <!--floor.27-->
         <scene sceneID="TMF-x6-B52">
             <objects>
-                <viewController title="７階" id="fhG-dR-aNp" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.27" id="fhG-dR-aNp" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oH2-Ge-7Cf"/>
                         <viewControllerLayoutGuide type="bottom" id="rO6-1K-EKf"/>
@@ -4441,8 +4184,8 @@
                                     <constraint firstAttribute="width" constant="1" id="15M-TC-UuW"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m27" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-q8-xq2">
-                                <rect key="frame" x="5" y="214.5" width="365" height="238"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.27" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-q8-xq2">
+                                <rect key="frame" x="5" y="214.5" width="365.00000000000023" height="238"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-0I-GE0" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="149.5"/>
@@ -4567,10 +4310,10 @@
             </objects>
             <point key="canvasLocation" x="6964" y="-1669"/>
         </scene>
-        <!--８階-->
+        <!--floor.28-->
         <scene sceneID="ehS-wg-5Bj">
             <objects>
-                <viewController title="８階" id="Wc0-Jd-yar" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.28" id="Wc0-Jd-yar" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IXv-Aq-GBB"/>
                         <viewControllerLayoutGuide type="bottom" id="8R9-Fb-Luj"/>
@@ -4591,7 +4334,7 @@
                                     <constraint firstAttribute="width" constant="1" id="sQa-pE-mXN"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m28" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-qW-iHB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.28" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-qW-iHB">
                                 <rect key="frame" x="5" y="214.5" width="365" height="238"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeS-9p-Tad" userLabel="Height1">
@@ -4704,10 +4447,10 @@
             </objects>
             <point key="canvasLocation" x="7822" y="-1669"/>
         </scene>
-        <!--１階-->
+        <!--floor.41-->
         <scene sceneID="e7T-qY-Psd">
             <objects>
-                <viewController title="１階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zpd-mf-tzf" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.41" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zpd-mf-tzf" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e95-Iy-zCR"/>
                         <viewControllerLayoutGuide type="bottom" id="Pg7-ym-AIP"/>
@@ -4728,8 +4471,8 @@
                                     <constraint firstAttribute="width" constant="1" id="hsF-Mh-ayH"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m41" translatesAutoresizingMaskIntoConstraints="NO" id="l5s-0w-AAu">
-                                <rect key="frame" x="5" y="270" width="365" height="127"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.41" translatesAutoresizingMaskIntoConstraints="NO" id="l5s-0w-AAu">
+                                <rect key="frame" x="5" y="270" width="365.00000000000023" height="127"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZB-UT-udD" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="243.5"/>
@@ -4778,12 +4521,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20f-Bf-D7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4155" y="840"/>
+            <point key="canvasLocation" x="4418" y="1675"/>
         </scene>
-        <!--２階-->
+        <!--floor.42-->
         <scene sceneID="3Jt-FG-oua">
             <objects>
-                <viewController title="２階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wv7-dH-S7X" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.42" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wv7-dH-S7X" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NZs-KR-opX"/>
                         <viewControllerLayoutGuide type="bottom" id="a5G-zz-cxd"/>
@@ -4804,8 +4547,8 @@
                                     <constraint firstAttribute="width" constant="1" id="SGK-su-tS6"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m42" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-9r-jhE">
-                                <rect key="frame" x="5" y="270" width="365" height="127"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.42" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-9r-jhE">
+                                <rect key="frame" x="5" y="270" width="365.00000000000023" height="127"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-OB-vX9" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="243.5"/>
@@ -4893,10 +4636,10 @@
             </objects>
             <point key="canvasLocation" x="5284" y="1676"/>
         </scene>
-        <!--３階-->
+        <!--floor.43-->
         <scene sceneID="zMm-qT-Wle">
             <objects>
-                <viewController title="３階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bHF-g2-ftH" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.43" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bHF-g2-ftH" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qkw-IG-mmA"/>
                         <viewControllerLayoutGuide type="bottom" id="ROV-nD-URr"/>
@@ -4917,8 +4660,8 @@
                                     <constraint firstAttribute="width" constant="1" id="MCD-QN-tZJ"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m43" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-SY-YfG">
-                                <rect key="frame" x="5" y="270" width="365" height="127"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.43" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-SY-YfG">
+                                <rect key="frame" x="5" y="270" width="365.00000000000023" height="127"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiW-P6-kfT" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="243.5"/>
@@ -5013,10 +4756,10 @@
             </objects>
             <point key="canvasLocation" x="6123" y="1676"/>
         </scene>
-        <!--１階-->
+        <!--floor.51-->
         <scene sceneID="Nca-N8-99c">
             <objects>
-                <viewController title="１階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTi-wh-A7w" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.51" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTi-wh-A7w" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="03k-Rh-UoI"/>
                         <viewControllerLayoutGuide type="bottom" id="EJH-kl-WtD"/>
@@ -5037,7 +4780,7 @@
                                     <constraint firstAttribute="width" constant="1" id="zt0-X5-wUM"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m51" translatesAutoresizingMaskIntoConstraints="NO" id="hpQ-Zf-gcZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.51" translatesAutoresizingMaskIntoConstraints="NO" id="hpQ-Zf-gcZ">
                                 <rect key="frame" x="5" y="272.5" width="365" height="122"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugv-no-atY" userLabel="Height1">
@@ -5082,10 +4825,10 @@
             </objects>
             <point key="canvasLocation" x="4419" y="3363"/>
         </scene>
-        <!--２階-->
+        <!--floor.52-->
         <scene sceneID="uvh-H9-n6o">
             <objects>
-                <viewController title="２階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V2K-FQ-CWL" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.52" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V2K-FQ-CWL" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iP1-dw-Rac"/>
                         <viewControllerLayoutGuide type="bottom" id="6la-y7-EUD"/>
@@ -5106,8 +4849,8 @@
                                     <constraint firstAttribute="width" constant="1" id="yjL-S5-Qdw"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m52" translatesAutoresizingMaskIntoConstraints="NO" id="ipx-9S-XUe">
-                                <rect key="frame" x="5" y="264.5" width="365" height="138"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.52" translatesAutoresizingMaskIntoConstraints="NO" id="ipx-9S-XUe">
+                                <rect key="frame" x="5" y="264.5" width="365" height="138.00000000000006"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-jw-iaJ" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="210"/>
@@ -5151,10 +4894,10 @@
             </objects>
             <point key="canvasLocation" x="5284" y="3363"/>
         </scene>
-        <!--３階-->
+        <!--floor.53-->
         <scene sceneID="phP-BN-GHT">
             <objects>
-                <viewController title="３階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5QX-4i-2MG" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.53" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5QX-4i-2MG" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fEG-94-XhG"/>
                         <viewControllerLayoutGuide type="bottom" id="qZM-2v-1hG"/>
@@ -5175,8 +4918,8 @@
                                     <constraint firstAttribute="width" constant="1" id="bIA-rY-7Tq"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m53" translatesAutoresizingMaskIntoConstraints="NO" id="3ZX-qg-Ibv">
-                                <rect key="frame" x="5" y="270" width="365" height="127"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.53" translatesAutoresizingMaskIntoConstraints="NO" id="3ZX-qg-Ibv">
+                                <rect key="frame" x="5" y="270" width="365.00000000000023" height="127"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ap-9b-UVV" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="210"/>
@@ -5244,10 +4987,10 @@
             </objects>
             <point key="canvasLocation" x="6123" y="3363"/>
         </scene>
-        <!--４階-->
+        <!--floor.54-->
         <scene sceneID="iLd-ID-3cQ">
             <objects>
-                <viewController title="４階" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cz6-VB-Pv4" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="floor.54" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cz6-VB-Pv4" customClass="floorViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oWO-Ua-yS9"/>
                         <viewControllerLayoutGuide type="bottom" id="oxM-7M-WDL"/>
@@ -5268,8 +5011,8 @@
                                     <constraint firstAttribute="width" constant="1" id="g1m-tJ-ahi"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m54" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-OD-sWj">
-                                <rect key="frame" x="5" y="236.5" width="365.00000000000023" height="194"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor.54" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-OD-sWj">
+                                <rect key="frame" x="5" y="236.5" width="365" height="194"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6y0-sO-nUs" userLabel="Height1">
                                 <rect key="frame" x="17" y="65" width="342" height="226.5"/>
@@ -5670,6 +5413,20 @@
         <image name="HowTo8" width="398" height="687"/>
         <image name="creditpic" width="128" height="128"/>
         <image name="detailBookmark" width="137" height="137"/>
+        <image name="floor.12" width="563" height="722"/>
+        <image name="floor.13" width="562" height="716"/>
+        <image name="floor.23" width="960" height="406"/>
+        <image name="floor.24" width="954" height="568"/>
+        <image name="floor.26" width="958" height="572"/>
+        <image name="floor.27" width="956" height="568"/>
+        <image name="floor.28" width="954" height="568"/>
+        <image name="floor.41" width="958" height="184"/>
+        <image name="floor.42" width="956" height="184"/>
+        <image name="floor.43" width="956" height="186"/>
+        <image name="floor.51" width="954" height="190"/>
+        <image name="floor.52" width="954" height="196"/>
+        <image name="floor.53" width="958" height="194"/>
+        <image name="floor.54" width="524" height="194"/>
         <image name="homeBookmark" width="256" height="256"/>
         <image name="homeFood" width="128" height="128"/>
         <image name="homeKaijo" width="250" height="250"/>
@@ -5683,23 +5440,6 @@
         <image name="howTo4" width="395" height="683"/>
         <image name="howTo5" width="400" height="692"/>
         <image name="howtopic" width="256" height="256"/>
-        <image name="m12" width="1053" height="1091"/>
-        <image name="m13" width="1047" height="1085"/>
-        <image name="m23" width="1302" height="536"/>
-        <image name="m24" width="1198" height="613"/>
-        <image name="m26" width="1206" height="651"/>
-        <image name="m27" width="1203" height="648"/>
-        <image name="m28" width="1207" height="646"/>
-        <image name="m31" width="911" height="417"/>
-        <image name="m32" width="917" height="302"/>
-        <image name="m33" width="929" height="280"/>
-        <image name="m41" width="1621" height="311"/>
-        <image name="m42" width="1565" height="304"/>
-        <image name="m43" width="1688" height="326"/>
-        <image name="m51" width="1683" height="332"/>
-        <image name="m52" width="1622" height="325"/>
-        <image name="m53" width="1688" height="330"/>
-        <image name="m54" width="927" height="329"/>
         <image name="mGarden" width="1209" height="762"/>
         <image name="naviMenu" width="32" height="32"/>
         <image name="num1" width="40" height="40"/>
@@ -5745,11 +5485,10 @@
         <segue reference="znP-n1-Trk"/>
         <segue reference="xOw-Lj-yeZ"/>
         <segue reference="hF8-Zt-oDl"/>
-        <segue reference="a4L-4Q-f0i"/>
+        <segue reference="3dT-ZK-oeI"/>
         <segue reference="kg2-WV-VzN"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
-        <segue reference="gDc-1Q-OV0"/>
         <segue reference="Ph2-N7-b6G"/>
         <segue reference="gsa-NM-7Br"/>
         <segue reference="RNI-Ia-Yd5"/>
