@@ -26,13 +26,26 @@ class selectSearchViewController: UIViewController
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 	{
 		if segue.identifier == nil { return }
-		let nextScene = segue.destination as! searchViewController
 		var param:String = ""
 		if segue.identifier == "selectWatch" { param = "watch" }
 		if segue.identifier == "selectHear" { param = "hear" }
 		if segue.identifier == "selectExpr" { param = "expr" }
 		if segue.identifier == "selectLearn" { param = "learn" }
-		nextScene.param = param
+		if segue.identifier == "selectNo1" { param = "1" }
+		if segue.identifier == "selectNo2" { param = "2" }
+		if segue.identifier == "selectNo3" { param = "3" }
+		if segue.identifier == "selectNo4" { param = "4" }
+		if segue.identifier == "selectNo5" { param = "5" }
+		if param.count == 1
+		{
+			let nextScene = segue.destination as! floorDetailViewController
+			nextScene.param = param
+		}
+		else
+		{
+			let nextScene = segue.destination as! searchViewController
+			nextScene.param = param
+		}
 	}
 	
 	//　サイドバー管理
