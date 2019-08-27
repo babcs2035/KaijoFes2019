@@ -24,7 +24,7 @@
 		9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */; };
 		9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */; };
 		9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */; };
-		9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F759B1D1F5AB11200879326 /* floorViewController.swift */; };
+		9F759B1E1F5AB11200879326 /* floorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F759B1D1F5AB11200879326 /* floorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideBarViewController.swift; sourceTree = "<group>"; };
 		9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewController.swift; sourceTree = "<group>"; };
 		9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideBarControllingViewController.swift; sourceTree = "<group>"; };
-		9F759B1D1F5AB11200879326 /* floorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = floorViewController.swift; sourceTree = "<group>"; };
+		9F759B1D1F5AB11200879326 /* floorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = floorDetailViewController.swift; sourceTree = "<group>"; };
 		9FC6A90121451E3C00BDE479 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		9FC6A90221451E3C00BDE479 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */,
 				2B5BA287230919C7003D10E6 /* search */,
 				4DB579D31EEFE79E0047D90E /* eventDetailViewController.swift */,
-				9F759B1D1F5AB11200879326 /* floorViewController.swift */,
+				9F759B1D1F5AB11200879326 /* floorDetailViewController.swift */,
 				2BF08412225C4861005AF79E /* timetable */,
 				4DAEF2B31EE6CA7B00AC9187 /* LaunchScreen.storyboard */,
 				4DAEF2B61EE6CA7B00AC9187 /* Info.plist */,
@@ -210,7 +210,7 @@
 				2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */,
 				9F1DE0D31F2F04F20073C3D5 /* bookmarkTableViewController.swift in Sources */,
 				9F7130F41F62D1F400B46C8E /* sideBarControllingViewController.swift in Sources */,
-				9F759B1E1F5AB11200879326 /* floorViewController.swift in Sources */,
+				9F759B1E1F5AB11200879326 /* floorDetailViewController.swift in Sources */,
 				4DB579D41EEFE79E0047D90E /* eventDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

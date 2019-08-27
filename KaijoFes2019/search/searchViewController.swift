@@ -207,18 +207,3 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
     }
 }
-
-extension UIImage
-{
-	// 画像をリサイズするメソッド
-	func resize(size _size: CGSize) -> UIImage?
-	{
-		let ratio = min(_size.width / size.width, _size.height / size.height)
-		let resizedSize = CGSize(width: size.width * ratio, height: size.height * ratio)
-		UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
-		draw(in: CGRect(origin: .zero, size: resizedSize))
-		let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext()
-		return resizedImage
-	}
-}
