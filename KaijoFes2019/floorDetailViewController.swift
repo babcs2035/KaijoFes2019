@@ -19,80 +19,20 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 	var originList:[String] = []		// 全データ
 	var displayList:[String] = []       // 表示するデータ
 	var SideBar = sideBarCommon()
+	var navigationTitles:[String] = []
+	var floorIndexs:[Int] = []
+	var scrollBeginingPoint: CGPoint!
 	
-    override func viewDidLoad()
+	override func viewDidLoad()
 	{
         super.viewDidLoad()
-		
-		// サイドバーの設定
-		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
-		self.addChild(SideBar.sideBarVC)
-		self.view.addSubview(SideBar.sideBarVC.view)
-		SideBar.initSideBar(view: floorDetailViewController())
-		
-        // scrollView の設定
-		let scrollY = self.navigationController!.navigationBar.frame.size.height
-		let scrollH = self.eventTable.frame.minY - 30
-		
-		scrollView = UIScrollView(frame: CGRect(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH + scrollY))
-        scrollView.delegate = self
-        scrollView.isPagingEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-		
-		// pageControl の設定
-		pageControl = UIPageControl(frame: CGRect(x: 0, y: scrollY + scrollH + 45, width: self.view.frame.size.width, height: 30))
-		pageControl.pageIndicatorTintColor = UIColor.lightGray
-		pageControl.currentPageIndicatorTintColor = UIColor.black
-		
-		// タイトルとフロア画像をセット
-		if param == "1"
-		{
-			self.navigationItem.title = "１号館"
-			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 2, height: scrollH)
-			pageControl.numberOfPages = 2
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.12"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.13"))
-		}
-		if param == "2"
-		{
-			self.navigationItem.title = "２号館"
-			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 5, height: scrollH)
-			pageControl.numberOfPages = 5
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.23"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.24"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.26"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.27"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 4, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.28"))
-		}
-		if param == "4"
-		{
-			self.navigationItem.title = "４号館"
-			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 3, height: scrollH)
-			pageControl.numberOfPages = 3
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.41"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.42"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.43"))
-		}
-		if param == "5"
-		{
-			self.navigationItem.title = "５号館"
-			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 4, height: scrollH)
-			pageControl.numberOfPages = 4
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.51"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.52"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.53"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.54"))
-		}
-		
-		self.view.addSubview(scrollView)
-		self.view.addSubview(pageControl)
 		
 		// デリゲート先の設定
 		eventTable.delegate = self
 		eventTable.dataSource = self
 		
-        // CSV ファイル読み込み
-        do
+		// CSV ファイル読み込み
+		do
 		{
 			// CSV ファイルのデータを取得
 			let csvData = try String(contentsOfFile: Bundle.main.path(forResource: "eventData", ofType: "csv")!, encoding: String.Encoding.utf8)
@@ -100,7 +40,7 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 			// 改行区切りでデータを分割し，配列に格納
 			originList = csvData.components(separatedBy: "*\n")
 			originList.removeLast()
-        }
+		}
 		catch { print(error) }
 		
 		// "" を削除
@@ -118,6 +58,109 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 		
 		// テーブル再表示
 		eventTable.reloadData()
+		
+        // scrollView の設定
+		let scrollY = self.navigationController!.navigationBar.frame.size.height + 5
+		let scrollH:CGFloat = 290
+		
+		scrollView = UIScrollView(frame: CGRect(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH))
+        scrollView.delegate = self
+        scrollView.isPagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+		
+		// pageControl の設定
+		pageControl = UIPageControl(frame: CGRect(x: 0, y: scrollY + scrollH + 5, width: self.view.frame.size.width, height: 15))
+		pageControl.pageIndicatorTintColor = UIColor.lightGray
+		pageControl.currentPageIndicatorTintColor = UIColor.black
+		
+		// タイトルとフロア画像をセット
+		navigationTitles.removeAll()
+		floorIndexs.removeAll()
+		if param == "1"
+		{
+			self.navigationItem.title = "１号館２階"
+			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 2, height: scrollH)
+			pageControl.numberOfPages = 2
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.12"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.13"))
+			navigationTitles.append("１号館２階")
+			navigationTitles.append("１号館３階")
+			floorIndexs.append(2)
+			floorIndexs.append(3)
+		}
+		if param == "2"
+		{
+			self.navigationItem.title = "２号館３階"
+			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 5, height: scrollH)
+			pageControl.numberOfPages = 5
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.23"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.24"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.26"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.27"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 4, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.28"))
+			navigationTitles.append("２号館３階")
+			navigationTitles.append("２号館４階")
+			navigationTitles.append("２号館６階")
+			navigationTitles.append("２号館７階")
+			navigationTitles.append("２号館８階")
+			floorIndexs.append(3)
+			floorIndexs.append(4)
+			floorIndexs.append(6)
+			floorIndexs.append(7)
+			floorIndexs.append(8)
+		}
+		if param == "4"
+		{
+			self.navigationItem.title = "４号館１階"
+			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 3, height: scrollH)
+			pageControl.numberOfPages = 3
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.41"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.42"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.43"))
+			navigationTitles.append("４号館１階")
+			navigationTitles.append("４号館２階")
+			navigationTitles.append("４号館３階")
+			floorIndexs.append(1)
+			floorIndexs.append(2)
+			floorIndexs.append(3)
+		}
+		if param == "5"
+		{
+			self.navigationItem.title = "５号館１階"
+			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 4, height: scrollH)
+			pageControl.numberOfPages = 4
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.51"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.52"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.53"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.54"))
+			navigationTitles.append("５号館１階")
+			navigationTitles.append("５号館２階")
+			navigationTitles.append("５号館３階")
+			navigationTitles.append("５号館４階")
+			floorIndexs.append(1)
+			floorIndexs.append(2)
+			floorIndexs.append(3)
+			floorIndexs.append(4)
+		}
+		self.view.addSubview(scrollView)
+		self.view.addSubview(pageControl)
+		
+		displayList.removeAll()
+		for list in originList
+		{
+			let details = list.components(separatedBy: ",")
+			if (details[6].prefix(2) == param + String(floorIndexs[Int(scrollView.contentOffset.x / scrollView.frame.size.width)]))
+			{
+				displayList.append(list)
+			}
+		}
+		eventTable.reloadData()
+		
+		// サイドバーの設定
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: floorDetailViewController())
     }
 	
 	// テーブルのセクション数を設定
@@ -213,28 +256,37 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
     }
 	
-    @objc func sideBar()
+	@IBAction func buttonDetail(_ sender: Any)
 	{
-        // サイドメニューが表示されていない時
-        if SideBar.sideBarVC.view.isHidden
-		{
-            // サイドメニューを出す
-            SideBar.displaySideBar()
-        }
-		// サイドメニューが表示されている時
-        else
-		{
-            // サイドメニューを閉じる
-            SideBar.closeSideBar()
-        }
-    }
+		SideBar.performSideBar()
+	}
 }
 
 // scrollView のページ移動に合わせて pageControl の表示も移動
 extension floorDetailViewController: UIScrollViewDelegate
 {
-	func scrollViewDidScroll(_ scrollView: UIScrollView)
+	
+	func scrollViewWillBeginDragging(_ scrollView: UIScrollView)
 	{
-		pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+		scrollBeginingPoint = scrollView.contentOffset;
+	}
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
+	{
+		let currentPoint = scrollView.contentOffset;
+		if scrollBeginingPoint.x != currentPoint.x
+		{
+			pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+			self.navigationItem.title = navigationTitles[pageControl.currentPage]
+			displayList.removeAll()
+			for list in originList
+			{
+				let details = list.components(separatedBy: ",")
+				if (details[6].prefix(2) == param + String(floorIndexs[pageControl.currentPage]))
+				{
+					displayList.append(list)
+				}
+			}
+			eventTable.reloadData()
+		}
 	}
 }

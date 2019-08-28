@@ -3728,7 +3728,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jKi-kV-VXb">
-                                <rect key="frame" x="5" y="328.5" width="365" height="333.5"/>
+                                <rect key="frame" x="5" y="364" width="365" height="298"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCellOnFloorDetail" rowHeight="132" id="bcg-h2-DhT" customClass="eventTableViewCell" customModule="KaijoFes2019" customModuleProvider="target">
@@ -3807,8 +3807,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jKi-kV-VXb" firstAttribute="height" secondItem="AUe-Jh-iJe" secondAttribute="height" multiplier="0.5" id="OZL-Hf-pxU"/>
                             <constraint firstItem="jKi-kV-VXb" firstAttribute="leading" secondItem="AUe-Jh-iJe" secondAttribute="leading" constant="5" id="fwn-Hy-f9p"/>
+                            <constraint firstItem="jKi-kV-VXb" firstAttribute="top" secondItem="kra-Dr-zhJ" secondAttribute="bottom" constant="300" id="iDJ-vX-i6a"/>
                             <constraint firstItem="xmp-xj-IZb" firstAttribute="top" secondItem="jKi-kV-VXb" secondAttribute="bottom" constant="5" id="ufd-s3-RZk"/>
                             <constraint firstAttribute="trailing" secondItem="jKi-kV-VXb" secondAttribute="trailing" constant="5" id="z9U-eN-bQv"/>
                         </constraints>
@@ -3816,7 +3816,7 @@
                     <navigationItem key="navigationItem" id="ZgC-Jg-nRI">
                         <barButtonItem key="rightBarButtonItem" image="naviMenu" id="IA6-Gb-2Gg">
                             <connections>
-                                <action selector="buttonSearchWord:" destination="bWF-9v-YJg" id="8Us-hz-eRo"/>
+                                <action selector="buttonDetail:" destination="GOT-XU-fwu" id="Pjf-UL-1Fg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
