@@ -30,17 +30,49 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 		self.view.addSubview(SideBar.sideBarVC.view)
 		SideBar.initSideBar(view: floorDetailViewController())
 		
-        // scrollView の設定
-		let scrollY = self.navigationController!.navigationBar.frame.size.height
-		let scrollH = self.eventTable.frame.minY - 30
+		// デリゲート先の設定
+		eventTable.delegate = self
+		eventTable.dataSource = self
 		
-		scrollView = UIScrollView(frame: CGRect(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH + scrollY))
+		// CSV ファイル読み込み
+		do
+		{
+			// CSV ファイルのデータを取得
+			let csvData = try String(contentsOfFile: Bundle.main.path(forResource: "eventData", ofType: "csv")!, encoding: String.Encoding.utf8)
+			
+			// 改行区切りでデータを分割し，配列に格納
+			originList = csvData.components(separatedBy: "*\n")
+			originList.removeLast()
+		}
+		catch { print(error) }
+		
+		// "" を削除
+		for i in 0 ... (originList.count - 1) { originList[i] = originList[i].replacingOccurrences(of: "\"", with: "") }
+		
+		for list in originList
+		{
+			let details = list.components(separatedBy: ",")
+			if (details[6].prefix(1) == param)
+			{
+				displayList.append(list)
+			}
+		}
+		originList = displayList
+		
+		// テーブル再表示
+		eventTable.reloadData()
+		
+        // scrollView の設定
+		let scrollY = self.navigationController!.navigationBar.frame.size.height + 5
+		let scrollH:CGFloat = 290
+		
+		scrollView = UIScrollView(frame: CGRect(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH))
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
 		
 		// pageControl の設定
-		pageControl = UIPageControl(frame: CGRect(x: 0, y: scrollY + scrollH + 45, width: self.view.frame.size.width, height: 30))
+		pageControl = UIPageControl(frame: CGRect(x: 0, y: scrollY + scrollH + 5, width: self.view.frame.size.width, height: 15))
 		pageControl.pageIndicatorTintColor = UIColor.lightGray
 		pageControl.currentPageIndicatorTintColor = UIColor.black
 		
@@ -50,8 +82,8 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 			self.navigationItem.title = "１号館"
 			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 2, height: scrollH)
 			pageControl.numberOfPages = 2
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.12"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.13"))
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.12"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.13"))
 		}
 		if param == "2"
 		{
@@ -86,38 +118,6 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 		
 		self.view.addSubview(scrollView)
 		self.view.addSubview(pageControl)
-		
-		// デリゲート先の設定
-		eventTable.delegate = self
-		eventTable.dataSource = self
-		
-        // CSV ファイル読み込み
-        do
-		{
-			// CSV ファイルのデータを取得
-			let csvData = try String(contentsOfFile: Bundle.main.path(forResource: "eventData", ofType: "csv")!, encoding: String.Encoding.utf8)
-			
-			// 改行区切りでデータを分割し，配列に格納
-			originList = csvData.components(separatedBy: "*\n")
-			originList.removeLast()
-        }
-		catch { print(error) }
-		
-		// "" を削除
-		for i in 0 ... (originList.count - 1) { originList[i] = originList[i].replacingOccurrences(of: "\"", with: "") }
-		
-		for list in originList
-		{
-			let details = list.components(separatedBy: ",")
-			if (details[6].prefix(1) == param)
-			{
-				displayList.append(list)
-			}
-		}
-		originList = displayList
-		
-		// テーブル再表示
-		eventTable.reloadData()
     }
 	
 	// テーブルのセクション数を設定
