@@ -19,16 +19,10 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 	var originList:[String] = []		// 全データ
 	var displayList:[String] = []       // 表示するデータ
 	var SideBar = sideBarCommon()
-	
-    override func viewDidLoad()
+
+	override func viewDidLoad()
 	{
         super.viewDidLoad()
-		
-		// サイドバーの設定
-		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
-		self.addChild(SideBar.sideBarVC)
-		self.view.addSubview(SideBar.sideBarVC.view)
-		SideBar.initSideBar(view: floorDetailViewController())
 		
 		// デリゲート先の設定
 		eventTable.delegate = self
@@ -118,6 +112,12 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 		
 		self.view.addSubview(scrollView)
 		self.view.addSubview(pageControl)
+		
+		// サイドバーの設定
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: floorDetailViewController())
     }
 	
 	// テーブルのセクション数を設定
@@ -213,21 +213,10 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
     }
 	
-    @objc func sideBar()
+	@IBAction func buttonDetail(_ sender: Any)
 	{
-        // サイドメニューが表示されていない時
-        if SideBar.sideBarVC.view.isHidden
-		{
-            // サイドメニューを出す
-            SideBar.displaySideBar()
-        }
-		// サイドメニューが表示されている時
-        else
-		{
-            // サイドメニューを閉じる
-            SideBar.closeSideBar()
-        }
-    }
+		SideBar.performSideBar()
+	}
 }
 
 // scrollView のページ移動に合わせて pageControl の表示も移動
