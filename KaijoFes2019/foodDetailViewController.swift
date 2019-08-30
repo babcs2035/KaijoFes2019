@@ -1,42 +1,29 @@
 //
-//  searchViewController.swift
+//  foodDetailViewController
 //  KaijoFes2019
 //
-//  Created by Bwambocos on 2019/02/01.
+//  Created by Bwambocos on 2019/08/30.
 //  Copyright © 2019年 com.babcs2035.kaijofes2019. All rights reserved.
 //
 
 import UIKit
 
-class searchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate
+class foodDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-	@IBOutlet weak var eventSearchBar: UISearchBar!
 	@IBOutlet weak var eventTable: UITableView!
 	
 	// 変数
-	var originList:[String] = []		// 全データ
+	var originList:[String] = []       // 全データ
 	var displayList:[String] = []       // 表示するデータ
 	var SideBar = sideBarCommon()
-	var param:String = ""
 	
-	// 初期化処理
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-		
-		// サイドバーの設定
-		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
-		self.addChild(SideBar.sideBarVC)
-		self.view.addSubview(SideBar.sideBarVC.view)
-		SideBar.initSideBar(view: searchViewController())
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
 		
 		// デリゲート先の設定
-		eventSearchBar.delegate = self
 		eventTable.delegate = self
 		eventTable.dataSource = self
-		
-		// 何も入力されていなくても検索キーを押せるようにする
-		eventSearchBar.enablesReturnKeyAutomatically = false
 		
 		// CSV ファイル読み込み
 		do
@@ -53,24 +40,25 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		// "" を削除
 		for i in 0 ... (originList.count - 1) { originList[i] = originList[i].replacingOccurrences(of: "\"", with: "") }
 		
-		// 表示用配列を初期化
-		if !param.isEmpty
+		displayList.removeAll()
+		for list in originList
 		{
-			for list in originList
+			let details = list.components(separatedBy: ",")
+			if details[2] == "food"
 			{
-				let details = list.components(separatedBy: ",")
-				if (!param.isEmpty && details[2].range(of: param) != nil)
-				{
-					displayList.append(list)
-				}
+				displayList.append(list)
 			}
-			originList = displayList
 		}
-		else { displayList = originList }
 		
 		// テーブル再表示
 		eventTable.reloadData()
-    }
+		
+		// サイドバーの設定
+		SideBar.sideBarVC = storyboard?.instantiateViewController(withIdentifier: "sideBar")
+		self.addChild(SideBar.sideBarVC)
+		self.view.addSubview(SideBar.sideBarVC.view)
+		SideBar.initSideBar(view: foodDetailViewController())
+	}
 	
 	// テーブルのセクション数を設定
 	func numberOfSections(in tableView: UITableView) -> Int
@@ -87,7 +75,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 	// テーブルのセルを設定
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
-		let cell = self.eventTable.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? eventTableViewCell
+		let cell = self.eventTable.dequeueReusableCell(withIdentifier: "eventCellOnFoodDetail", for: indexPath) as? eventTableViewCell
 		let details = displayList[indexPath.row].components(separatedBy: ",")
 		cell?.eventName.text = details[1]
 		cell?.eventDetail.text = details[4]
@@ -132,61 +120,14 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		tableView.deselectRow(at: indexPath, animated: true)
 		
 		// 指定した ID の Segue を初期化
-		self.performSegue(withIdentifier: "showDetail", sender: displayList[(indexPath as NSIndexPath).row].components(separatedBy: ","))
+		self.performSegue(withIdentifier: "showDetailFromFood", sender: displayList[(indexPath as NSIndexPath).row].components(separatedBy: ","))
 	}
 	
-	// サーチバーで検索ボタンが押された時の処理
-	func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-	{
-		// キーボードをしまう
-		searchBar.resignFirstResponder()
-		
-		if searchBar.text == ""
-		{
-			// 空文字列の場合は全表示
-			displayList = originList
-		}
-		else
-		{
-			// 表示用・伝達用配列を初期化
-			displayList = []
-			
-			for list in originList
-			{
-				if (searchBar.selectedScopeButtonIndex == 0 && list.range(of: searchBar.text!) != nil)
-					|| (searchBar.selectedScopeButtonIndex == 1 && list.components(separatedBy: ",")[1].range(of: searchBar.text!) != nil)
-					|| (searchBar.selectedScopeButtonIndex == 2 && list.components(separatedBy: ",")[0].range(of: searchBar.text!) != nil)
-				{
-					displayList.append(list)
-				}
-			}
-		}
-		
-		// テーブル再表示
-		eventTable.reloadData()
-	}
-	
-	// サーチバーのキャンセルボタンが押された時の処理
-	func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
-	{
-		// キーボードをしまう
-		searchBar.resignFirstResponder()
-		
-		// サーチバーの中身を空にする
-		searchBar.text = ""
-		
-		// 全表示
-		displayList = originList
-		
-		// テーブル再表示
-		eventTable.reloadData()
-	}
-
 	// セグエで詳細ページに移動する際のデータの受け渡し
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 	{
-		// セグエが showDetail の時の処理
-		if segue.identifier == "showDetail"
+		// セグエが showDetailFromFloor の時の処理
+		if segue.identifier == "showDetailFromFood"
 		{
 			// 移動先のビューコントローラの data プロパティに値を設定する
 			(segue.destination as! eventDetailViewController).data = sender as! [String]
@@ -202,13 +143,13 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		}
 	}
 	
-	@IBAction func buttonSearchWord(_ sender: Any)
+	override func didReceiveMemoryWarning()
+	{
+		super.didReceiveMemoryWarning()
+	}
+	
+	@IBAction func buttonDetail(_ sender: Any)
 	{
 		SideBar.performSideBar()
 	}
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
 }

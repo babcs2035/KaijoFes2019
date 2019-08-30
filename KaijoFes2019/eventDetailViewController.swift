@@ -132,6 +132,11 @@ class eventDetailViewController: UIViewController
 			eventCategory.text = "聞く"
 			eventCategory.backgroundColor = UIColor.init(red: 200 / 255, green: 200 / 255, blue: 120 / 255, alpha: 1)
 		}
+		if data[2] == "food"
+		{
+			eventCategory.text = "食品"
+			eventCategory.backgroundColor = UIColor.init(red: 100 / 255, green: 100 / 255, blue: 100 / 255, alpha: 1)
+		}
 		eventCategory.textColor = UIColor.white
 		eventCategory.layer.cornerRadius = 5
 		eventCategory.clipsToBounds = true
