@@ -93,11 +93,11 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 			self.navigationItem.title = "２号館３階"
 			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 5, height: scrollH)
 			pageControl.numberOfPages = 5
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.23"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.24"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.26"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.27"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 4, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.28"))
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.23"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.24"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.26"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.27"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 4, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.28"))
 			navigationTitles.append("２号館３階")
 			navigationTitles.append("２号館４階")
 			navigationTitles.append("２号館６階")
@@ -114,9 +114,9 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 			self.navigationItem.title = "４号館１階"
 			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 3, height: scrollH)
 			pageControl.numberOfPages = 3
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.41"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.42"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.43"))
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.41"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.42"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.43"))
 			navigationTitles.append("４号館１階")
 			navigationTitles.append("４号館２階")
 			navigationTitles.append("４号館３階")
@@ -129,10 +129,10 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 			self.navigationItem.title = "５号館１階"
 			scrollView.contentSize = CGSize(width: self.view.frame.size.width * 4, height: scrollH)
 			pageControl.numberOfPages = 4
-			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.51"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.52"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.53"))
-			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH, image: "floor.54"))
+			scrollView.addSubview(createImageView(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.51"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.52"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 2, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.53"))
+			scrollView.addSubview(createImageView(x: self.view.frame.size.width * 3, y: scrollY, width: self.view.frame.size.width, height: scrollH - scrollY, image: "floor.54"))
 			navigationTitles.append("５号館１階")
 			navigationTitles.append("５号館２階")
 			navigationTitles.append("５号館３階")
