@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1DBC7123190F34000116C5 /* foodData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B1DBC7023190F33000116C5 /* foodData.csv */; };
 		2B5BA28623090AA1003D10E6 /* selectSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BA28523090AA1003D10E6 /* selectSearchViewController.swift */; };
 		2B7CC0BD22F993360084D131 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */; };
 		2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1DBC7023190F33000116C5 /* foodData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = foodData.csv; sourceTree = "<group>"; };
 		2B5BA28523090AA1003D10E6 /* selectSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectSearchViewController.swift; sourceTree = "<group>"; };
 		2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
 		2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				4D83B5861EEE95540063D1E3 /* eventData.csv */,
+				2B1DBC7023190F33000116C5 /* foodData.csv */,
 				9F1035CA1F30378100C16E32 /* bookmarks.csv */,
 				4DAEF2E01EE6D33E00AC9187 /* Images.xcassets */,
 				4DAEF2A61EE6CA7B00AC9187 /* KaijoFes2019 */,
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1DBC7123190F34000116C5 /* foodData.csv in Resources */,
 				4DAEF2B51EE6CA7B00AC9187 /* LaunchScreen.storyboard in Resources */,
 				4DAEF2E11EE6D33E00AC9187 /* Images.xcassets in Resources */,
 				4DAEF2AD1EE6CA7B00AC9187 /* Main.storyboard in Resources */,
