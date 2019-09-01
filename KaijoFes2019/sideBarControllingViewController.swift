@@ -25,11 +25,6 @@ class sideBarControllingViewController: UIViewController
         self.performSegue(withIdentifier: "goSearch", sender: nil)
     }
 	
-    @IBAction func goMap(_ sender: Any)
-	{
-        self.performSegue(withIdentifier: "goMap", sender: nil)
-    }
-	
 	@IBAction func goBook(_ sender: Any)
 	{
 		self.performSegue(withIdentifier: "goBook", sender: nil)
@@ -42,7 +37,7 @@ class sideBarControllingViewController: UIViewController
 	
     @IBAction func goTime(_ sender: Any)
 	{
-        self.performSegue(withIdentifier: "goTime", sender: nil)
+        self.performSegue(withIdentifier: "goTimetable", sender: nil)
     }
 
     @IBAction func goOther(_ sender: Any)

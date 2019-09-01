@@ -655,7 +655,7 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.3" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-do-fyE">
-                                                                <rect key="frame" x="0.0" y="8" width="175.5" height="129.00000000000045"/>
+                                                                <rect key="frame" x="0.0" y="8" width="175.5" height="129"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="３号館" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-sE-gRM" userLabel="３号館">
                                                                 <rect key="frame" x="0.0" y="137.5" width="176" height="24"/>
@@ -1296,7 +1296,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-F7-8gJ">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dmm-F7-8gJ" secondAttribute="height" multiplier="14:25" id="2Ff-kl-hNR"/>
                                 </constraints>
@@ -1353,7 +1353,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo2" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-Cv-xje">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ryj-Cv-xje" secondAttribute="height" multiplier="14:25" id="dZd-O9-b1s"/>
                                 </constraints>
@@ -1711,10 +1711,10 @@
             </objects>
             <point key="canvasLocation" x="4004" y="411"/>
         </scene>
-        <!--タイムテーブル-->
+        <!--selectTimetable-->
         <scene sceneID="P29-jD-LXT">
             <objects>
-                <viewController title="タイムテーブル" id="Ezc-NM-pqN" sceneMemberID="viewController">
+                <viewController title="selectTimetable" id="Ezc-NM-pqN" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2o-q6-S04"/>
                         <viewControllerLayoutGuide type="bottom" id="Yru-Q0-EOo"/>
@@ -1876,7 +1876,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイムテーブル上の各企画は タップすることができます" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-ZL-EfR">
                                 <rect key="frame" x="5" y="489" width="365" height="173"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1901,15 +1901,22 @@
                             <constraint firstAttribute="trailing" secondItem="kji-1T-Qkz" secondAttribute="trailing" constant="5" id="zxz-cj-gI4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="タイムテーブル" id="7x1-Qr-4Tp">
+                        <barButtonItem key="rightBarButtonItem" image="naviMenu" id="dAe-vS-3xB">
+                            <connections>
+                                <action selector="buttonTimetable:" destination="Ezc-NM-pqN" id="nop-65-8xj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcl-mT-bn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="905" y="1776"/>
         </scene>
-        <!--軽音楽部-->
+        <!--keionTimetable-->
         <scene sceneID="Kym-S3-Stc">
             <objects>
-                <viewController title="軽音楽部" id="htP-IU-N6U" sceneMemberID="viewController">
+                <viewController title="keionTimetable" id="htP-IU-N6U" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Ld-og-Yvl"/>
                         <viewControllerLayoutGuide type="bottom" id="qIf-jT-hpg"/>
@@ -1924,6 +1931,209 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.keion" translatesAutoresizingMaskIntoConstraints="NO" id="16J-g1-n4b">
                                         <rect key="frame" x="0.0" y="0.0" width="734" height="1566"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLV-jL-slz" userLabel="keion1">
+                                        <rect key="frame" x="8" y="223" width="148" height="114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion1:" destination="htP-IU-N6U" eventType="touchUpInside" id="A2D-x7-CBU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMf-1T-z7w" userLabel="keion2">
+                                        <rect key="frame" x="8" y="354" width="148" height="138"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion2:" destination="htP-IU-N6U" eventType="touchUpInside" id="wih-Y0-dBC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bav-mk-vaM" userLabel="keion3">
+                                        <rect key="frame" x="8" y="575" width="148" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion3:" destination="htP-IU-N6U" eventType="touchUpInside" id="zNV-rc-u4P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-om-Oyi" userLabel="keion4">
+                                        <rect key="frame" x="8" y="669" width="148" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion4:" destination="htP-IU-N6U" eventType="touchUpInside" id="oCZ-hz-ocf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-8S-hQF" userLabel="keion5">
+                                        <rect key="frame" x="8" y="890" width="148" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion5:" destination="htP-IU-N6U" eventType="touchUpInside" id="hEU-XK-ucS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S1-5c-ZGT" userLabel="keion6">
+                                        <rect key="frame" x="8" y="1003" width="148" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion6:" destination="htP-IU-N6U" eventType="touchUpInside" id="aAD-ED-Ugk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm6-8J-eGz" userLabel="keion7">
+                                        <rect key="frame" x="8" y="1113" width="148" height="108"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion7:" destination="htP-IU-N6U" eventType="touchUpInside" id="k1D-pY-Hni"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-bf-mc2" userLabel="keion8">
+                                        <rect key="frame" x="8" y="1235" width="148" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion8:" destination="htP-IU-N6U" eventType="touchUpInside" id="Kz4-K2-1DS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-5S-Grf" userLabel="keion9">
+                                        <rect key="frame" x="198" y="223" width="148" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion9:" destination="htP-IU-N6U" eventType="touchUpInside" id="PP4-AB-nKo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-0k-tt7" userLabel="keion10">
+                                        <rect key="frame" x="198" y="445" width="148" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion10:" destination="htP-IU-N6U" eventType="touchUpInside" id="BAC-cX-LKb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-or-SuP" userLabel="keion11">
+                                        <rect key="frame" x="198" y="669" width="148" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion11:" destination="htP-IU-N6U" eventType="touchUpInside" id="euD-Of-iiI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfW-hL-Uul" userLabel="keion12">
+                                        <rect key="frame" x="198" y="779" width="148" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion12:" destination="htP-IU-N6U" eventType="touchUpInside" id="9uV-bp-mhz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhI-QJ-lUH" userLabel="keion13">
+                                        <rect key="frame" x="198" y="995" width="148" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion13:" destination="htP-IU-N6U" eventType="touchUpInside" id="rVG-jO-UNT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH8-VM-zP6" userLabel="keion14">
+                                        <rect key="frame" x="198" y="1105" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion14:" destination="htP-IU-N6U" eventType="touchUpInside" id="Eqj-4O-mgB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1td-Jx-C1u" userLabel="keion15">
+                                        <rect key="frame" x="198" y="1217" width="148" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion15:" destination="htP-IU-N6U" eventType="touchUpInside" id="JH6-vi-l5w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvF-La-hho" userLabel="keion16">
+                                        <rect key="frame" x="393" y="226" width="148" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion16:" destination="htP-IU-N6U" eventType="touchUpInside" id="0o6-UD-TT7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-SM-0eA" userLabel="keion17">
+                                        <rect key="frame" x="393" y="446" width="148" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion17:" destination="htP-IU-N6U" eventType="touchUpInside" id="73a-8J-ziC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-VD-LnO" userLabel="keion18">
+                                        <rect key="frame" x="393" y="668" width="148" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion18:" destination="htP-IU-N6U" eventType="touchUpInside" id="zBH-Ku-W1W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bel-vG-LHr" userLabel="keion19">
+                                        <rect key="frame" x="393" y="779" width="148" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion19:" destination="htP-IU-N6U" eventType="touchUpInside" id="HIo-Ae-kBR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTp-9P-2ox" userLabel="keion20">
+                                        <rect key="frame" x="393" y="995" width="148" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion20:" destination="htP-IU-N6U" eventType="touchUpInside" id="izj-OL-6mE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA1-df-2Io" userLabel="keion21">
+                                        <rect key="frame" x="393" y="1113" width="148" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion21:" destination="htP-IU-N6U" eventType="touchUpInside" id="WNd-7R-UCv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-ag-ZBa" userLabel="keion22">
+                                        <rect key="frame" x="393" y="1288" width="148" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion22:" destination="htP-IU-N6U" eventType="touchUpInside" id="vT1-UL-rMR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHy-eI-SKu" userLabel="keion23">
+                                        <rect key="frame" x="578" y="223" width="148" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion23:" destination="htP-IU-N6U" eventType="touchUpInside" id="KnM-uO-iRb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-Zk-utU" userLabel="keion24">
+                                        <rect key="frame" x="578" y="427" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion24:" destination="htP-IU-N6U" eventType="touchUpInside" id="L0k-kM-rnm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lo-v4-Rih" userLabel="keion25">
+                                        <rect key="frame" x="578" y="541" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion25:" destination="htP-IU-N6U" eventType="touchUpInside" id="EOR-P5-bVM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hka-e6-38O" userLabel="keion26">
+                                        <rect key="frame" x="578" y="671" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion26:" destination="htP-IU-N6U" eventType="touchUpInside" id="prV-pv-evr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCZ-qT-zyk" userLabel="keion27">
+                                        <rect key="frame" x="578" y="778" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion27:" destination="htP-IU-N6U" eventType="touchUpInside" id="CdR-g5-SRY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf4-Cb-g0k" userLabel="keion28">
+                                        <rect key="frame" x="578" y="889" width="148" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion28:" destination="htP-IU-N6U" eventType="touchUpInside" id="g59-jD-J6i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-P3-xGD" userLabel="keion29">
+                                        <rect key="frame" x="578" y="997" width="148" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="keion29:" destination="htP-IU-N6U" eventType="touchUpInside" id="Ebo-eD-gnW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="16J-g1-n4b" firstAttribute="top" secondItem="rp4-se-aV8" secondAttribute="top" id="4s5-0P-dzG"/>
@@ -1942,11 +2152,21 @@
                             <constraint firstItem="rp4-se-aV8" firstAttribute="height" secondItem="Ckm-8S-J9b" secondAttribute="height" constant="-64" id="wAU-CE-vZG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="軽音楽部" id="F63-VU-RJh">
+                        <barButtonItem key="rightBarButtonItem" image="naviMenu" id="veh-71-gys">
+                            <connections>
+                                <action selector="buttonTimetable:" destination="htP-IU-N6U" id="AcV-90-Mor"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="734" height="1640"/>
+                    <connections>
+                        <segue destination="EQH-ZF-mps" kind="show" identifier="segueKeion" id="kWu-gS-MJd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOp-ZG-yhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="2818"/>
+            <point key="canvasLocation" x="1984" y="2817.3913043478265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="51R-Xd-nsa">
@@ -2278,6 +2498,7 @@
                         <segue destination="wbH-oc-9fZ" kind="show" identifier="goBook" id="vl4-r9-aQL"/>
                         <segue destination="PJb-Hv-VI5" kind="show" identifier="goOther" id="eR9-0h-w72"/>
                         <segue destination="dTK-J0-Rez" kind="show" identifier="goShop" id="19c-Lb-Uf1"/>
+                        <segue destination="Ezc-NM-pqN" kind="show" identifier="goTimetable" id="zHK-Gv-wD0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrF-lG-AL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2301,7 +2522,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo3" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-LK-zsc">
-                                <rect key="frame" x="64.5" y="67" width="246" height="440.00000000000011"/>
+                                <rect key="frame" x="64.5" y="67" width="246" height="440"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Oe-LK-zsc" secondAttribute="height" multiplier="14:25" id="Cse-Qx-Aks"/>
                                 </constraints>
@@ -2906,10 +3127,10 @@
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="877.51124437781118"/>
         </scene>
-        <!--ミニステージ-->
+        <!--stageTimetable-->
         <scene sceneID="K0q-5M-YA9">
             <objects>
-                <viewController title="ミニステージ" id="cAn-ki-nJt" sceneMemberID="viewController">
+                <viewController title="stageTimetable" id="cAn-ki-nJt" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RdA-nh-Eqw"/>
                         <viewControllerLayoutGuide type="bottom" id="JjO-ZT-HmP"/>
@@ -2924,6 +3145,111 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.stage" translatesAutoresizingMaskIntoConstraints="NO" id="vxS-Zw-J2X">
                                         <rect key="frame" x="0.0" y="0.0" width="714" height="1400"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWI-ks-URT" userLabel="stage1">
+                                        <rect key="frame" x="8" y="134" width="335" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage1:" destination="cAn-ki-nJt" eventType="touchUpInside" id="bpK-Kn-jV4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-pp-uPj" userLabel="stage2">
+                                        <rect key="frame" x="8" y="316" width="335" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage2:" destination="cAn-ki-nJt" eventType="touchUpInside" id="CQn-Sr-hea"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHI-hn-dqY" userLabel="stage3">
+                                        <rect key="frame" x="8" y="451" width="335" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage3:" destination="cAn-ki-nJt" eventType="touchUpInside" id="7Nt-Fe-tJX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpb-vM-mG1" userLabel="stage4">
+                                        <rect key="frame" x="8" y="625" width="335" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage4:" destination="cAn-ki-nJt" eventType="touchUpInside" id="lLO-6e-6bA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVp-r3-SJg" userLabel="stage5">
+                                        <rect key="frame" x="8" y="803" width="335" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage5:" destination="cAn-ki-nJt" eventType="touchUpInside" id="5IZ-ea-Joq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke0-6C-jgz" userLabel="stage6">
+                                        <rect key="frame" x="8" y="958" width="335" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage6:" destination="cAn-ki-nJt" eventType="touchUpInside" id="fgU-dT-XgO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijG-TN-YuO" userLabel="stage7">
+                                        <rect key="frame" x="8" y="1048" width="335" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage7:" destination="cAn-ki-nJt" eventType="touchUpInside" id="0jH-PB-eCB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-co-JhF" userLabel="stage8">
+                                        <rect key="frame" x="8" y="1121" width="335" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage8:" destination="cAn-ki-nJt" eventType="touchUpInside" id="E7W-7n-5Ud"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13W-OG-dNq" userLabel="stage9">
+                                        <rect key="frame" x="366" y="134" width="340" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage9:" destination="cAn-ki-nJt" eventType="touchUpInside" id="ycJ-Ov-cIO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrW-h2-JEs" userLabel="stage10">
+                                        <rect key="frame" x="366" y="316" width="340" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage10:" destination="cAn-ki-nJt" eventType="touchUpInside" id="kuy-6h-LJb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKH-JG-cH3" userLabel="stage11">
+                                        <rect key="frame" x="366" y="495" width="340" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage11:" destination="cAn-ki-nJt" eventType="touchUpInside" id="UnH-eS-Bfc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDC-Ao-iP9" userLabel="stage12">
+                                        <rect key="frame" x="366" y="674" width="340" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage12:" destination="cAn-ki-nJt" eventType="touchUpInside" id="gf8-tG-owf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIA-8e-hYm" userLabel="stage13">
+                                        <rect key="frame" x="366" y="851" width="340" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage13:" destination="cAn-ki-nJt" eventType="touchUpInside" id="FwY-vF-eoB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-yG-gJB" userLabel="stage14">
+                                        <rect key="frame" x="366" y="1030" width="340" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage14:" destination="cAn-ki-nJt" eventType="touchUpInside" id="nzg-V9-zWe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0Z-h4-s0V" userLabel="stage15">
+                                        <rect key="frame" x="366" y="1211" width="340" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stage15:" destination="cAn-ki-nJt" eventType="touchUpInside" id="b2C-nD-fD1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="714" id="02f-gx-a51"/>
@@ -2942,16 +3268,26 @@
                             <constraint firstItem="H0F-pK-OcG" firstAttribute="top" secondItem="RdA-nh-Eqw" secondAttribute="bottom" id="dY1-Ac-7BJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ミニステージ" id="6pg-3A-U51">
+                        <barButtonItem key="rightBarButtonItem" image="naviMenu" id="1ah-m3-oz1">
+                            <connections>
+                                <action selector="buttonTimetable:" destination="cAn-ki-nJt" id="tfb-D5-0vA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="714" height="1480"/>
+                    <connections>
+                        <segue destination="EQH-ZF-mps" kind="show" identifier="segueStage" id="CSu-l3-Xck"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9V-Q0-RKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3461" y="2816"/>
+            <point key="canvasLocation" x="3460.8000000000002" y="2815.5922038980511"/>
         </scene>
-        <!--運動系-->
+        <!--sportTimetable-->
         <scene sceneID="GoE-3T-RNV">
             <objects>
-                <viewController title="運動系" id="zHy-sh-B7D" sceneMemberID="viewController">
+                <viewController title="sportTimetable" id="zHy-sh-B7D" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CqJ-P9-Up8"/>
                         <viewControllerLayoutGuide type="bottom" id="SUZ-ys-TWl"/>
@@ -2964,8 +3300,85 @@
                                 <rect key="frame" x="0.0" y="64" width="948" height="1434"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.sport" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-L4-7lt">
-                                        <rect key="frame" x="0.0" y="0.0" width="948.00000000000023" height="1424"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw1-Z6-m1L" userLabel="sport1">
+                                        <rect key="frame" x="8" y="205" width="118" height="1203"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport1:" destination="zHy-sh-B7D" eventType="touchUpInside" id="Nxq-x5-1ZW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-Yq-ZHM" userLabel="sport2">
+                                        <rect key="frame" x="176" y="282" width="118" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport2:" destination="zHy-sh-B7D" eventType="touchUpInside" id="Ggk-wW-yZ3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js9-cj-Htf" userLabel="sport3">
+                                        <rect key="frame" x="176" y="717" width="118" height="527"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport3:" destination="zHy-sh-B7D" eventType="touchUpInside" id="Gqt-13-ZUZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyp-Xr-qJe" userLabel="sport4">
+                                        <rect key="frame" x="176" y="1237" width="118" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport4:" destination="zHy-sh-B7D" eventType="touchUpInside" id="03b-73-IpA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmj-NG-nnp" userLabel="sport5">
+                                        <rect key="frame" x="339" y="808" width="118" height="600"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport5:" destination="zHy-sh-B7D" eventType="touchUpInside" id="REi-Vb-Wek"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEs-P4-SzH" userLabel="sport6">
+                                        <rect key="frame" x="485" y="205" width="118" height="343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport6:" destination="zHy-sh-B7D" eventType="touchUpInside" id="MMl-U0-Inu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmK-gB-z5H" userLabel="sport7">
+                                        <rect key="frame" x="485" y="635" width="118" height="343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport7:" destination="zHy-sh-B7D" eventType="touchUpInside" id="Wsl-j3-Y4g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-JL-VKB" userLabel="sport8">
+                                        <rect key="frame" x="485" y="1065" width="118" height="343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport8:" destination="zHy-sh-B7D" eventType="touchUpInside" id="fG0-Am-fXT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVS-Bp-vIO" userLabel="sport9">
+                                        <rect key="frame" x="656" y="205" width="118" height="1038"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport9:" destination="zHy-sh-B7D" eventType="touchUpInside" id="Dtb-FB-wHv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj8-JP-B7W" userLabel="sport10">
+                                        <rect key="frame" x="656" y="1237" width="118" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport10:" destination="zHy-sh-B7D" eventType="touchUpInside" id="nIN-mJ-v90"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu9-Ir-VwN" userLabel="sport11">
+                                        <rect key="frame" x="822" y="205" width="118" height="1207"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sport11:" destination="zHy-sh-B7D" eventType="touchUpInside" id="jhV-cH-ErD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="5oG-L4-7lt" firstAttribute="leading" secondItem="Ffx-jw-lbO" secondAttribute="leading" id="2nC-O4-3Dc"/>
@@ -2984,16 +3397,26 @@
                             <constraint firstItem="Ffx-jw-lbO" firstAttribute="height" secondItem="WDI-hw-Pir" secondAttribute="height" constant="-70" id="usa-FN-XXL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="運動系" id="mWq-sa-qFs">
+                        <barButtonItem key="rightBarButtonItem" image="naviMenu" id="LDi-0h-y1x">
+                            <connections>
+                                <action selector="buttonTimetable:" destination="zHy-sh-B7D" id="cLj-1v-XO2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="948" height="1504"/>
+                    <connections>
+                        <segue destination="EQH-ZF-mps" kind="show" identifier="segueSport" id="ShG-IO-G7G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfd-ha-uQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5134" y="2817"/>
+            <point key="canvasLocation" x="5132.8000000000002" y="2816.4917541229388"/>
         </scene>
-        <!--講堂-->
+        <!--hallTimetable-->
         <scene sceneID="8nh-Jt-g3q">
             <objects>
-                <viewController title="講堂" id="Bhr-ue-tlQ" sceneMemberID="viewController">
+                <viewController title="hallTimetable" id="Bhr-ue-tlQ" customClass="timetableViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kea-tY-SH8"/>
                         <viewControllerLayoutGuide type="bottom" id="dFK-bt-RpK"/>
@@ -3008,6 +3431,62 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.hall" translatesAutoresizingMaskIntoConstraints="NO" id="JON-0W-qrS">
                                         <rect key="frame" x="0.0" y="0.0" width="336" height="1422"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg4-NF-Nef" userLabel="hall1">
+                                        <rect key="frame" x="24" y="286" width="118" height="325"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall1:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="2xN-EQ-Nun"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-8f-yra" userLabel="hall2">
+                                        <rect key="frame" x="24" y="609" width="118" height="498"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall2:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="a7x-TB-Ay6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEE-58-LeC" userLabel="hall3">
+                                        <rect key="frame" x="24" y="1105" width="118" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall3:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="y1k-6y-v7s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ag-zf-ve9" userLabel="hall4">
+                                        <rect key="frame" x="201" y="203" width="127" height="161"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall4:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="Bf1-0A-GFO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2j-bF-UjT" userLabel="hall5">
+                                        <rect key="frame" x="201" y="368" width="127" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall5:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="RJK-1V-vgP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-l6-ktV" userLabel="hall6">
+                                        <rect key="frame" x="201" y="447" width="127" height="411"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall6:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="uhH-8L-N5T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-8N-tfG" userLabel="hall7">
+                                        <rect key="frame" x="201" y="943" width="127" height="331"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall7:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="t2j-CU-PBb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iof-kK-cDP" userLabel="hall8">
+                                        <rect key="frame" x="201" y="1272" width="127" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hall8:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="65E-l5-aJf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="JON-0W-qrS" secondAttribute="bottom" constant="10" id="2sd-ee-TRk"/>
@@ -3026,11 +3505,21 @@
                             <constraint firstItem="hhG-2d-5wi" firstAttribute="height" secondItem="mtE-lU-Z7y" secondAttribute="height" constant="-70" id="sfU-BP-eBJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="講堂" id="LlC-TC-uuZ">
+                        <barButtonItem key="rightBarButtonItem" image="naviMenu" id="EZq-4S-ZVn">
+                            <connections>
+                                <action selector="buttonTimetable:" destination="Bhr-ue-tlQ" id="uDp-Vs-TtS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="336" height="1502"/>
+                    <connections>
+                        <segue destination="EQH-ZF-mps" kind="show" identifier="segueHall" id="7gW-gU-euy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8H-yX-1Gy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6494" y="2816"/>
+            <point key="canvasLocation" x="6492.8000000000002" y="2815.5922038980511"/>
         </scene>
     </scenes>
     <resources>
@@ -3094,7 +3583,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="19c-Lb-Uf1"/>
         <segue reference="jwG-y6-7fz"/>
-        <segue reference="NFa-m8-1IP"/>
+        <segue reference="zHK-Gv-wD0"/>
+        <segue reference="7gW-gU-euy"/>
         <segue reference="wdt-Xq-0l1"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
