@@ -64,7 +64,7 @@ class eventDetailViewController: UIViewController
             while index < bookmarkList.count
             {
                 let bookmarkDetail = bookmarkList[index].components(separatedBy: ",")
-                bookmarkNums.insert(bookmarkDetail[0], at: index);
+                bookmarkNums.insert(bookmarkDetail[6], at: index);
                 index += 1
             }
         }
@@ -75,7 +75,7 @@ class eventDetailViewController: UIViewController
         
         for nums in bookmarkNums
 		{
-            if String(nums) == String(data[0])
+            if String(nums) == String(data[6])
 			{
                 bookLabel.text = "ブックマーク登録済み"
                 bookEnable.isEnabled = false

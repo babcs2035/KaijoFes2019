@@ -95,6 +95,11 @@ class bookmarkTableViewController: UITableViewController
 			cell?.eventCategory.text = "聞く"
 			cell?.eventCategory.backgroundColor = UIColor.init(red: 200 / 255, green: 200 / 255, blue: 120 / 255, alpha: 1)
 		}
+		if details[2] == "food"
+		{
+			cell?.eventCategory.text = "食品"
+			cell?.eventCategory.backgroundColor = UIColor.init(red: 100 / 255, green: 100 / 255, blue: 100 / 255, alpha: 1)
+		}
 		cell?.eventCategory.textColor = UIColor.white
 		cell?.eventCategory.layer.cornerRadius = 5
 		cell?.eventCategory.clipsToBounds = true
