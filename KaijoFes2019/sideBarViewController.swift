@@ -117,7 +117,12 @@ class sideBarViewController: UIViewController
         self.navigationController?.popToRootViewController(animated: true)
     }
 	
-    @IBAction func buttonSearch(_ sender: Any)
+	@IBAction func buttonTimetable(_ sender: Any)
+	{
+		SideBar.performSideBar()
+	}
+	
+	@IBAction func buttonSearch(_ sender: Any)
 	{
 		SideBar.performSideBar()
     }
