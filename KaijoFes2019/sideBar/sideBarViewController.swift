@@ -91,16 +91,6 @@ class sideBarViewController: UIViewController
 		self.addChild(SideBar.sideBarVC)
 		self.view.addSubview(SideBar.sideBarVC.view)
 		SideBar.initSideBar(view: sideBarViewController())
-        
-        // グラデーション処理
-        let gradientLayer:CAGradientLayer = CAGradientLayer()
-        let startColor = UIColor(red: 255 / 255.0, green: 247 / 255.0, blue: 99 / 255.0, alpha: 0.8).cgColor
-        let endColor = UIColor(red: 255 / 255.0, green: 186 / 255.0, blue: 36 / 255.0, alpha: 0.8).cgColor
-        gradientLayer.colors = [startColor, endColor]
-        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
-        gradientLayer.frame = view.bounds
-        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     // 画面遷移時，サイドバーが出ていれば閉じる
