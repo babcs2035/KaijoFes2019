@@ -721,7 +721,7 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectSearch.3" translatesAutoresizingMaskIntoConstraints="NO" id="9dE-do-fyE">
-                                                                <rect key="frame" x="0.0" y="8" width="160.5" height="114"/>
+                                                                <rect key="frame" x="0.0" y="8" width="160.5" height="114.00000000000045"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="３号館" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-sE-gRM" userLabel="３号館">
                                                                 <rect key="frame" x="0.0" y="122.5" width="161" height="24"/>
@@ -1168,7 +1168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EC8-uE-cwq" firstAttribute="leading" secondItem="eiE-BX-1BI" secondAttribute="leading" constant="15" id="4rN-ef-ygG"/>
                             <constraint firstAttribute="trailing" secondItem="EC8-uE-cwq" secondAttribute="trailing" constant="15" id="EKi-BX-3j0"/>
@@ -1297,7 +1297,7 @@
         <!--使い方１-->
         <scene sceneID="b4J-Tp-gew">
             <objects>
-                <viewController title="使い方１" id="BRA-rZ-ybz" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="howtoViewController" title="使い方１" id="BRA-rZ-ybz" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f88-Ae-oJW"/>
                         <viewControllerLayoutGuide type="bottom" id="yrD-E3-AiI"/>
@@ -1311,7 +1311,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-F7-8gJ">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dmm-F7-8gJ" secondAttribute="height" multiplier="14:25" id="2Ff-kl-hNR"/>
                                 </constraints>
@@ -1339,7 +1339,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="num1" id="jSb-lh-Ytw"/>
-                    <navigationItem key="navigationItem" title="使い方１" id="ZzH-RO-jdr">
+                    <navigationItem key="navigationItem" title="使い方１" id="ZzH-RO-jdr" customClass="howtoBarItem">
                         <barButtonItem key="rightBarButtonItem" title="次へ" id="N2a-3a-t4D">
                             <connections>
                                 <segue destination="cVR-rv-OW2" kind="show" id="EoT-2C-HrQ"/>
@@ -1368,7 +1368,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo2" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-Cv-xje">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
+                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ryj-Cv-xje" secondAttribute="height" multiplier="14:25" id="dZd-O9-b1s"/>
                                 </constraints>
@@ -2534,7 +2534,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo3" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-LK-zsc">
-                                <rect key="frame" x="64.5" y="67" width="246" height="440"/>
+                                <rect key="frame" x="64.5" y="67" width="246" height="440.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Oe-LK-zsc" secondAttribute="height" multiplier="14:25" id="Cse-Qx-Aks"/>
                                 </constraints>
@@ -3314,7 +3314,7 @@
                                 <rect key="frame" x="0.0" y="64" width="948" height="1434"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.sport" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-L4-7lt">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="948.00000000000023" height="1424"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw1-Z6-m1L" userLabel="sport1">
                                         <rect key="frame" x="8" y="205" width="118" height="1203"/>
@@ -3594,7 +3594,7 @@
         <segue reference="19c-Lb-Uf1"/>
         <segue reference="jwG-y6-7fz"/>
         <segue reference="zHK-Gv-wD0"/>
-        <segue reference="a4L-4Q-f0i"/>
+        <segue reference="ShG-IO-G7G"/>
         <segue reference="w6B-Vp-i6K"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
