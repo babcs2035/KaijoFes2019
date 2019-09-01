@@ -72,6 +72,24 @@
 			path = search;
 			sourceTree = "<group>";
 		};
+		2BB42B40231BA26300384F1D /* bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */,
+				2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */,
+			);
+			path = bookmark;
+			sourceTree = "<group>";
+		};
+		2BB42B41231BA28000384F1D /* sideBar */ = {
+			isa = PBXGroup;
+			children = (
+				9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */,
+				9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */,
+			);
+			path = sideBar;
+			sourceTree = "<group>";
+		};
 		4DAEF29B1EE6CA7B00AC9187 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +113,10 @@
 		4DAEF2A61EE6CA7B00AC9187 /* KaijoFes2019 */ = {
 			isa = PBXGroup;
 			children = (
-				9F1DE0D21F2F04F20073C3D5 /* bookmarkTableViewController.swift */,
-				2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */,
 				4DAEF2A71EE6CA7B00AC9187 /* AppDelegate.swift */,
 				4DAEF2AB1EE6CA7B00AC9187 /* Main.storyboard */,
-				9F1C52E61F603D2700C0CF1F /* sideBarViewController.swift */,
-				9F7130F31F62D1F400B46C8E /* sideBarControllingViewController.swift */,
+				2BB42B41231BA28000384F1D /* sideBar */,
+				2BB42B40231BA26300384F1D /* bookmark */,
 				2B5BA287230919C7003D10E6 /* search */,
 				4DB579D31EEFE79E0047D90E /* eventDetailViewController.swift */,
 				9F759B1D1F5AB11200879326 /* floorDetailViewController.swift */,
