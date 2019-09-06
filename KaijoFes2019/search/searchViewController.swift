@@ -97,7 +97,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		if details[2] == "expr"
 		{
 			cell?.eventCategory.text = "体験する"
-			cell?.eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 255 / 255, blue: 20 / 255, alpha: 1)
+			cell?.eventCategory.backgroundColor = UIColor.init(red: 255 / 255, green: 20 / 255, blue: 20 / 255, alpha: 1)
 		}
 		if details[2] == "learn"
 		{
@@ -107,7 +107,7 @@ class searchViewController: UIViewController, UITableViewDataSource, UITableView
 		if details[2] == "watch"
 		{
 			cell?.eventCategory.text = "観る"
-			cell?.eventCategory.backgroundColor = UIColor.init(red: 255 / 255, green: 20 / 255, blue: 20 / 255, alpha: 1)
+			cell?.eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 255 / 255, blue: 20 / 255, alpha: 1)
 		}
 		if details[2] == "hear"
 		{
