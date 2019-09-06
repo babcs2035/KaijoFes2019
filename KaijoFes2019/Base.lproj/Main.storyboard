@@ -1745,41 +1745,50 @@
                                     <constraint firstAttribute="width" secondItem="Gin-PS-a78" secondAttribute="height" multiplier="1:1" id="fKQ-yT-jXM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="企画名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-1j-RwB" userLabel="eventName">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="企画名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-1j-RwB" userLabel="eventName">
                                 <rect key="frame" x="0.0" y="284" width="272" height="48"/>
                                 <color key="backgroundColor" red="0.97685993020304573" green="0.97685993020304573" blue="0.97685993020304573" alpha="0.84968964041095896" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="1u0-zN-Tdd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="tP1-Mr-edc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="団体名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRC-OV-lu5" userLabel="organName">
-                                <rect key="frame" x="20" y="372" width="73" height="27"/>
+                                <rect key="frame" x="20" y="372" width="72" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="9sx-ZX-pvK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" lineBreakMode="tailTruncation" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffJ-g1-k7a" userLabel="placeName">
-                                <rect key="frame" x="20" y="408" width="45" height="21"/>
+                                <rect key="frame" x="20" y="408" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="88S-j1-BMb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-pj-qKd">
                                 <rect key="frame" x="20" y="483" width="339" height="171"/>
                                 <string key="text">説明文ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-2A-QgX">
                                 <rect key="frame" x="269" y="372" width="75" height="75"/>
@@ -1792,20 +1801,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ブックマーク登録済み" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="hxX-dM-SBH" userLabel="Book Label">
-                                <rect key="frame" x="240" y="452" width="133" height="21"/>
+                                <rect key="frame" x="242" y="452" width="129.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="QSh-6g-KF9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWF-qg-nbK" userLabel="eventCategory">
-                                <rect key="frame" x="20" y="437" width="111.5" height="26.5"/>
+                                <rect key="frame" x="20" y="437" width="120" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="Tfy-79-qiV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1826,7 +1835,6 @@
                             <constraint firstItem="UlD-2A-QgX" firstAttribute="top" secondItem="Gin-PS-a78" secondAttribute="bottom" constant="25" id="LQz-jG-omA"/>
                             <constraint firstItem="mlP-pj-qKd" firstAttribute="top" secondItem="hxX-dM-SBH" secondAttribute="bottom" constant="10" id="M9B-7c-0If"/>
                             <constraint firstItem="2ym-lH-L0q" firstAttribute="leading" secondItem="mTv-F2-tUa" secondAttribute="trailing" id="MpK-On-shy"/>
-                            <constraint firstItem="JRC-OV-lu5" firstAttribute="top" secondItem="Gin-PS-a78" secondAttribute="bottom" constant="25" id="NX3-f0-GVN"/>
                             <constraint firstItem="2la-Ov-9vu" firstAttribute="top" secondItem="mlP-pj-qKd" secondAttribute="bottom" constant="13" id="Nvq-yM-5SP"/>
                             <constraint firstItem="Uuf-1j-RwB" firstAttribute="leading" secondItem="mTv-F2-tUa" secondAttribute="trailing" id="Pfz-6v-beS"/>
                             <constraint firstItem="AWF-qg-nbK" firstAttribute="leading" secondItem="mTv-F2-tUa" secondAttribute="trailing" constant="20" id="Q25-3p-eCR"/>
@@ -3137,9 +3145,18 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">現在、海城中学高等学校では新理科館の建設プロジェクトが進行中です。詳しくはホームページ&gt;新校舎プロジェクトからご確認ください。  https://www.kaijo.ed.jp/schoolhouse 
 また、文化祭開催中の工事は行われませんが砂埃などが舞う可能性があります。また、囲いの中に物が入ってしまうとお取りできない場合もございますのでお気をつけください。</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3739,7 +3756,7 @@
         <segue reference="YyR-mq-KMm"/>
         <segue reference="jwG-y6-7fz"/>
         <segue reference="5q7-71-SWg"/>
-        <segue reference="ShG-IO-G7G"/>
+        <segue reference="Kgy-R8-HLc"/>
         <segue reference="w6B-Vp-i6K"/>
         <segue reference="0AQ-m6-o5P"/>
         <segue reference="67d-0m-6jm"/>
