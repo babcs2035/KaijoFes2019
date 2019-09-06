@@ -3,7 +3,7 @@
 //  KaijoFes2019
 //
 //  Created by Bwambocos on 2019/08/30.
-//  Copyright © 2019年 com.babcs2035.kaijofes2019. All rights reserved.
+//  Copyright © 2019年 jp.ed.kaijo.KaijoFes2019. All rights reserved.
 //
 
 import UIKit
