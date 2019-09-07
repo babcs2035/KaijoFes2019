@@ -12,6 +12,7 @@
 		2B7CC0BD22F993360084D131 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */; };
 		2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */; };
 		2BCB6122231B78860082A6CB /* timetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB6121231B78860082A6CB /* timetableViewController.swift */; };
+		2BDD93BB23238F0E00DDF9E6 /* tutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD93BA23238F0E00DDF9E6 /* tutorialViewController.swift */; };
 		4D5718731EE97013003B95D4 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5718721EE97013003B95D4 /* searchViewController.swift */; };
 		4D83B5871EEE95540063D1E3 /* eventData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4D83B5861EEE95540063D1E3 /* eventData.csv */; };
 		4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEF2A71EE6CA7B00AC9187 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		2B7CC0BC22F993360084D131 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
 		2BB4226B2302CD1000B4DAA3 /* bookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		2BCB6121231B78860082A6CB /* timetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetableViewController.swift; sourceTree = "<group>"; };
+		2BDD93BA23238F0E00DDF9E6 /* tutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialViewController.swift; sourceTree = "<group>"; };
 		4D5718721EE97013003B95D4 /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		4D83B5861EEE95540063D1E3 /* eventData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventData.csv; sourceTree = "<group>"; };
 		4DAEF2A41EE6CA7B00AC9187 /* KaijoFes2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaijoFes2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				9F759B1D1F5AB11200879326 /* floorDetailViewController.swift */,
 				2B1DBC7223191916000116C5 /* foodDetailViewController.swift */,
 				2BCB6121231B78860082A6CB /* timetableViewController.swift */,
+				2BDD93BA23238F0E00DDF9E6 /* tutorialViewController.swift */,
 				4DAEF2B31EE6CA7B00AC9187 /* LaunchScreen.storyboard */,
 				4DAEF2B61EE6CA7B00AC9187 /* Info.plist */,
 				4DAEF2AE1EE6CA7B00AC9187 /* Kaijosai2017.xcdatamodeld */,
@@ -209,6 +212,7 @@
 				4D5718731EE97013003B95D4 /* searchViewController.swift in Sources */,
 				2B5BA28623090AA1003D10E6 /* selectSearchViewController.swift in Sources */,
 				9F1C52E71F603D2700C0CF1F /* sideBarViewController.swift in Sources */,
+				2BDD93BB23238F0E00DDF9E6 /* tutorialViewController.swift in Sources */,
 				4DAEF2A81EE6CA7B00AC9187 /* AppDelegate.swift in Sources */,
 				2BCB6122231B78860082A6CB /* timetableViewController.swift in Sources */,
 				2BB4226C2302CD1000B4DAA3 /* bookmarkTableViewCell.swift in Sources */,

@@ -1439,7 +1439,7 @@
         <!--使い方１-->
         <scene sceneID="b4J-Tp-gew">
             <objects>
-                <viewController storyboardIdentifier="howtoViewController" title="使い方１" id="BRA-rZ-ybz" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="howtoViewController" title="使い方１" id="BRA-rZ-ybz" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f88-Ae-oJW"/>
                         <viewControllerLayoutGuide type="bottom" id="yrD-E3-AiI"/>
@@ -1448,36 +1448,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCZ-1L-V5z">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらがホーム画面です。「企画検索」「ブックマーク」「食品・グッズ」「タイムテーブル」「その他」の項目へ移動できます。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-Wn-1bO">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo1" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-F7-8gJ">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dmm-F7-8gJ" secondAttribute="height" multiplier="14:25" id="2Ff-kl-hNR"/>
+                                    <constraint firstAttribute="height" constant="120" id="wnF-Dp-b90"/>
                                 </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらがホーム画面です。「企画検索」「ブックマーク」「食品・グッズ」「タイムテーブル」「その他」の項目へ移動できます。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-Wn-1bO">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.1" translatesAutoresizingMaskIntoConstraints="NO" id="dTl-QW-V1j">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="iGd-Wn-1bO" secondAttribute="trailing" constant="10" id="AE2-Bs-QLb"/>
-                            <constraint firstItem="iGd-Wn-1bO" firstAttribute="top" secondItem="dmm-F7-8gJ" secondAttribute="bottom" constant="15" id="Mcz-ii-X7c"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="FCZ-1L-V5z" secondAttribute="bottom" id="NYv-kP-fLl"/>
-                            <constraint firstItem="yrD-E3-AiI" firstAttribute="top" secondItem="dmm-F7-8gJ" secondAttribute="bottom" constant="150" id="NqJ-c6-A6Y"/>
-                            <constraint firstItem="yrD-E3-AiI" firstAttribute="top" secondItem="iGd-Wn-1bO" secondAttribute="bottom" constant="15" id="UcI-BI-k5F"/>
+                            <constraint firstItem="dTl-QW-V1j" firstAttribute="top" secondItem="f88-Ae-oJW" secondAttribute="bottom" constant="5" id="Bgz-dl-HwH"/>
+                            <constraint firstItem="yrD-E3-AiI" firstAttribute="top" secondItem="iGd-Wn-1bO" secondAttribute="bottom" constant="10" id="UcI-BI-k5F"/>
                             <constraint firstItem="iGd-Wn-1bO" firstAttribute="leading" secondItem="hMZ-gX-QSk" secondAttribute="leadingMargin" constant="10" id="YZs-wt-DVD"/>
-                            <constraint firstItem="FCZ-1L-V5z" firstAttribute="leading" secondItem="hMZ-gX-QSk" secondAttribute="leadingMargin" id="bD6-K9-Hm8"/>
-                            <constraint firstItem="dmm-F7-8gJ" firstAttribute="top" secondItem="f88-Ae-oJW" secondAttribute="bottom" constant="3" id="hEx-31-ZKq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FCZ-1L-V5z" secondAttribute="trailing" id="lQ2-Tv-Wqx"/>
-                            <constraint firstItem="dmm-F7-8gJ" firstAttribute="centerX" secondItem="hMZ-gX-QSk" secondAttribute="centerX" id="yXR-p2-D68"/>
-                            <constraint firstItem="FCZ-1L-V5z" firstAttribute="top" secondItem="f88-Ae-oJW" secondAttribute="bottom" id="zI0-eG-Z1j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dTl-QW-V1j" secondAttribute="trailing" constant="5" id="a5F-GD-EtA"/>
+                            <constraint firstItem="dTl-QW-V1j" firstAttribute="leading" secondItem="hMZ-gX-QSk" secondAttribute="leadingMargin" constant="5" id="cPt-Zm-KJA"/>
+                            <constraint firstItem="iGd-Wn-1bO" firstAttribute="top" secondItem="dTl-QW-V1j" secondAttribute="bottom" constant="10" id="zuN-xl-7xe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="num1" id="jSb-lh-Ytw"/>
@@ -1488,6 +1489,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="text1" destination="iGd-Wn-1bO" id="lg7-N9-t85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYW-FI-kV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1496,7 +1500,7 @@
         <!--使い方２-->
         <scene sceneID="PoL-Gx-09N">
             <objects>
-                <viewController id="cVR-rv-OW2" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cVR-rv-OW2" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y8h-AK-i0R"/>
                         <viewControllerLayoutGuide type="bottom" id="1cF-eH-v5l"/>
@@ -1505,36 +1509,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-Qd-l9c">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="様々なページの右上にはサイドメニューボタンがございます、ショートカットに適宜ご利用ください。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiB-cO-SmJ">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo2" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-Cv-xje">
-                                <rect key="frame" x="61.5" y="67" width="252.00000000000011" height="450"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ryj-Cv-xje" secondAttribute="height" multiplier="14:25" id="dZd-O9-b1s"/>
+                                    <constraint firstAttribute="height" constant="120" id="KYd-U9-GPG"/>
                                 </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="様々なページの右上にはサイドメニューボタンがございます、ショートカットに適宜ご利用ください。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiB-cO-SmJ">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.2" translatesAutoresizingMaskIntoConstraints="NO" id="C65-uf-X0t">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JiB-cO-SmJ" firstAttribute="top" secondItem="Ryj-Cv-xje" secondAttribute="bottom" constant="15" id="33v-wu-pjR"/>
-                            <constraint firstItem="Yip-Qd-l9c" firstAttribute="trailing" secondItem="Gzr-op-1Nf" secondAttribute="trailingMargin" id="DbK-ed-IaT"/>
-                            <constraint firstItem="Ryj-Cv-xje" firstAttribute="centerX" secondItem="Gzr-op-1Nf" secondAttribute="centerX" id="Gta-2d-ufI"/>
-                            <constraint firstItem="Yip-Qd-l9c" firstAttribute="top" secondItem="Y8h-AK-i0R" secondAttribute="bottom" id="GzF-am-1OV"/>
-                            <constraint firstItem="1cF-eH-v5l" firstAttribute="top" secondItem="JiB-cO-SmJ" secondAttribute="bottom" constant="15" id="OEW-c4-Coc"/>
-                            <constraint firstItem="Yip-Qd-l9c" firstAttribute="leading" secondItem="Gzr-op-1Nf" secondAttribute="leadingMargin" id="Spl-jd-bsl"/>
+                            <constraint firstItem="C65-uf-X0t" firstAttribute="leading" secondItem="Gzr-op-1Nf" secondAttribute="leadingMargin" constant="5" id="0i3-Jc-G7I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C65-uf-X0t" secondAttribute="trailing" constant="5" id="GjW-gT-0oE"/>
+                            <constraint firstItem="1cF-eH-v5l" firstAttribute="top" secondItem="JiB-cO-SmJ" secondAttribute="bottom" constant="10" id="OEW-c4-Coc"/>
+                            <constraint firstItem="JiB-cO-SmJ" firstAttribute="top" secondItem="C65-uf-X0t" secondAttribute="bottom" constant="10" id="RBR-K0-hvI"/>
                             <constraint firstItem="JiB-cO-SmJ" firstAttribute="leading" secondItem="Gzr-op-1Nf" secondAttribute="leadingMargin" constant="10" id="ah0-3s-f25"/>
-                            <constraint firstItem="Ryj-Cv-xje" firstAttribute="top" secondItem="Y8h-AK-i0R" secondAttribute="bottom" constant="3" id="g8F-6E-5lk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JiB-cO-SmJ" secondAttribute="trailing" constant="10" id="iUI-Hd-0Bh"/>
-                            <constraint firstItem="1cF-eH-v5l" firstAttribute="top" secondItem="Yip-Qd-l9c" secondAttribute="bottom" id="o2Z-kp-k2m"/>
-                            <constraint firstItem="1cF-eH-v5l" firstAttribute="top" secondItem="Ryj-Cv-xje" secondAttribute="bottom" constant="150" id="uok-nV-Yfd"/>
+                            <constraint firstItem="C65-uf-X0t" firstAttribute="top" secondItem="Y8h-AK-i0R" secondAttribute="bottom" constant="5" id="jii-XT-gdM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="num2" id="sQ1-oP-zs8"/>
@@ -1545,10 +1550,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="text2" destination="JiB-cO-SmJ" id="zxd-VB-09C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raj-F1-EqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2689" y="4050"/>
+            <point key="canvasLocation" x="2688.8000000000002" y="4049.3253373313346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcP-Sr-9jL">
@@ -2760,7 +2768,7 @@
         <!--使い方３-->
         <scene sceneID="9I6-WF-o9m">
             <objects>
-                <viewController id="ZEZ-0z-qM3" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZEZ-0z-qM3" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TXg-NI-esC"/>
                         <viewControllerLayoutGuide type="bottom" id="QDz-SJ-uob"/>
@@ -2769,336 +2777,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJJ-v0-ZGS">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOK-gr-3ku">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo3" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-LK-zsc">
-                                <rect key="frame" x="64.5" y="67" width="246" height="440.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="1Oe-LK-zsc" secondAttribute="height" multiplier="14:25" id="Cse-Qx-Aks"/>
+                                    <constraint firstAttribute="height" constant="120" id="OTL-9e-U8R"/>
                                 </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOK-gr-3ku">
-                                <rect key="frame" x="26" y="522" width="323" height="130"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">こちらは「企画を探す」から「キーワードから探す」を選択した画面です。一番上の白いボックスに文字を入れれば、その文字を含む（企画名、団体名または説明文）企画を表示します。検索対象の切り替えも可能です。そして企画名をタップすれば、その企画の詳細を閲覧できます。</string>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.3" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-Io-QF3">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xJJ-v0-ZGS" firstAttribute="top" secondItem="TXg-NI-esC" secondAttribute="bottom" id="1hf-oD-MCp"/>
-                            <constraint firstItem="QDz-SJ-uob" firstAttribute="top" secondItem="xJJ-v0-ZGS" secondAttribute="bottom" id="5tw-Sf-QwF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xJJ-v0-ZGS" secondAttribute="trailing" id="EUQ-7a-Cx7"/>
-                            <constraint firstItem="cOK-gr-3ku" firstAttribute="top" secondItem="1Oe-LK-zsc" secondAttribute="bottom" constant="15" id="HtP-IV-1zK"/>
-                            <constraint firstItem="xJJ-v0-ZGS" firstAttribute="leading" secondItem="5aT-Uf-NoM" secondAttribute="leadingMargin" id="JEk-Pi-Evv"/>
-                            <constraint firstItem="1Oe-LK-zsc" firstAttribute="centerX" secondItem="5aT-Uf-NoM" secondAttribute="centerX" id="Om6-0v-sai"/>
-                            <constraint firstItem="1Oe-LK-zsc" firstAttribute="top" secondItem="TXg-NI-esC" secondAttribute="bottom" constant="3" id="awJ-nh-EsH"/>
+                            <constraint firstItem="Ypd-Io-QF3" firstAttribute="leading" secondItem="5aT-Uf-NoM" secondAttribute="leadingMargin" constant="5" id="721-V9-ixr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ypd-Io-QF3" secondAttribute="trailing" constant="5" id="DGz-WL-qp0"/>
+                            <constraint firstItem="Ypd-Io-QF3" firstAttribute="top" secondItem="TXg-NI-esC" secondAttribute="bottom" constant="5" id="RjF-u0-2aD"/>
+                            <constraint firstItem="cOK-gr-3ku" firstAttribute="top" secondItem="Ypd-Io-QF3" secondAttribute="bottom" constant="10" id="VfP-OT-H2N"/>
                             <constraint firstItem="cOK-gr-3ku" firstAttribute="leading" secondItem="5aT-Uf-NoM" secondAttribute="leadingMargin" constant="10" id="gru-TB-qWo"/>
-                            <constraint firstItem="QDz-SJ-uob" firstAttribute="top" secondItem="1Oe-LK-zsc" secondAttribute="bottom" constant="160" id="hg4-K4-Lu9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cOK-gr-3ku" secondAttribute="trailing" constant="10" id="pTC-3t-1Jh"/>
-                            <constraint firstItem="QDz-SJ-uob" firstAttribute="top" secondItem="cOK-gr-3ku" secondAttribute="bottom" constant="15" id="tvE-FC-4wO"/>
+                            <constraint firstItem="QDz-SJ-uob" firstAttribute="top" secondItem="cOK-gr-3ku" secondAttribute="bottom" constant="10" id="tvE-FC-4wO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="num3" id="PJi-Zb-SNK"/>
                     <navigationItem key="navigationItem" title="使い方３" id="au3-4l-AS8">
                         <barButtonItem key="rightBarButtonItem" title="次へ" id="LwZ-iU-bO0">
                             <connections>
-                                <segue destination="w5M-zZ-UKB" kind="show" id="Prg-Jg-YQc"/>
+                                <segue destination="rxJ-4l-5Uf" kind="show" id="Y9n-mD-yLX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="text3" destination="cOK-gr-3ku" id="3fP-tv-SV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdf-fA-gzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3377" y="4050"/>
-        </scene>
-        <!--使い方４-->
-        <scene sceneID="wNO-bs-bko">
-            <objects>
-                <viewController id="w5M-zZ-UKB" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kg8-E8-CnT"/>
-                        <viewControllerLayoutGuide type="bottom" id="KBW-fh-ByO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QmE-fn-9l3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcI-GG-Nug">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo4" translatesAutoresizingMaskIntoConstraints="NO" id="q2o-Yl-h6n">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="q2o-Yl-h6n" secondAttribute="height" multiplier="14:25" id="94q-ZM-a9F"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらは「企画を探す」から「地図から探す」を選択した画面です。地図に表示されている場所をタップすると、その場所の詳細地図、またはタイムテーブルが表示されます。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-FV-Dfa">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WcI-GG-Nug" firstAttribute="leading" secondItem="QmE-fn-9l3" secondAttribute="leadingMargin" id="0Lw-aM-6jr"/>
-                            <constraint firstItem="KBW-fh-ByO" firstAttribute="top" secondItem="cm8-FV-Dfa" secondAttribute="bottom" constant="15" id="8FF-h2-wdR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cm8-FV-Dfa" secondAttribute="trailing" constant="10" id="BKo-MN-bC0"/>
-                            <constraint firstItem="WcI-GG-Nug" firstAttribute="top" secondItem="Kg8-E8-CnT" secondAttribute="bottom" id="Eou-Yg-R0Z"/>
-                            <constraint firstItem="q2o-Yl-h6n" firstAttribute="centerX" secondItem="QmE-fn-9l3" secondAttribute="centerX" id="P0P-W6-nRB"/>
-                            <constraint firstItem="q2o-Yl-h6n" firstAttribute="top" secondItem="Kg8-E8-CnT" secondAttribute="bottom" constant="3" id="ZOc-oM-mFh"/>
-                            <constraint firstItem="KBW-fh-ByO" firstAttribute="top" secondItem="WcI-GG-Nug" secondAttribute="bottom" id="fAa-fB-cy3"/>
-                            <constraint firstItem="cm8-FV-Dfa" firstAttribute="top" secondItem="q2o-Yl-h6n" secondAttribute="bottom" constant="15" id="grL-XQ-i4Q"/>
-                            <constraint firstItem="cm8-FV-Dfa" firstAttribute="leading" secondItem="QmE-fn-9l3" secondAttribute="leadingMargin" constant="10" id="p10-VM-QgZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WcI-GG-Nug" secondAttribute="trailing" id="tWp-1I-Utt"/>
-                            <constraint firstItem="KBW-fh-ByO" firstAttribute="top" secondItem="q2o-Yl-h6n" secondAttribute="bottom" constant="150" id="vDL-1g-oOM"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num4" id="3BD-y9-57J"/>
-                    <navigationItem key="navigationItem" title="使い方４" id="MWx-4f-CIN">
-                        <barButtonItem key="rightBarButtonItem" title="次へ" id="3bd-04-2BD">
-                            <connections>
-                                <segue destination="2VJ-RZ-qYa" kind="show" id="T8t-DB-GFw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LuC-HX-Xr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4084" y="4050"/>
-        </scene>
-        <!--使い方５-->
-        <scene sceneID="IWN-PJ-KOQ">
-            <objects>
-                <viewController id="Wxk-wV-G5k" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="riH-On-0Qp"/>
-                        <viewControllerLayoutGuide type="bottom" id="HPS-Qd-KIC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fui-uI-8T2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BX-ec-sp4">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowTo6" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-ka-A8U">
-                                <rect key="frame" x="60.5" y="64" width="254" height="453"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="f7c-ka-A8U" secondAttribute="height" multiplier="14:25" id="vds-9O-Ckm"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらは企画詳細を表示する画面です。「企画を探す」や「ブックマーク」からアクセス可能です。また、赤い星マークのボタンを押すことで、ブックマークに登録することができます。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tV-Md-wun">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="f7c-ka-A8U" firstAttribute="centerX" secondItem="fui-uI-8T2" secondAttribute="centerX" id="5DP-lF-f5u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4tV-Md-wun" secondAttribute="trailing" constant="10" id="AOv-jE-MgU"/>
-                            <constraint firstItem="2BX-ec-sp4" firstAttribute="top" secondItem="riH-On-0Qp" secondAttribute="bottom" id="DCa-VC-BNa"/>
-                            <constraint firstItem="4tV-Md-wun" firstAttribute="leading" secondItem="fui-uI-8T2" secondAttribute="leadingMargin" constant="10" id="KiB-CI-T1i"/>
-                            <constraint firstItem="f7c-ka-A8U" firstAttribute="top" secondItem="riH-On-0Qp" secondAttribute="bottom" id="Kv7-IB-uAN"/>
-                            <constraint firstItem="HPS-Qd-KIC" firstAttribute="top" secondItem="f7c-ka-A8U" secondAttribute="bottom" constant="150" id="L8N-2s-C9i"/>
-                            <constraint firstItem="HPS-Qd-KIC" firstAttribute="top" secondItem="4tV-Md-wun" secondAttribute="bottom" constant="15" id="VpB-4M-dsP"/>
-                            <constraint firstItem="4tV-Md-wun" firstAttribute="top" secondItem="f7c-ka-A8U" secondAttribute="bottom" constant="15" id="faw-DH-JjF"/>
-                            <constraint firstItem="HPS-Qd-KIC" firstAttribute="top" secondItem="2BX-ec-sp4" secondAttribute="bottom" id="tsg-Cf-EuS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2BX-ec-sp4" secondAttribute="trailing" id="xDl-JZ-xW9"/>
-                            <constraint firstItem="2BX-ec-sp4" firstAttribute="leading" secondItem="fui-uI-8T2" secondAttribute="leadingMargin" id="xdn-WS-1fp"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num6" id="fXi-Uo-UEZ"/>
-                    <navigationItem key="navigationItem" title="使い方５" id="Az9-sV-Yfe">
-                        <barButtonItem key="rightBarButtonItem" title="次へ" id="oNM-pd-L6W">
-                            <connections>
-                                <segue destination="cod-LS-cpu" kind="show" id="4Pe-qA-are"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fhA-CG-7hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5513" y="4050"/>
-        </scene>
-        <!--使い方６-->
-        <scene sceneID="Yeu-df-HdR">
-            <objects>
-                <viewController id="cod-LS-cpu" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d9J-y5-XXO"/>
-                        <viewControllerLayoutGuide type="bottom" id="OjM-DS-CdL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="spS-9a-Bjh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-bp-THb">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowTo7" translatesAutoresizingMaskIntoConstraints="NO" id="2ec-gg-LeE">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2ec-gg-LeE" secondAttribute="height" multiplier="14:25" id="Oye-O3-1CF"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらはブックマーク一覧の画面です。企画名をタップすれば詳細情報を閲覧できます。また、右上のEditボタンでブックマークを編集可能です。全て削除する場合は「ブックマークをリセットする」が便利です。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZz-nI-him">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ujc-bp-THb" secondAttribute="trailing" id="5Hw-aU-sF8"/>
-                            <constraint firstItem="OjM-DS-CdL" firstAttribute="top" secondItem="WZz-nI-him" secondAttribute="bottom" constant="15" id="9iF-bd-cbu"/>
-                            <constraint firstItem="2ec-gg-LeE" firstAttribute="centerX" secondItem="spS-9a-Bjh" secondAttribute="centerX" id="DWD-rB-z54"/>
-                            <constraint firstItem="OjM-DS-CdL" firstAttribute="top" secondItem="2ec-gg-LeE" secondAttribute="bottom" constant="150" id="H0X-Jl-42y"/>
-                            <constraint firstItem="ujc-bp-THb" firstAttribute="top" secondItem="d9J-y5-XXO" secondAttribute="bottom" id="TQ5-zu-C3O"/>
-                            <constraint firstItem="WZz-nI-him" firstAttribute="top" secondItem="2ec-gg-LeE" secondAttribute="bottom" constant="15" id="ie3-8a-hIb"/>
-                            <constraint firstItem="OjM-DS-CdL" firstAttribute="top" secondItem="ujc-bp-THb" secondAttribute="bottom" id="jDQ-b5-oxE"/>
-                            <constraint firstItem="ujc-bp-THb" firstAttribute="leading" secondItem="spS-9a-Bjh" secondAttribute="leadingMargin" id="n19-yW-oJf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WZz-nI-him" secondAttribute="trailing" constant="10" id="t6x-FG-yB9"/>
-                            <constraint firstItem="2ec-gg-LeE" firstAttribute="top" secondItem="d9J-y5-XXO" secondAttribute="bottom" constant="3" id="vCg-Rp-mag"/>
-                            <constraint firstItem="WZz-nI-him" firstAttribute="leading" secondItem="spS-9a-Bjh" secondAttribute="leadingMargin" constant="10" id="zgt-za-SO7"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num7" id="LtU-Lf-7lj"/>
-                    <navigationItem key="navigationItem" title="使い方６" id="egS-n5-RWn">
-                        <barButtonItem key="rightBarButtonItem" title="次へ" id="HyA-5n-Rjm">
-                            <connections>
-                                <segue destination="LOd-lG-ehA" kind="show" id="CH0-mO-OT5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mhs-vg-7fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6210" y="4050"/>
-        </scene>
-        <!--使い方７-->
-        <scene sceneID="mCP-7q-buD">
-            <objects>
-                <viewController id="LOd-lG-ehA" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aZo-EJ-rrY"/>
-                        <viewControllerLayoutGuide type="bottom" id="5nj-du-vgE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AUa-2D-W48">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdi-uj-q00">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowTo8" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-RY-dH8">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="BBH-RY-dH8" secondAttribute="height" multiplier="14:25" id="ZtP-lu-GSn"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらが、タイムテーブルの画面です。画像をドラッグすれば、土・日のスケジュールが隅々まで見れます。また、企画をタップすればその詳細情報を閲覧できます。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-0N-2EX">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5nj-du-vgE" firstAttribute="top" secondItem="BBH-RY-dH8" secondAttribute="bottom" constant="150" id="1vR-dI-0lU"/>
-                            <constraint firstItem="5nj-du-vgE" firstAttribute="top" secondItem="j4x-0N-2EX" secondAttribute="bottom" constant="15" id="CBM-tO-cFH"/>
-                            <constraint firstItem="BBH-RY-dH8" firstAttribute="top" secondItem="aZo-EJ-rrY" secondAttribute="bottom" constant="3" id="IcR-gZ-XeQ"/>
-                            <constraint firstItem="BBH-RY-dH8" firstAttribute="centerX" secondItem="AUa-2D-W48" secondAttribute="centerX" id="USS-k3-J68"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j4x-0N-2EX" secondAttribute="trailing" constant="10" id="hdP-qK-WI9"/>
-                            <constraint firstItem="wdi-uj-q00" firstAttribute="top" secondItem="aZo-EJ-rrY" secondAttribute="bottom" id="lzq-fA-8IN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wdi-uj-q00" secondAttribute="trailing" id="mqi-6A-zq5"/>
-                            <constraint firstItem="5nj-du-vgE" firstAttribute="top" secondItem="wdi-uj-q00" secondAttribute="bottom" id="pbt-Qb-yyE"/>
-                            <constraint firstItem="wdi-uj-q00" firstAttribute="leading" secondItem="AUa-2D-W48" secondAttribute="leadingMargin" id="t2o-Nx-ode"/>
-                            <constraint firstItem="j4x-0N-2EX" firstAttribute="top" secondItem="BBH-RY-dH8" secondAttribute="bottom" constant="15" id="wX5-uX-txy"/>
-                            <constraint firstItem="j4x-0N-2EX" firstAttribute="leading" secondItem="AUa-2D-W48" secondAttribute="leadingMargin" constant="10" id="ylI-kb-1d9"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num8" id="Cso-we-mgw"/>
-                    <navigationItem key="navigationItem" title="使い方７" id="zzZ-lO-Aaq">
-                        <barButtonItem key="rightBarButtonItem" title="終了" id="c4O-Er-2QK">
-                            <connections>
-                                <action selector="barButtonFinish:" destination="LOd-lG-ehA" id="xUq-y2-s6u"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qtw-oK-c6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6894" y="4050"/>
-        </scene>
-        <!--使い方４-->
-        <scene sceneID="Laa-ct-Lo9">
-            <objects>
-                <viewController id="2VJ-RZ-qYa" customClass="sideBarViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hwS-ga-yje"/>
-                        <viewControllerLayoutGuide type="bottom" id="sCQ-fv-AAz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fMK-ij-4ar">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-GG-ffb">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howTo5" translatesAutoresizingMaskIntoConstraints="NO" id="T3e-IZ-G3r">
-                                <rect key="frame" x="61.5" y="67" width="252" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="T3e-IZ-G3r" secondAttribute="height" multiplier="14:25" id="Xa9-62-T58"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="地図から建物を選択すると、このように各フロアの詳細マップを開けます。また、数字の書かれた部屋をタップすることで、その部屋での催しの詳しい情報が得られます。" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J86-mg-W1J">
-                                <rect key="frame" x="26" y="532" width="323" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="J86-mg-W1J" secondAttribute="trailing" constant="10" id="23q-gH-8lm"/>
-                            <constraint firstItem="ifu-GG-ffb" firstAttribute="leading" secondItem="fMK-ij-4ar" secondAttribute="leadingMargin" id="7PS-0d-U6L"/>
-                            <constraint firstItem="T3e-IZ-G3r" firstAttribute="top" secondItem="hwS-ga-yje" secondAttribute="bottom" constant="3" id="9Dt-Mj-FC9"/>
-                            <constraint firstItem="ifu-GG-ffb" firstAttribute="top" secondItem="hwS-ga-yje" secondAttribute="bottom" id="JVk-df-NXH"/>
-                            <constraint firstItem="sCQ-fv-AAz" firstAttribute="top" secondItem="T3e-IZ-G3r" secondAttribute="bottom" constant="150" id="M7f-Ia-x8k"/>
-                            <constraint firstItem="J86-mg-W1J" firstAttribute="top" secondItem="T3e-IZ-G3r" secondAttribute="bottom" constant="15" id="RSf-xh-AAH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ifu-GG-ffb" secondAttribute="trailing" id="bVp-w0-gKA"/>
-                            <constraint firstItem="sCQ-fv-AAz" firstAttribute="top" secondItem="J86-mg-W1J" secondAttribute="bottom" constant="15" id="f6u-Ea-uz2"/>
-                            <constraint firstItem="T3e-IZ-G3r" firstAttribute="centerX" secondItem="fMK-ij-4ar" secondAttribute="centerX" id="ihV-FY-mtP"/>
-                            <constraint firstItem="J86-mg-W1J" firstAttribute="leading" secondItem="fMK-ij-4ar" secondAttribute="leadingMargin" constant="10" id="orO-Cg-jVM"/>
-                            <constraint firstItem="sCQ-fv-AAz" firstAttribute="top" secondItem="ifu-GG-ffb" secondAttribute="bottom" id="zS8-Sx-Umb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="num5" id="oi4-Jp-bD8"/>
-                    <navigationItem key="navigationItem" title="使い方４" id="73i-17-qHp">
-                        <barButtonItem key="rightBarButtonItem" title="次へ" id="FZz-4o-XsT">
-                            <connections>
-                                <segue destination="Wxk-wV-G5k" kind="show" id="zIt-z6-W4g"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6rP-JM-bCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4793" y="4050"/>
         </scene>
         <!--floorDetail-->
         <scene sceneID="Af0-p0-QCP">
@@ -3792,12 +3519,322 @@
             </objects>
             <point key="canvasLocation" x="6492.8000000000002" y="2815.5922038980511"/>
         </scene>
+        <!--使い方４-->
+        <scene sceneID="1iq-bs-F6g">
+            <objects>
+                <viewController id="rxJ-4l-5Uf" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hgK-5u-up4"/>
+                        <viewControllerLayoutGuide type="bottom" id="lEk-LD-dTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfD-Xo-6xH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらは「企画を探す」から「地図から探す」を選択した画面です。地図に表示されている場所をタップすると、その場所の詳細地図、またはタイムテーブルが表示されます。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-Mr-ZNY">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="hgv-iv-h7p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.4" translatesAutoresizingMaskIntoConstraints="NO" id="lSj-Wd-koX">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZGe-Mr-ZNY" firstAttribute="top" secondItem="lSj-Wd-koX" secondAttribute="bottom" constant="10" id="A6S-Ap-yFh"/>
+                            <constraint firstItem="lEk-LD-dTV" firstAttribute="top" secondItem="ZGe-Mr-ZNY" secondAttribute="bottom" constant="10" id="IBY-nz-afl"/>
+                            <constraint firstItem="ZGe-Mr-ZNY" firstAttribute="leading" secondItem="wfD-Xo-6xH" secondAttribute="leadingMargin" constant="10" id="JIA-aM-cGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lSj-Wd-koX" secondAttribute="trailing" constant="5" id="Mut-nj-Ijg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZGe-Mr-ZNY" secondAttribute="trailing" constant="10" id="b5a-uk-mSh"/>
+                            <constraint firstItem="lSj-Wd-koX" firstAttribute="leading" secondItem="wfD-Xo-6xH" secondAttribute="leadingMargin" constant="5" id="fgM-oY-AxU"/>
+                            <constraint firstItem="lSj-Wd-koX" firstAttribute="top" secondItem="hgK-5u-up4" secondAttribute="bottom" constant="5" id="jEj-Rg-fGn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="num4" id="zdB-Oq-zGL"/>
+                    <navigationItem key="navigationItem" title="使い方４" id="y8b-EO-ZwC">
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="Kwu-O6-494">
+                            <connections>
+                                <segue destination="M2O-Oq-IsF" kind="show" id="7A1-0O-mV4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text4" destination="ZGe-Mr-ZNY" id="iLY-qQ-jia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ar3-Ko-8eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4090" y="4050"/>
+        </scene>
+        <!--使い方６-->
+        <scene sceneID="ceg-Ed-Ms7">
+            <objects>
+                <viewController title="使い方６" id="4zd-5i-XU5" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h09-AH-LLc"/>
+                        <viewControllerLayoutGuide type="bottom" id="l1q-l3-tSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Uw-Tl-I6h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらは企画詳細を表示する画面です。「企画を探す」や「ブックマーク」からアクセス可能です。また、赤い星マークのボタンを押すことで、ブックマークに登録することができます。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jga-Ya-vQL">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="KwX-lC-Yeg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.6" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-cO-Bz6">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l1q-l3-tSe" firstAttribute="top" secondItem="jga-Ya-vQL" secondAttribute="bottom" constant="10" id="35S-fG-hs3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jga-Ya-vQL" secondAttribute="trailing" constant="10" id="EBY-IM-wjK"/>
+                            <constraint firstItem="aQJ-cO-Bz6" firstAttribute="top" secondItem="h09-AH-LLc" secondAttribute="bottom" constant="5" id="Ldl-v4-wZ9"/>
+                            <constraint firstItem="aQJ-cO-Bz6" firstAttribute="leading" secondItem="5Uw-Tl-I6h" secondAttribute="leadingMargin" constant="5" id="Uhs-go-3EA"/>
+                            <constraint firstItem="jga-Ya-vQL" firstAttribute="leading" secondItem="5Uw-Tl-I6h" secondAttribute="leadingMargin" constant="10" id="bJ6-1f-g8g"/>
+                            <constraint firstItem="jga-Ya-vQL" firstAttribute="top" secondItem="aQJ-cO-Bz6" secondAttribute="bottom" constant="10" id="hmd-sF-2oJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQJ-cO-Bz6" secondAttribute="trailing" constant="5" id="lzh-Lr-gaZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="num6" id="EYr-1m-EX7"/>
+                    <navigationItem key="navigationItem" title="使い方6" id="fur-Hd-Z7Q">
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="svR-YN-Bkg">
+                            <connections>
+                                <segue destination="txB-lu-E8N" kind="show" id="mqr-ge-llc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text6" destination="jga-Ya-vQL" id="xR1-AW-rY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7e-cw-lF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5566" y="4049"/>
+        </scene>
+        <!--使い方７-->
+        <scene sceneID="HdZ-ed-lii">
+            <objects>
+                <viewController title="使い方７" id="txB-lu-E8N" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S5o-qA-6gq"/>
+                        <viewControllerLayoutGuide type="bottom" id="8he-qS-l8l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uv2-EH-XHe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HY9-BF-0xj">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="T2L-UW-hIQ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="こちらはブックマーク一覧の画面です。企画名をタップすれば詳細情報を閲覧できます。また、右上のEditボタンでブックマークを編集可能です。全て削除する場合は「ブックマークをリセットする」が便利です。">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.7" translatesAutoresizingMaskIntoConstraints="NO" id="cKF-hb-dQz">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8he-qS-l8l" firstAttribute="top" secondItem="HY9-BF-0xj" secondAttribute="bottom" constant="10" id="4Vh-us-4Ze"/>
+                            <constraint firstItem="cKF-hb-dQz" firstAttribute="leading" secondItem="Uv2-EH-XHe" secondAttribute="leadingMargin" constant="5" id="4wI-oK-HS7"/>
+                            <constraint firstItem="cKF-hb-dQz" firstAttribute="top" secondItem="S5o-qA-6gq" secondAttribute="bottom" constant="5" id="cgM-Oe-a58"/>
+                            <constraint firstItem="HY9-BF-0xj" firstAttribute="top" secondItem="cKF-hb-dQz" secondAttribute="bottom" constant="10" id="dXL-ZV-gsd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HY9-BF-0xj" secondAttribute="trailing" constant="10" id="eEq-Tn-eDs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cKF-hb-dQz" secondAttribute="trailing" constant="5" id="erb-wH-Ls8"/>
+                            <constraint firstItem="HY9-BF-0xj" firstAttribute="leading" secondItem="Uv2-EH-XHe" secondAttribute="leadingMargin" constant="10" id="hss-cz-Vah"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="num7" id="LK5-10-z6X"/>
+                    <navigationItem key="navigationItem" title="使い方７" id="o8C-zC-Fey">
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="YeK-jl-ohE">
+                            <connections>
+                                <segue destination="7z1-jZ-ECZ" kind="show" id="Sfi-ao-5Dd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text7" destination="HY9-BF-0xj" id="8yz-Wn-L0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hj6-j7-uHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6262" y="4049"/>
+        </scene>
+        <!--使い方８-->
+        <scene sceneID="0E2-pb-3nP">
+            <objects>
+                <viewController title="使い方８" id="7z1-jZ-ECZ" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ntl-Ki-sXB"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIf-1U-Il8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oLy-2L-eAp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="こちらが、タイムテーブルの画面です。画像をドラッグすれば、土・日のスケジュールが隅々まで見れます。また、企画をタップすればその詳細情報を閲覧できます。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJs-G6-F8V">
+                                <rect key="frame" x="26" y="532" width="323" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="I0m-vC-nlb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.8" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-kH-8Qf">
+                                <rect key="frame" x="21" y="69" width="333" height="453"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CJs-G6-F8V" firstAttribute="top" secondItem="WC1-kH-8Qf" secondAttribute="bottom" constant="10" id="2hA-J4-YJa"/>
+                            <constraint firstItem="WC1-kH-8Qf" firstAttribute="top" secondItem="ntl-Ki-sXB" secondAttribute="bottom" constant="5" id="AVw-f6-TGr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CJs-G6-F8V" secondAttribute="trailing" constant="10" id="K1t-iD-l8y"/>
+                            <constraint firstItem="WC1-kH-8Qf" firstAttribute="leading" secondItem="oLy-2L-eAp" secondAttribute="leadingMargin" constant="5" id="MIT-DP-xn3"/>
+                            <constraint firstItem="JIf-1U-Il8" firstAttribute="top" secondItem="CJs-G6-F8V" secondAttribute="bottom" constant="15" id="gD4-RH-wgv"/>
+                            <constraint firstItem="CJs-G6-F8V" firstAttribute="leading" secondItem="oLy-2L-eAp" secondAttribute="leadingMargin" constant="10" id="mEG-Sc-f9X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WC1-kH-8Qf" secondAttribute="trailing" constant="5" id="ng8-hh-g6H"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="num8" id="kEg-nv-bBh"/>
+                    <navigationItem key="navigationItem" title="使い方８" id="2s3-Nr-s0P">
+                        <barButtonItem key="rightBarButtonItem" title="終了" id="Bf0-iy-0y5">
+                            <connections>
+                                <action selector="barButtonFinish:" destination="7z1-jZ-ECZ" id="opF-co-fBI"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Hva-b3-bzA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text8" destination="CJs-G6-F8V" id="gCO-kY-d5L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kI-JL-Gmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6946" y="4048"/>
+        </scene>
+        <!--使い方５-->
+        <scene sceneID="zer-A1-302">
+            <objects>
+                <viewController title="使い方５" id="M2O-Oq-IsF" customClass="tutorialViewController" customModule="KaijoFes2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZYe-Ma-Mzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="88S-js-aSc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8rJ-bd-I6b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="地図から建物を選択すると、このように各フロアの詳細マップを開けます。また、数字の書かれた部屋をタップすることで、その部屋での催しの詳しい情報が得られます。" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juW-ey-W2u">
+                                <rect key="frame" x="26" y="537" width="323" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Bay-Su-w41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.5" translatesAutoresizingMaskIntoConstraints="NO" id="mHp-6o-KPu">
+                                <rect key="frame" x="21" y="69" width="333" height="458"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mHp-6o-KPu" firstAttribute="leading" secondItem="8rJ-bd-I6b" secondAttribute="leadingMargin" constant="5" id="AmD-GN-bSQ"/>
+                            <constraint firstItem="juW-ey-W2u" firstAttribute="leading" secondItem="8rJ-bd-I6b" secondAttribute="leadingMargin" constant="10" id="FiZ-za-T4v"/>
+                            <constraint firstItem="88S-js-aSc" firstAttribute="top" secondItem="juW-ey-W2u" secondAttribute="bottom" constant="10" id="LWm-BR-wdB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="juW-ey-W2u" secondAttribute="trailing" constant="10" id="nSZ-fq-LXq"/>
+                            <constraint firstItem="juW-ey-W2u" firstAttribute="top" secondItem="mHp-6o-KPu" secondAttribute="bottom" constant="10" id="tBu-7Z-M8a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mHp-6o-KPu" secondAttribute="trailing" constant="5" id="vcm-31-9yv"/>
+                            <constraint firstItem="mHp-6o-KPu" firstAttribute="top" secondItem="ZYe-Ma-Mzp" secondAttribute="bottom" constant="5" id="wHu-7B-23L"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="num5" id="4KA-QE-ORW"/>
+                    <navigationItem key="navigationItem" title="使い方５" id="hZe-kv-zq6">
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="MEN-J0-jsr">
+                            <connections>
+                                <segue destination="4zd-5i-XU5" kind="show" id="FrD-g6-qIA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="text5" destination="juW-ey-W2u" id="nnM-uj-YaX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bl9-NQ-VC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4846" y="4048"/>
+        </scene>
     </scenes>
     <resources>
         <image name="2801" width="1000" height="1000"/>
-        <image name="HowTo6" width="393" height="689"/>
-        <image name="HowTo7" width="395" height="683"/>
-        <image name="HowTo8" width="398" height="687"/>
         <image name="detailBookmark" width="137" height="137"/>
         <image name="food.map" width="1068" height="536"/>
         <image name="hall2" width="900" height="900"/>
@@ -3805,11 +3842,6 @@
         <image name="home.map" width="526" height="471"/>
         <image name="home.title" width="972" height="188"/>
         <image name="homeMap" width="256" height="256"/>
-        <image name="howTo1" width="394" height="690"/>
-        <image name="howTo2" width="392" height="680"/>
-        <image name="howTo3" width="393" height="685"/>
-        <image name="howTo4" width="395" height="683"/>
-        <image name="howTo5" width="400" height="692"/>
         <image name="naviMenu" width="32" height="32"/>
         <image name="newSchoolhouse" width="2400" height="1560"/>
         <image name="num1" width="40" height="40"/>
@@ -3847,6 +3879,14 @@
         <image name="timetable.keion" width="734" height="1566"/>
         <image name="timetable.sport" width="948" height="1424"/>
         <image name="timetable.stage" width="714" height="1400"/>
+        <image name="tutorial.1" width="828" height="1792"/>
+        <image name="tutorial.2" width="828" height="1792"/>
+        <image name="tutorial.3" width="828" height="1792"/>
+        <image name="tutorial.4" width="828" height="1792"/>
+        <image name="tutorial.5" width="828" height="1792"/>
+        <image name="tutorial.6" width="828" height="1792"/>
+        <image name="tutorial.7" width="828" height="1792"/>
+        <image name="tutorial.8" width="828" height="1792"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uG8-L3-eeg"/>
@@ -3859,6 +3899,6 @@
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>
         <segue reference="gsa-NM-7Br"/>
-        <segue reference="RNI-Ia-Yd5"/>
+        <segue reference="Hva-b3-bzA"/>
     </inferredMetricsTieBreakers>
 </document>
