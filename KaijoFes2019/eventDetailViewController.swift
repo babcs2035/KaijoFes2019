@@ -72,7 +72,9 @@ class eventDetailViewController: UIViewController
 		{
             print(error)
         }
-        
+		
+		bookLabel.text = "ブックマーク未登録"
+		bookEnable.isEnabled = true
         for nums in bookmarkNums
 		{
             if String(nums) == String(data[6])
@@ -80,11 +82,6 @@ class eventDetailViewController: UIViewController
                 bookLabel.text = "ブックマーク登録済み"
                 bookEnable.isEnabled = false
                 break
-            }
-			else
-			{
-                bookLabel.text = "ブックマーク未登録"
-                bookEnable.isEnabled = true
             }
         }
 		
@@ -106,7 +103,7 @@ class eventDetailViewController: UIViewController
 		if data[2] == "expr"
 		{
 			eventCategory.text = "体験する"
-			eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 255 / 255, blue: 20 / 255, alpha: 1)
+			eventCategory.backgroundColor = UIColor.init(red: 255 / 255, green: 20 / 255, blue: 20 / 255, alpha: 1)
 		}
 		if data[2] == "learn"
 		{
@@ -116,7 +113,7 @@ class eventDetailViewController: UIViewController
 		if data[2] == "watch"
 		{
 			eventCategory.text = "観る"
-			eventCategory.backgroundColor = UIColor.init(red: 255 / 255, green: 20 / 255, blue: 20 / 255, alpha: 1)
+			eventCategory.backgroundColor = UIColor.init(red: 20 / 255, green: 255 / 255, blue: 20 / 255, alpha: 1)
 		}
 		if data[2] == "hear"
 		{

@@ -1198,8 +1198,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使い方" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtI-vR-xTK">
-                                        <rect key="frame" x="187.5" y="33" width="85.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <rect key="frame" x="188" y="36" width="84" height="28"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1218,6 +1218,15 @@
                                     <constraint firstAttribute="bottom" secondItem="mTd-DM-31w" secondAttribute="bottom" constant="15" id="gGr-jX-StQ"/>
                                     <constraint firstAttribute="trailing" secondItem="IMg-Zm-ctJ" secondAttribute="trailing" id="tZv-Xy-ClV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxh-pc-J4z" userLabel="クレジット">
                                 <rect key="frame" x="5" y="174" width="365" height="100"/>
@@ -1235,8 +1244,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クレジット" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAQ-aP-9ks">
-                                        <rect key="frame" x="159" y="33" width="142" height="34"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <rect key="frame" x="160" y="36" width="140" height="28"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1256,6 +1265,15 @@
                                     <constraint firstAttribute="bottom" secondItem="Dvl-Wg-ErA" secondAttribute="bottom" id="q3G-32-y0k"/>
                                     <constraint firstAttribute="height" constant="100" id="szS-WQ-0YT"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1292,13 +1310,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第128回海城学園文化祭 「海城、まるごと」 2019年9月14,15日 9:00 ~ 16:00  ＜開発＞ 文化祭実行委員会 プログラム部 高２ 高橋昂生" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT2-JX-ES4">
-                                <rect key="frame" x="31" y="169" width="313" height="483"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海城祭2019アプリ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-uE-cwq">
                                 <rect key="frame" x="15" y="79" width="345" height="75"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1309,15 +1320,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="第128回海城学園文化祭 「海城、まるごと」 2019年9月14,15日 9:00 ~ 16:00  ＜開発＞ 文化祭実行委員会 プログラム部 高２ 高橋昂生  ＜プライバシーポリシー＞ http://kaijofes.com/privacypolicy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nO8-JH-iT0">
+                                <rect key="frame" x="31" y="169" width="313" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509803921573" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EC8-uE-cwq" firstAttribute="leading" secondItem="eiE-BX-1BI" secondAttribute="leading" constant="15" id="4rN-ef-ygG"/>
+                            <constraint firstItem="nO8-JH-iT0" firstAttribute="leading" secondItem="eiE-BX-1BI" secondAttribute="leadingMargin" constant="15" id="5Va-m1-Up1"/>
                             <constraint firstAttribute="trailing" secondItem="EC8-uE-cwq" secondAttribute="trailing" constant="15" id="EKi-BX-3j0"/>
-                            <constraint firstItem="AT2-JX-ES4" firstAttribute="top" secondItem="EC8-uE-cwq" secondAttribute="bottom" constant="15" id="GxE-US-BwQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AT2-JX-ES4" secondAttribute="trailing" constant="15" id="QTm-D1-TNf"/>
-                            <constraint firstItem="AT2-JX-ES4" firstAttribute="leading" secondItem="eiE-BX-1BI" secondAttribute="leadingMargin" constant="15" id="RaF-54-Z2t"/>
-                            <constraint firstItem="For-To-aJd" firstAttribute="top" secondItem="AT2-JX-ES4" secondAttribute="bottom" constant="15" id="h31-4y-Uiv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nO8-JH-iT0" secondAttribute="trailing" constant="15" id="PbB-u7-x0w"/>
+                            <constraint firstItem="For-To-aJd" firstAttribute="top" secondItem="nO8-JH-iT0" secondAttribute="bottom" constant="15" id="RE0-kS-AiZ"/>
+                            <constraint firstItem="nO8-JH-iT0" firstAttribute="top" secondItem="EC8-uE-cwq" secondAttribute="bottom" constant="15" id="bY0-rm-CGE"/>
                             <constraint firstItem="EC8-uE-cwq" firstAttribute="top" secondItem="oRH-GA-AQ7" secondAttribute="bottom" constant="15" id="xho-xm-L0Z"/>
                         </constraints>
                     </view>
