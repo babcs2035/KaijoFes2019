@@ -61,7 +61,7 @@ class floorDetailViewController: UIViewController, UITableViewDataSource, UITabl
 		
         // scrollView の設定
 		let scrollY = self.navigationController!.navigationBar.frame.size.height + 5
-		let scrollH:CGFloat = 290
+		let scrollH:CGFloat = self.view.frame.size.height * 0.4
 		
 		scrollView = UIScrollView(frame: CGRect(x: 0, y: scrollY, width: self.view.frame.size.width, height: scrollH))
         scrollView.delegate = self
