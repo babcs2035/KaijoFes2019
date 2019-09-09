@@ -3469,35 +3469,35 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ag-zf-ve9" userLabel="hall4">
-                                        <rect key="frame" x="201" y="203" width="127" height="161"/>
+                                        <rect key="frame" x="194" y="197" width="134" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hall4:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="Bf1-0A-GFO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2j-bF-UjT" userLabel="hall5">
-                                        <rect key="frame" x="201" y="368" width="127" height="79"/>
+                                        <rect key="frame" x="194" y="361" width="134" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hall5:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="RJK-1V-vgP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-l6-ktV" userLabel="hall6">
-                                        <rect key="frame" x="201" y="447" width="127" height="411"/>
+                                        <rect key="frame" x="194" y="447" width="134" height="411"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hall6:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="uhH-8L-N5T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-8N-tfG" userLabel="hall7">
-                                        <rect key="frame" x="201" y="943" width="127" height="331"/>
+                                        <rect key="frame" x="194" y="943" width="134" height="331"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hall7:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="t2j-CU-PBb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iof-kK-cDP" userLabel="hall8">
-                                        <rect key="frame" x="201" y="1272" width="127" height="135"/>
+                                        <rect key="frame" x="194" y="1272" width="134" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hall8:" destination="Bhr-ue-tlQ" eventType="touchUpInside" id="65E-l5-aJf"/>
@@ -3912,7 +3912,7 @@
         <segue reference="19c-Lb-Uf1"/>
         <segue reference="jwG-y6-7fz"/>
         <segue reference="zHK-Gv-wD0"/>
-        <segue reference="kWu-gS-MJd"/>
+        <segue reference="7gW-gU-euy"/>
         <segue reference="w6B-Vp-i6K"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>

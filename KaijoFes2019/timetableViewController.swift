@@ -307,7 +307,7 @@ class timetableViewController: UIViewController
 	}
 	@IBAction func hall5(_ sender: Any)
 	{
-		self.performSegue(withIdentifier: "segueHall", sender: dataList[64].components(separatedBy: ","))
+		self.performSegue(withIdentifier: "segueHall", sender: dataList[65].components(separatedBy: ","))
 	}
 	@IBAction func hall6(_ sender: Any)
 	{
