@@ -725,7 +725,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-b4-4as">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="160.50000000000045" height="160.50000000000045"/>
                                                                 <state key="normal" backgroundImage="selectSearch.1"/>
                                                                 <connections>
                                                                     <segue destination="GOT-XU-fwu" kind="show" identifier="selectNo1" id="jwG-y6-7fz"/>
@@ -817,7 +817,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYU-CI-PLF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="160.50000000000045" height="160.50000000000045"/>
                                                                 <state key="normal" backgroundImage="selectSearch.3"/>
                                                                 <connections>
                                                                     <segue destination="BVW-dB-1cH" kind="show" id="bXV-68-1RH"/>
@@ -857,7 +857,7 @@
                                                         <rect key="frame" x="174.5" y="0.0" width="160.5" height="160.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-mV-eDg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="160.50000000000045" height="160.5"/>
                                                                 <state key="normal" backgroundImage="selectSearch.4"/>
                                                                 <connections>
                                                                     <segue destination="GOT-XU-fwu" kind="show" identifier="selectNo4" id="l8Q-TR-ZOa"/>
@@ -912,7 +912,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-2j-bYZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="160.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="160.50000000000045" height="160.5"/>
                                                                 <state key="normal" backgroundImage="selectSearch.5"/>
                                                                 <connections>
                                                                     <segue destination="GOT-XU-fwu" kind="show" identifier="selectNo5" id="qTX-7K-fXS"/>
@@ -3316,7 +3316,7 @@
                                 <rect key="frame" x="0.0" y="64" width="948" height="1434"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timetable.sport" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-L4-7lt">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="948.00000000000023" height="1424"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw1-Z6-m1L" userLabel="sport1">
                                         <rect key="frame" x="8" y="205" width="118" height="1203"/>
@@ -3912,7 +3912,7 @@
         <segue reference="19c-Lb-Uf1"/>
         <segue reference="jwG-y6-7fz"/>
         <segue reference="zHK-Gv-wD0"/>
-        <segue reference="Kgy-R8-HLc"/>
+        <segue reference="kWu-gS-MJd"/>
         <segue reference="w6B-Vp-i6K"/>
         <segue reference="vl4-r9-aQL"/>
         <segue reference="eR9-0h-w72"/>

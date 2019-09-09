@@ -79,7 +79,7 @@ class timetableViewController: UIViewController
 	}
 	@IBAction func keion3(_ sender: Any)
 	{
-		self.performSegue(withIdentifier: "segueKeion", sender: dataList[59].components(separatedBy: ","))
+		self.performSegue(withIdentifier: "segueKeion", sender: dataList[47].components(separatedBy: ","))
 	}
 	@IBAction func keion4(_ sender: Any)
 	{
@@ -91,7 +91,7 @@ class timetableViewController: UIViewController
 	}
 	@IBAction func keion6(_ sender: Any)
 	{
-		self.performSegue(withIdentifier: "segueKeion", sender: dataList[47].components(separatedBy: ","))
+		self.performSegue(withIdentifier: "segueKeion", sender: dataList[44].components(separatedBy: ","))
 	}
 	@IBAction func keion7(_ sender: Any)
 	{
@@ -99,7 +99,7 @@ class timetableViewController: UIViewController
 	}
 	@IBAction func keion8(_ sender: Any)
 	{
-		self.performSegue(withIdentifier: "segueKeion", sender: dataList[44].components(separatedBy: ","))
+		self.performSegue(withIdentifier: "segueKeion", sender: dataList[59].components(separatedBy: ","))
 	}
 	@IBAction func keion9(_ sender: Any)
 	{
